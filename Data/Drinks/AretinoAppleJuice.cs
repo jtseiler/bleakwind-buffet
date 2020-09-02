@@ -95,7 +95,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <returns>a string detailing the items specifications</returns>
         public override string ToString()
         {
-            return @"""[Size] Aretino Apple Juice"" where [Size] is ""Large"", ""Medium"", or ""Small""";
+            return $"{Size} Aretino Apple Juice";
         }
     }
 }

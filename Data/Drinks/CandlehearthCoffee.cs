@@ -106,7 +106,11 @@ namespace BleakwindBuffet.Data.Drinks
         /// <returns>a string detailing the items specifications</returns>
         public override string ToString()
         {
-            return @"""[Size] Candlehearth Coffee"" when thhe coffee is caffinated, or ""[Size] Decaf Candlehhearth Coffee"" when it is decaffinated, and for both[Size] is ""Large"", ""Medium"", or ""Small""";
+            if (Decaf)
+            {
+                return Size + " Candlehearth Decaf Coffee";
+            }
+            else return Size + " Candlehearth Coffee";
         }
     }
 }
