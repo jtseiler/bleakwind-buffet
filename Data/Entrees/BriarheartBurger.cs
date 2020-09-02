@@ -25,7 +25,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// variable to keep track of the items calories
         /// </summary>
-        public uint Calories => 732;
+        public uint Calories => 743;
 
         /// <summary>
         /// property for the choice of ketchup, default to true
@@ -60,11 +60,11 @@ namespace BleakwindBuffet.Data.Entrees
             get
             {
                 List<string> instructions = new List<string>();
-                if (!Bun) instructions.Add("Hold bun;");
-                if (!Ketchup) instructions.Add("Hold ketchup;");
-                if (!Mustard) instructions.Add("Hold mustard;");
-                if (!Cheese) instructions.Add("Hold cheese;");
-                if (!Pickle) instructions.Add("Hold pickle;");
+                if (!Bun) instructions.Add("Hold bun");
+                if (!Ketchup) instructions.Add("Hold ketchup");
+                if (!Mustard) instructions.Add("Hold mustard");
+                if (!Cheese) instructions.Add("Hold cheese");
+                if (!Pickle) instructions.Add("Hold pickle");
                 return instructions;
             }
         }

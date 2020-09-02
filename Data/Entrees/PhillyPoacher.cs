@@ -25,7 +25,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// variable to keep track of the items calories
         /// </summary>
-        public uint Calories => 404;
+        public uint Calories => 784;
 
         /// <summary>
         /// property for the choice of Sirloin, default to true
@@ -50,9 +50,9 @@ namespace BleakwindBuffet.Data.Entrees
             get
             {
                 List<string> instructions = new List<string>();
-                if (!Sirloin) instructions.Add("Hold sirloin;");
-                if (!Onion) instructions.Add("Hold onion;");
-                if (!Roll) instructions.Add("Hold roll;");
+                if (!Sirloin) instructions.Add("Hold sirloin");
+                if (!Onion) instructions.Add("Hold onions");
+                if (!Roll) instructions.Add("Hold roll");
                 return instructions;
             }
         }

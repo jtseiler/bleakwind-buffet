@@ -55,10 +55,10 @@ namespace BleakwindBuffet.Data.Entrees
             get
             {
                 List<string> instructions = new List<string>();
-                if (!Broccoli) instructions.Add("Hold broccoli;");
-                if (!Mushroom) instructions.Add("Hold mushroom;");
-                if (!Tomato) instructions.Add("Hold tomato;");
-                if (!Cheddar) instructions.Add("Hold cheddar;");
+                if (!Broccoli) instructions.Add("Hold broccoli");
+                if (!Mushroom) instructions.Add("Hold mushrooms");
+                if (!Tomato) instructions.Add("Hold tomato");
+                if (!Cheddar) instructions.Add("Hold cheddar");
                 return instructions;
             }
         }
@@ -69,7 +69,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// <returns>a string detailing the items specifications</returns>
         public override string ToString()
         {
-            return "Garden Orc Omelete";
+            return "Garden Orc Omelette";
         }
     }
 }
