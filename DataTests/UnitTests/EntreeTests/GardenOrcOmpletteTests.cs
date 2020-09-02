@@ -1,5 +1,5 @@
 ﻿/*
- * Author: Zachery Brunner
+ * Author: Jack Seiler
  * Class: GardenOrcOmeletteTests.cs
  * Purpose: Test the GardenOrcOmelette.cs class in the Data library
  */

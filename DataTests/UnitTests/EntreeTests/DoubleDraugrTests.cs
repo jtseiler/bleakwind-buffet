@@ -1,5 +1,5 @@
 ﻿/*
- * Author: Zachery Brunner
+ * Author: Jack Seiler
  * Class: DoubleDraugrTests.cs
  * Purpose: Test the DoubleDraugr.cs class in the Data library
  */

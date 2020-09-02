@@ -1,5 +1,5 @@
 ﻿/*
- * Author: Zachery Brunner
+ * Author: Jack Seiler
  * Class: ThalmorTripleTests.cs
  * Purpose: Test the ThalmorTriple.cs class in the Data library
  */

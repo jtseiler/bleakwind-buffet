@@ -1,5 +1,5 @@
 ﻿/*
- * Author: Zachery Brunner
+ * Author: Jack Seiler
  * Class: AretinoAppleJuiceTests.cs
  * Purpose: Test the AretinoAppleJuice.cs class in the Data library
  */
