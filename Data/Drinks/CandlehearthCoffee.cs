@@ -108,7 +108,7 @@ namespace BleakwindBuffet.Data.Drinks
         {
             if (Decaf)
             {
-                return Size + " Candlehearth Decaf Coffee";
+                return Size + " Decaf Candlehearth Coffee";
             }
             else return Size + " Candlehearth Coffee";
         }

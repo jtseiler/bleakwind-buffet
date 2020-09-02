@@ -95,7 +95,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <returns>a string detailing the items specifications</returns>
         public override string ToString()
         {
-            return @"""[Size] Markarth Milk"" where [Size] is ""Large"", ""Medium"", or ""Small""";
+            return $"{Size} Markarth Milk";
         }
     }
 }

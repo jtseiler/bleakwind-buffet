@@ -100,7 +100,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <returns>a string detailing the items specifications</returns>
         public override string ToString()
         {
-            return @"""[Size][Flavor] Sailor Soda"" where [Size] is ""Large"", ""Medium"", or ""Small"" and [Flavor] is ""Blackberry"", ""Cherry"", ""Grapefruit"", ""Lemon"", ""Peach"", or ""Watermellon""";
+            return $"{Size} {Flavor} Sailor Soda";
         }
     }
 }
