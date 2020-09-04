@@ -15,35 +15,35 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         [Fact]
         public void ShouldInlcudeBroccoliByDefault()
         {
-            GardenOrcOmelete oo = new GardenOrcOmelete();
+            GardenOrcOmelette oo = new GardenOrcOmelette();
             Assert.True(oo.Broccoli);
         }
 
         [Fact]
         public void ShouldInlcudeMushroomsByDefault()
         {
-            GardenOrcOmelete oo = new GardenOrcOmelete();
+            GardenOrcOmelette oo = new GardenOrcOmelette();
             Assert.True(oo.Mushrooms);
         }
 
         [Fact]
         public void ShouldInlcudeTomatoByDefault()
         {
-            GardenOrcOmelete oo = new GardenOrcOmelete();
+            GardenOrcOmelette oo = new GardenOrcOmelette();
             Assert.True(oo.Tomato);
         }
 
         [Fact]
         public void ShouldInlcudeCheddarByDefault()
         {
-            GardenOrcOmelete oo = new GardenOrcOmelete();
+            GardenOrcOmelette oo = new GardenOrcOmelette();
             Assert.True(oo.Cheddar);
         }
 
         [Fact]
         public void ShouldBeAbleToSetBroccoli()
         {
-            GardenOrcOmelete oo = new GardenOrcOmelete();
+            GardenOrcOmelette oo = new GardenOrcOmelette();
             oo.Broccoli = true;
             Assert.True(oo.Broccoli);
             oo.Broccoli = false;
@@ -53,7 +53,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         [Fact]
         public void ShouldBeAbleToSetMushrooms()
         {
-            GardenOrcOmelete oo = new GardenOrcOmelete();
+            GardenOrcOmelette oo = new GardenOrcOmelette();
             oo.Mushrooms = true;
             Assert.True(oo.Mushrooms);
             oo.Mushrooms = false;
@@ -63,7 +63,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         [Fact]
         public void ShouldBeAbleToSetTomato()
         {
-            GardenOrcOmelete oo = new GardenOrcOmelete();
+            GardenOrcOmelette oo = new GardenOrcOmelette();
             oo.Tomato = true;
             Assert.True(oo.Tomato);
             oo.Tomato = false;
@@ -73,7 +73,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         [Fact]
         public void ShouldBeAbleToSetCheddar()
         {
-            GardenOrcOmelete oo = new GardenOrcOmelete();
+            GardenOrcOmelette oo = new GardenOrcOmelette();
             oo.Cheddar = true;
             Assert.True(oo.Cheddar);
             oo.Cheddar = false;
@@ -83,14 +83,14 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         [Fact]
         public void ShouldReturnCorrectPrice()
         {
-            GardenOrcOmelete oo = new GardenOrcOmelete();
+            GardenOrcOmelette oo = new GardenOrcOmelette();
             Assert.Equal(4.57, oo.Price);
         }
 
         [Fact]
         public void ShouldReturnCorrectCalories()
         {
-            GardenOrcOmelete oo = new GardenOrcOmelete();
+            GardenOrcOmelette oo = new GardenOrcOmelette();
             Assert.Equal((uint)404, oo.Calories);
         }
 
@@ -100,7 +100,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         public void ShouldReturnCorrectSpecialInstructions(bool includeBroccoli, bool includeMushrooms,
                                                             bool includeTomato, bool includeCheddar)
         {
-            GardenOrcOmelete oo = new GardenOrcOmelete();
+            GardenOrcOmelette oo = new GardenOrcOmelette();
             oo.Broccoli = includeBroccoli;
             if (!includeBroccoli) Assert.Contains("Hold broccoli", oo.SpecialInstructions);
             oo.Mushrooms = includeMushrooms;
@@ -114,7 +114,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         [Fact]
         public void ShouldReturnCorrectToString()
         {
-            GardenOrcOmelete oo = new GardenOrcOmelete();
+            GardenOrcOmelette oo = new GardenOrcOmelette();
             Assert.Equal("Garden Orc Omelette", oo.ToString());
         }
     }

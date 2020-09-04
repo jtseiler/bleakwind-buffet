@@ -15,63 +15,63 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         [Fact]
         public void ShouldIncludeBunByDefault()
         {
-            DoubleDragur dd = new DoubleDragur();
+            DoubleDraugr dd = new DoubleDraugr();
             Assert.True(dd.Bun);
         }
 
         [Fact]
         public void ShouldIncludeKetchupByDefault()
         {
-            DoubleDragur dd = new DoubleDragur();
+            DoubleDraugr dd = new DoubleDraugr();
             Assert.True(dd.Ketchup);
         }
 
         [Fact]
         public void ShouldIncludeMustardByDefault()
         {
-            DoubleDragur dd = new DoubleDragur();
+            DoubleDraugr dd = new DoubleDraugr();
             Assert.True(dd.Mustard);
         }
 
         [Fact]
         public void ShouldIncludePickleByDefault()
         {
-            DoubleDragur dd = new DoubleDragur();
+            DoubleDraugr dd = new DoubleDraugr();
             Assert.True(dd.Pickle);
         }
 
         [Fact]
         public void ShouldIncludeCheeseByDefault()
         {
-            DoubleDragur dd = new DoubleDragur();
+            DoubleDraugr dd = new DoubleDraugr();
             Assert.True(dd.Cheese);
         }
 
         [Fact]
         public void ShouldIncludeTomatoByDefault()
         {
-            DoubleDragur dd = new DoubleDragur();
+            DoubleDraugr dd = new DoubleDraugr();
             Assert.True(dd.Tomato);
         }
 
         [Fact]
         public void ShouldIncludeLettuceByDefault()
         {
-            DoubleDragur dd = new DoubleDragur();
+            DoubleDraugr dd = new DoubleDraugr();
             Assert.True(dd.Lettuce);
         }
 
         [Fact]
         public void ShouldIncludeMayoByDefault()
         {
-            DoubleDragur dd = new DoubleDragur();
+            DoubleDraugr dd = new DoubleDraugr();
             Assert.True(dd.Mayo);
         }
 
         [Fact]
         public void ShouldBeAbleToSetBun()
         {
-            DoubleDragur dd = new DoubleDragur();
+            DoubleDraugr dd = new DoubleDraugr();
             dd.Bun = true;
             Assert.True(dd.Bun);
             dd.Bun = false;
@@ -81,7 +81,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         [Fact]
         public void ShouldBeAbleToSetKetchup()
         {
-            DoubleDragur dd = new DoubleDragur();
+            DoubleDraugr dd = new DoubleDraugr();
             dd.Ketchup = true;
             Assert.True(dd.Ketchup);
             dd.Ketchup = false;
@@ -91,7 +91,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         [Fact]
         public void ShouldBeAbleToSetMustard()
         {
-            DoubleDragur dd = new DoubleDragur();
+            DoubleDraugr dd = new DoubleDraugr();
             dd.Mustard = true;
             Assert.True(dd.Mustard);
             dd.Mustard = false;
@@ -101,7 +101,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         [Fact]
         public void ShouldBeAbleToSetPickle()
         {
-            DoubleDragur dd = new DoubleDragur();
+            DoubleDraugr dd = new DoubleDraugr();
             dd.Pickle = true;
             Assert.True(dd.Pickle);
             dd.Pickle = false;
@@ -111,7 +111,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         [Fact]
         public void ShouldBeAbleToSetCheese()
         {
-            DoubleDragur dd = new DoubleDragur();
+            DoubleDraugr dd = new DoubleDraugr();
             dd.Cheese = true;
             Assert.True(dd.Cheese);
             dd.Cheese = false;
@@ -121,7 +121,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         [Fact]
         public void ShouldBeAbleToSetTomato()
         {
-            DoubleDragur dd = new DoubleDragur();
+            DoubleDraugr dd = new DoubleDraugr();
             dd.Tomato = true;
             Assert.True(dd.Tomato);
             dd.Tomato = false;
@@ -131,7 +131,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         [Fact]
         public void ShouldBeAbleToSetLettuce()
         {
-            DoubleDragur dd = new DoubleDragur();
+            DoubleDraugr dd = new DoubleDraugr();
             dd.Lettuce = true;
             Assert.True(dd.Lettuce);
             dd.Lettuce = false;
@@ -141,7 +141,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         [Fact]
         public void ShouldBeAbleToSetMayo()
         {
-            DoubleDragur dd = new DoubleDragur();
+            DoubleDraugr dd = new DoubleDraugr();
             dd.Mayo = true;
             Assert.True(dd.Mayo);
             dd.Mayo = false;
@@ -151,14 +151,14 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         [Fact]
         public void ShouldReturnCorrectPrice()
         {
-            DoubleDragur dd = new DoubleDragur();
+            DoubleDraugr dd = new DoubleDraugr();
             Assert.Equal(7.32, dd.Price);
         }
 
         [Fact]
         public void ShouldReturnCorrectCalories()
         {
-            DoubleDragur dd = new DoubleDragur();
+            DoubleDraugr dd = new DoubleDraugr();
             Assert.Equal((uint)843, dd.Calories);
         }
 
@@ -169,7 +169,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
                                                                     bool includePickle, bool includeCheese, bool includeTomato,
                                                                     bool includeLettuce, bool includeMayo)
         {
-            DoubleDragur dd = new DoubleDragur();
+            DoubleDraugr dd = new DoubleDraugr();
             dd.Bun = includeBun;
             if (!includeBun) Assert.Contains("Hold bun", dd.SpecialInstructions);
             dd.Ketchup = includeKetchup;
@@ -190,7 +190,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         [Fact]
         public void ShouldReturnCorrectToString()
         {
-            DoubleDragur dd = new DoubleDragur();
+            DoubleDraugr dd = new DoubleDraugr();
             Assert.Equal("Double Draugr", dd.ToString());
         }
     }
