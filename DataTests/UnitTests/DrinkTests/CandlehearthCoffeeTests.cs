@@ -1,6 +1,6 @@
 ﻿/*
  * Author: Jack Seiler
- * Class: CandlehearthCoffeeTests.cs
+ * Class: WarriorWaterTests.cs
  * Purpose: Test the CandlehearthCoffee.cs class in the Data library
  */
 using Xunit;

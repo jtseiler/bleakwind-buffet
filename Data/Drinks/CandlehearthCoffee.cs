@@ -1,6 +1,6 @@
 ﻿/*
  * Author: Jack Seiler
- * Class name: CandlehearthCoffee.cs
+ * Class name: WarriorWater.cs
  * Purpose: gives details of this particular drink
  */
 using System;

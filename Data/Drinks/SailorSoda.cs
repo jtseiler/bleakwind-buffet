@@ -74,7 +74,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// property for choice of ice default to false
         /// </summary>
-        public bool Ice { get; set; } = false;
+        public bool Ice { get; set; } = true;
 
         /// <summary>
         /// Property representing the Flavor of the given soda
@@ -89,7 +89,7 @@ namespace BleakwindBuffet.Data.Drinks
             get
             {
                 List<string> instructions = new List<string>();
-                if (!Ice) instructions.Add("Add ice");
+                if (!Ice) instructions.Add("Hold ice");
                 return instructions;
             }
         }

@@ -56,9 +56,9 @@ namespace BleakwindBuffet.Data.Drinks
         }
 
         /// <summary>
-        /// property for choice of ice default to false
+        /// property for choice of ice default to true
         /// </summary>
-        public bool Ice { get; set; } = false;
+        public bool Ice { get; set; } = true;
 
         /// <summary>
         /// propety for the choice of lemon, default to false
@@ -74,7 +74,7 @@ namespace BleakwindBuffet.Data.Drinks
             {
                 List<string> instructions = new List<string>();
                 if (!Ice) instructions.Add("Hold ice");
-                if (Lemon) instructions.Add("add lemon");
+                if (Lemon) instructions.Add("Add lemon");
                 return instructions;
             }
         }
