@@ -40,7 +40,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// property for the choice of hashbrowns, default set to true
         /// </summary>
-        public bool Hashbrowns { get; set; } = true;
+        public bool HashBrowns { get; set; } = true;
 
         /// <summary>
         /// property for the choice of pancakes, default set to true
@@ -57,7 +57,7 @@ namespace BleakwindBuffet.Data.Entrees
                 List<string> instructions = new List<string>();
                 if (!SausageLink) instructions.Add("Hold sausage");
                 if (!Egg) instructions.Add("Hold eggs");
-                if (!Hashbrowns) instructions.Add("Hold hash browns");
+                if (!HashBrowns) instructions.Add("Hold hash browns");
                 if (!Pancake) instructions.Add("Hold pancakes");
                 return instructions;
             }

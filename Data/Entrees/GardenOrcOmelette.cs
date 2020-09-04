@@ -15,7 +15,7 @@ namespace BleakwindBuffet.Data.Entrees
     /// <summary>
     /// Creating an addition to the drink menu under the entree namespace
     /// </summary>
-    public class GardenOrcOmelete
+    public class GardenOrcOmelette
     {
         /// <summary>
         /// Property to keep track of the price
@@ -35,7 +35,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// property for the choice of mushroom, default to true
         /// </summary>
-        public bool Mushroom { get; set; } = true;
+        public bool Mushrooms { get; set; } = true;
 
         /// <summary>
         /// property for the choice of tomatoes, default to true
@@ -56,7 +56,7 @@ namespace BleakwindBuffet.Data.Entrees
             {
                 List<string> instructions = new List<string>();
                 if (!Broccoli) instructions.Add("Hold broccoli");
-                if (!Mushroom) instructions.Add("Hold mushrooms");
+                if (!Mushrooms) instructions.Add("Hold mushrooms");
                 if (!Tomato) instructions.Add("Hold tomato");
                 if (!Cheddar) instructions.Add("Hold cheddar");
                 return instructions;

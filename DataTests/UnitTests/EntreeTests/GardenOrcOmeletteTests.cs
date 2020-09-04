@@ -23,7 +23,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         public void ShouldInlcudeMushroomsByDefault()
         {
             GardenOrcOmelete oo = new GardenOrcOmelete();
-            Assert.True(oo.Mushroom);
+            Assert.True(oo.Mushrooms);
         }
 
         [Fact]
@@ -54,10 +54,10 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         public void ShouldBeAbleToSetMushrooms()
         {
             GardenOrcOmelete oo = new GardenOrcOmelete();
-            oo.Mushroom = true;
-            Assert.True(oo.Mushroom);
-            oo.Mushroom = false;
-            Assert.False(oo.Mushroom);
+            oo.Mushrooms = true;
+            Assert.True(oo.Mushrooms);
+            oo.Mushrooms = false;
+            Assert.False(oo.Mushrooms);
         }
 
         [Fact]
@@ -103,7 +103,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             GardenOrcOmelete oo = new GardenOrcOmelete();
             oo.Broccoli = includeBroccoli;
             if (!includeBroccoli) Assert.Contains("Hold broccoli", oo.SpecialInstructions);
-            oo.Mushroom = includeMushrooms;
+            oo.Mushrooms = includeMushrooms;
             if (!includeMushrooms) Assert.Contains("Hold mushrooms", oo.SpecialInstructions);
             oo.Tomato = includeTomato;
             if (!includeTomato) Assert.Contains("Hold tomato", oo.SpecialInstructions);
