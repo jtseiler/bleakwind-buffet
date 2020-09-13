@@ -28,40 +28,44 @@ namespace BleakwindBuffet.Data
             return entrees;
         }
 
+        /// <summary>
+        /// Gets all of the sides on the menu, is also size specific
+        /// </summary>
+        /// <returns>A list of all size specific sides on the menu</returns>
         public static IEnumerable<IOrderItem> Sides()
         {
             List<IOrderItem> sides = new List<IOrderItem>();
             sides.Add(new DragonbornWaffleFries());
-            DragonbornWaffleFries bMed = new DragonbornWaffleFries();
-            sideIncrease(bMed, Size.Medium);
-            sides.Add(bMed);
-            DragonbornWaffleFries bLarge = new DragonbornWaffleFries();
-            sideIncrease(bLarge, Size.Large);
-            sides.Add(bLarge);
+            DragonbornWaffleFries dbMed = new DragonbornWaffleFries();
+            sideIncrease(dbMed, Size.Medium);
+            sides.Add(dbMed);
+            DragonbornWaffleFries dbLarge = new DragonbornWaffleFries();
+            sideIncrease(dbLarge, Size.Large);
+            sides.Add(dbLarge);
 
             sides.Add(new FriedMiraak());
-            FriedMiraak cMed = new FriedMiraak();
-            sideIncrease(cMed, Size.Medium);
-            sides.Add(cMed);
-            FriedMiraak cLarge = new FriedMiraak();
-            sideIncrease(cLarge, Size.Large);
-            sides.Add(cLarge);
+            FriedMiraak fmMed = new FriedMiraak();
+            sideIncrease(fmMed, Size.Medium);
+            sides.Add(fmMed);
+            FriedMiraak fmLarge = new FriedMiraak();
+            sideIncrease(fmLarge, Size.Large);
+            sides.Add(fmLarge);
 
             sides.Add(new MadOtarGrits());
-            MadOtarGrits dMed = new MadOtarGrits();
-            sideIncrease(dMed, Size.Medium);
-            sides.Add(dMed);
-            MadOtarGrits dLarge = new MadOtarGrits();
-            sideIncrease(dLarge, Size.Large);
-            sides.Add(dLarge);
+            MadOtarGrits mogMed = new MadOtarGrits();
+            sideIncrease(mogMed, Size.Medium);
+            sides.Add(mogMed);
+            MadOtarGrits mogLarge = new MadOtarGrits();
+            sideIncrease(mogLarge, Size.Large);
+            sides.Add(mogLarge);
 
             sides.Add(new VokunSalad());
-            VokunSalad cdMed = new VokunSalad();
-            sideIncrease(cdMed, Size.Medium);
-            sides.Add(cdMed);
-            VokunSalad cdLarge = new VokunSalad();
-            sideIncrease(cdLarge, Size.Large);
-            sides.Add(cdLarge);
+            VokunSalad vsMed = new VokunSalad();
+            sideIncrease(vsMed, Size.Medium);
+            sides.Add(vsMed);
+            VokunSalad vsLarge = new VokunSalad();
+            sideIncrease(vsLarge, Size.Large);
+            sides.Add(vsLarge);
             return sides;
         }
 
@@ -73,37 +77,57 @@ namespace BleakwindBuffet.Data
         {
             List<IOrderItem> drinks = new List<IOrderItem>();
             drinks.Add(new AretinoAppleJuice());
-            AretinoAppleJuice jMed = new AretinoAppleJuice();
-            drinkIncrease(jMed, Size.Medium);
-            drinks.Add(jMed);
-            AretinoAppleJuice jLarge = new AretinoAppleJuice();
-            drinkIncrease(jLarge, Size.Large);
-            drinks.Add(jLarge);
+            AretinoAppleJuice aaMed = new AretinoAppleJuice();
+            drinkIncrease(aaMed, Size.Medium);
+            drinks.Add(aaMed);
+            AretinoAppleJuice aaLarge = new AretinoAppleJuice();
+            drinkIncrease(aaLarge, Size.Large);
+            drinks.Add(aaLarge);
 
             drinks.Add(new CandlehearthCoffee());
-            CandlehearthCoffee cMed = new CandlehearthCoffee();
-            drinkIncrease(cMed, Size.Medium);
-            drinks.Add(cMed);
-            CandlehearthCoffee cLarge = new CandlehearthCoffee();
-            drinkIncrease(cLarge, Size.Large);
-            drinks.Add(cLarge);
+            CandlehearthCoffee ccMed = new CandlehearthCoffee();
+            drinkIncrease(ccMed, Size.Medium);
+            drinks.Add(ccMed);
+            CandlehearthCoffee ccLarge = new CandlehearthCoffee();
+            drinkIncrease(ccLarge, Size.Large);
+            drinks.Add(ccLarge);
 
             drinks.Add(new MarkarthMilk());
-            MarkarthMilk tMed = new MarkarthMilk();
-            drinkIncrease(tMed, Size.Medium);
-            drinks.Add(tMed);
-            MarkarthMilk tLarge = new MarkarthMilk();
-            drinkIncrease(tLarge, Size.Large);
-            drinks.Add(tLarge);
+            MarkarthMilk mmMed = new MarkarthMilk();
+            drinkIncrease(mmMed, Size.Medium);
+            drinks.Add(mmMed);
+            MarkarthMilk mmLarge = new MarkarthMilk();
+            drinkIncrease(mmLarge, Size.Large);
+            drinks.Add(mmLarge);
 
             drinks.Add(new WarriorWater());
-            WarriorWater wMed = new WarriorWater();
-            drinkIncrease(wMed, Size.Medium);
-            drinks.Add(wMed);
-            WarriorWater wLarge = new WarriorWater();
-            drinkIncrease(wLarge, Size.Large);
-            drinks.Add(wLarge);
+            WarriorWater wwMed = new WarriorWater();
+            drinkIncrease(wwMed, Size.Medium);
+            drinks.Add(wwMed);
+            WarriorWater wwLarge = new WarriorWater();
+            drinkIncrease(wwLarge, Size.Large);
+            drinks.Add(wwLarge);
             return drinks;
+        }
+
+        /// <summary>
+        /// Changes the size of the side
+        /// </summary>
+        /// <param name="side"></param>
+        /// <param name="s"></param>
+        public static void sideIncrease(Side side, Size s)
+        {
+            side.Size = s;
+        }
+
+        /// <summary>
+        /// Changes the size of the drink
+        /// </summary>
+        /// <param name="drink"></param>
+        /// <param name="s"></param>
+        public static void drinkIncrease(Drink drink, Size s)
+        {
+            drink.Size = s;
         }
 
         /// <summary>
