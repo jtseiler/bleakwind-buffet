@@ -15,17 +15,17 @@ namespace BleakwindBuffet.Data.Entrees
     /// <summary>
     /// Creating an addition to the drink menu under the entree namespace
     /// </summary>
-    public class PhillyPoacher
+    public class PhillyPoacher : Entree
     {
         // <summary>
         /// Property to keep track of the price
         /// </summary>
-        public double Price => 7.23;
+        public override double Price => 7.23;
 
         /// <summary>
         /// variable to keep track of the items calories
         /// </summary>
-        public uint Calories => 784;
+        public override uint Calories => 784;
 
         /// <summary>
         /// property for the choice of Sirloin, default to true
@@ -45,7 +45,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// special instructions should customer want any unusal additions or subractions from their item
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

@@ -16,7 +16,7 @@ namespace BleakwindBuffet.Data.Sides
     /// <summary>
     /// Creating an addition to the side menu under the sides namespace
     /// </summary>
-    public class MadOtarGrits
+    public class MadOtarGrits : Side
     {
         /// <summary>
         /// Property to keep track of the price
@@ -26,7 +26,7 @@ namespace BleakwindBuffet.Data.Sides
         /// <summary>
         /// Getter for the price after customer chooses a size, default free for water
         /// </summary>
-        public double Price
+        public override double Price
         {
             get
             {
@@ -43,11 +43,6 @@ namespace BleakwindBuffet.Data.Sides
         }
 
         /// <summary>
-        /// getter and setter for the Size property set to default small
-        /// </summary>
-        public Size Size { get; set; } = Size.Small;
-
-        /// <summary>
         /// variable to keep track of the items calories
         /// </summary>
         uint calories;
@@ -55,7 +50,7 @@ namespace BleakwindBuffet.Data.Sides
         /// <summary>
         /// getter for the calories after customer chooses a size
         /// </summary>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
@@ -74,7 +69,7 @@ namespace BleakwindBuffet.Data.Sides
         /// <summary>
         /// special instructions should customer want any unusal additions or subractions from their item
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

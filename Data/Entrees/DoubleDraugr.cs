@@ -15,17 +15,17 @@ namespace BleakwindBuffet.Data.Entrees
     /// <summary>
     /// Creating an addition to the drink menu under the entree namespace
     /// </summary>
-    public class DoubleDraugr
+    public class DoubleDraugr : Entree
     {
         /// <summary>
         /// Property to keep track of the price
         /// </summary>
-        public double Price => 7.32;
+        public override double Price => 7.32;
 
         /// <summary>
         /// variable to keep track of the items calories
         /// </summary>
-        public uint Calories => 843;
+        public override uint Calories => 843;
 
         /// <summary>
         /// property for the choice of ketchup, default to true
@@ -70,7 +70,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// special instructions should customer want any unusal additions or subractions from their item
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

@@ -16,7 +16,7 @@ namespace BleakwindBuffet.Data.Drinks
     /// <summary>
     /// Creating an addition to the drink menu under the drink namespace
     /// </summary>
-    public class SailorSoda
+    public class SailorSoda : Drink
     {
         /// <summary>
         /// Property to keep track of the price
@@ -26,7 +26,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Getter for the price after customer chooses a size
         /// </summary>
-        public double Price
+        public override double Price
         {
             get
             {
@@ -43,11 +43,6 @@ namespace BleakwindBuffet.Data.Drinks
         }
 
         /// <summary>
-        /// getter and setter for the Size property set to default small
-        /// </summary>
-        public Size Size { get; set; } = Size.Small;
-
-        /// <summary>
         /// variable to keep track of the items calories
         /// </summary>
         uint calories;
@@ -55,7 +50,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// getter for the calories after customer chooses a size
         /// </summary>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
@@ -84,7 +79,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// special instructions should customer want any unusal additions or subractions from their item
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {
