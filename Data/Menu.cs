@@ -40,16 +40,16 @@ namespace BleakwindBuffet.Data
         public static IEnumerable<IOrderItem> Sides()
         {
             List<IOrderItem> sides = new List<IOrderItem>();
-            foreach(Size s in Enum.GetValues(typeof(Size)))
+            foreach(Size size in Enum.GetValues(typeof(Size)))
             {
                 DragonbornWaffleFries db = new DragonbornWaffleFries();
                 FriedMiraak fm = new FriedMiraak();
                 MadOtarGrits mog = new MadOtarGrits();
                 VokunSalad vs = new VokunSalad();
-                db.Size = s;
-                fm.Size = s;
-                mog.Size = s;
-                vs.Size = s;
+                db.Size = size;
+                fm.Size = size;
+                mog.Size = size;
+                vs.Size = size;
                 sides.Add(db);
                 sides.Add(fm);
                 sides.Add(mog);
@@ -65,25 +65,25 @@ namespace BleakwindBuffet.Data
         public static IEnumerable<IOrderItem> Drinks()
         {
             List<IOrderItem> drinks = new List<IOrderItem>();
-            foreach (Size s in Enum.GetValues(typeof(Size)))
+            foreach (Size size in Enum.GetValues(typeof(Size)))
             {
                 AretinoAppleJuice aa = new AretinoAppleJuice();
                 CandlehearthCoffee cc = new CandlehearthCoffee();
                 MarkarthMilk mm = new MarkarthMilk();
                 WarriorWater ww = new WarriorWater();
-                aa.Size = s;
-                cc.Size = s;
-                mm.Size = s;
-                ww.Size = s;
+                aa.Size = size;
+                cc.Size = size;
+                mm.Size = size;
+                ww.Size = size;
                 drinks.Add(aa);
                 drinks.Add(cc);
                 drinks.Add(mm);
                 drinks.Add(ww);
-                foreach (SodaFlavor f in Enum.GetValues(typeof(SodaFlavor)))
+                foreach (SodaFlavor flavor in Enum.GetValues(typeof(SodaFlavor)))
                 {
                     SailorSoda ss = new SailorSoda();
-                    ss.Size = s;
-                    ss.Flavor = f;
+                    ss.Size = size;
+                    ss.Flavor = flavor;
                     drinks.Add(ss);
                 }
             }
@@ -97,17 +97,17 @@ namespace BleakwindBuffet.Data
         public static IEnumerable<IOrderItem> FullMenu()
         {
             List<IOrderItem> all = new List<IOrderItem>();
-            foreach (IOrderItem i in Entrees())
+            foreach (IOrderItem entree in Entrees())
             {
-                all.Add(i);
+                all.Add(entree);
             }
-            foreach (IOrderItem s in Sides())
+            foreach (IOrderItem side in Sides())
             {
-                all.Add(s);
+                all.Add(side);
             }
-            foreach (IOrderItem d in Drinks())
+            foreach (IOrderItem drink in Drinks())
             {
-                all.Add(d);
+                all.Add(drink);
             }
             return all;
         }
