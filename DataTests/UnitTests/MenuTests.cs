@@ -15,44 +15,134 @@ namespace BleakwindBuffet.DataTests
 {
     public class MenuTests
     {
-        [Fact]
-        public void EntreesContainAllEntreeItems()
+        [Theory]
+        [InlineData("Briarheart Burger")]
+        [InlineData("Double Draugr")]
+        [InlineData("Garden Orc Omelette")]
+        [InlineData("Philly Poacher")]
+        [InlineData("Smokehouse Skeleton")]
+        [InlineData("Thalmor Triple")]
+        [InlineData("Thugs T-Bone")]
+        public void EntreesContainAllEntreeItems(string s)
         {
-            var entrees = Menu.Entrees();
-            foreach (IOrderItem i in entrees)
-            {
-                Assert.Contains(i, entrees);
-            }
+            List<IOrderItem> allEntrees = new List<IOrderItem>();
+            allEntrees = (List<IOrderItem>)Menu.Entrees();
+            Assert.Contains<IOrderItem>(allEntrees, (item) => item.ToString().Equals(s));
         }
 
-        [Fact]
-        public void SidesContainAllSideItems()
+        [Theory]
+        [InlineData("Small Dragonborn Waffle Fries")]
+        [InlineData("Medium Dragonborn Waffle Fries")]
+        [InlineData("Large Dragonborn Waffle Fries")]
+        [InlineData("Small Fried Miraak")]
+        [InlineData("Medium Fried Miraak")]
+        [InlineData("Large Fried Miraak")]
+        [InlineData("Small Mad Otar Grits")]
+        [InlineData("Medium Mad Otar Grits")]
+        [InlineData("Large Mad Otar Grits")]
+        [InlineData("Small Vokun Salad")]
+        [InlineData("Medium Vokun Salad")]
+        [InlineData("Large Vokun Salad")]
+        public void SidesContainAllSideItems(string s)
         {
-            var sides = Menu.Sides();
-            foreach (IOrderItem i in sides)
-            {
-                Assert.Contains(i, sides);
-            }
+            List<IOrderItem> allSides = new List<IOrderItem>();
+            allSides = (List<IOrderItem>)Menu.Sides();
+            Assert.Contains<IOrderItem>(allSides, (item) => item.ToString().Equals(s));
         }
 
-        [Fact]
-        public void DrinksContainAllDrinkItems()
+        [Theory]
+        [InlineData("Small Aretino Apple Juice")]
+        [InlineData("Medium Aretino Apple Juice")]
+        [InlineData("Large Aretino Apple Juice")]
+        [InlineData("Small Candlehearth Coffee")]
+        [InlineData("Medium Candlehearth Coffee")]
+        [InlineData("Large Candlehearth Coffee")]
+        [InlineData("Small Markarth Milk")]
+        [InlineData("Medium Markarth Milk")]
+        [InlineData("Large Markarth Milk")]
+        [InlineData("Small Cherry Sailor Soda")]
+        [InlineData("Medium Cherry Sailor Soda")]
+        [InlineData("Large Cherry Sailor Soda")]
+        [InlineData("Small Blackberry Sailor Soda")]
+        [InlineData("Medium Blackberry Sailor Soda")]
+        [InlineData("Large Blackberry Sailor Soda")]
+        [InlineData("Small Grapefruit Sailor Soda")]
+        [InlineData("Medium Grapefruit Sailor Soda")]
+        [InlineData("Large Grapefruit Sailor Soda")]
+        [InlineData("Small Lemon Sailor Soda")]
+        [InlineData("Medium Lemon Sailor Soda")]
+        [InlineData("Large Lemon Sailor Soda")]
+        [InlineData("Small Peach Sailor Soda")]
+        [InlineData("Medium Peach Sailor Soda")]
+        [InlineData("Large Peach Sailor Soda")]
+        [InlineData("Small Watermelon Sailor Soda")]
+        [InlineData("Medium Watermelon Sailor Soda")]
+        [InlineData("Large Watermelon Sailor Soda")]
+        [InlineData("Small Warrior Water")]
+        [InlineData("Medium Warrior Water")]
+        [InlineData("Large Warrior Water")]
+        public void DrinksContainAllDrinkItems(string s)
         {
-            var drinks = Menu.Drinks();
-            foreach (IOrderItem i in drinks)
-            {
-                Assert.Contains(i, drinks);
-            }
+            List<IOrderItem> allDrinks = new List<IOrderItem>();
+            allDrinks = (List<IOrderItem>)Menu.Drinks();
+            Assert.Contains<IOrderItem>(allDrinks, (item) => item.ToString().Equals(s));
         }
 
-        [Fact]
-        public void AllContainAllIOrderItems()
+        [Theory]
+        [InlineData("Small Aretino Apple Juice")]
+        [InlineData("Medium Aretino Apple Juice")]
+        [InlineData("Large Aretino Apple Juice")]
+        [InlineData("Small Candlehearth Coffee")]
+        [InlineData("Medium Candlehearth Coffee")]
+        [InlineData("Large Candlehearth Coffee")]
+        [InlineData("Small Markarth Milk")]
+        [InlineData("Medium Markarth Milk")]
+        [InlineData("Large Markarth Milk")]
+        [InlineData("Small Cherry Sailor Soda")]
+        [InlineData("Medium Cherry Sailor Soda")]
+        [InlineData("Large Cherry Sailor Soda")]
+        [InlineData("Small Blackberry Sailor Soda")]
+        [InlineData("Medium Blackberry Sailor Soda")]
+        [InlineData("Large Blackberry Sailor Soda")]
+        [InlineData("Small Grapefruit Sailor Soda")]
+        [InlineData("Medium Grapefruit Sailor Soda")]
+        [InlineData("Large Grapefruit Sailor Soda")]
+        [InlineData("Small Lemon Sailor Soda")]
+        [InlineData("Medium Lemon Sailor Soda")]
+        [InlineData("Large Lemon Sailor Soda")]
+        [InlineData("Small Peach Sailor Soda")]
+        [InlineData("Medium Peach Sailor Soda")]
+        [InlineData("Large Peach Sailor Soda")]
+        [InlineData("Small Watermelon Sailor Soda")]
+        [InlineData("Medium Watermelon Sailor Soda")]
+        [InlineData("Large Watermelon Sailor Soda")]
+        [InlineData("Small Warrior Water")]
+        [InlineData("Medium Warrior Water")]
+        [InlineData("Large Warrior Water")]
+        [InlineData("Briarheart Burger")]
+        [InlineData("Double Draugr")]
+        [InlineData("Garden Orc Omelette")]
+        [InlineData("Philly Poacher")]
+        [InlineData("Smokehouse Skeleton")]
+        [InlineData("Thalmor Triple")]
+        [InlineData("Thugs T-Bone")]
+        [InlineData("Small Dragonborn Waffle Fries")]
+        [InlineData("Medium Dragonborn Waffle Fries")]
+        [InlineData("Large Dragonborn Waffle Fries")]
+        [InlineData("Small Fried Miraak")]
+        [InlineData("Medium Fried Miraak")]
+        [InlineData("Large Fried Miraak")]
+        [InlineData("Small Mad Otar Grits")]
+        [InlineData("Medium Mad Otar Grits")]
+        [InlineData("Large Mad Otar Grits")]
+        [InlineData("Small Vokun Salad")]
+        [InlineData("Medium Vokun Salad")]
+        [InlineData("Large Vokun Salad")]
+        public void AllContainAllIOrderItems(string s)
         {
-            var all = Menu.FullMenu();
-            foreach (IOrderItem i in all)
-            {
-                Assert.Contains(i, all);
-            }
+            List<IOrderItem> fullMenu = new List<IOrderItem>();
+            fullMenu = (List<IOrderItem>)Menu.FullMenu();
+            Assert.Contains<IOrderItem>(fullMenu, (item) => item.ToString().Equals(s));
         }
     }
 }
