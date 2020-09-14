@@ -16,7 +16,7 @@ namespace BleakwindBuffet.Data.Drinks
     /// <summary>
     /// Creating an addition to the drink menu under the drink namespace
     /// </summary>
-    public class WarriorWater : Drink
+    public class WarriorWater : Drink, IOrderItem
     {
         /// <summary>
         /// Property to keep track of the price

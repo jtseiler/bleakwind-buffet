@@ -15,7 +15,7 @@ namespace BleakwindBuffet.Data.Entrees
     /// <summary>
     /// Creating an addition to the drink menu under the entree namespace
     /// </summary>
-    public class DoubleDraugr : Entree
+    public class DoubleDraugr : Entree, IOrderItem
     {
         /// <summary>
         /// Property to keep track of the price

@@ -16,7 +16,7 @@ namespace BleakwindBuffet.Data.Sides
     /// <summary>
     /// Creating an addition to the side menu under the sides namespace
     /// </summary>
-    public class FriedMiraak : Side
+    public class FriedMiraak : Side, IOrderItem
     {
         /// <summary>
         /// Property to keep track of the price

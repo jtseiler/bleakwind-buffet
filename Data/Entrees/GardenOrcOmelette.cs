@@ -15,7 +15,7 @@ namespace BleakwindBuffet.Data.Entrees
     /// <summary>
     /// Creating an addition to the drink menu under the entree namespace
     /// </summary>
-    public class GardenOrcOmelette : Entree
+    public class GardenOrcOmelette : Entree, IOrderItem
     {
         /// <summary>
         /// Property to keep track of the price

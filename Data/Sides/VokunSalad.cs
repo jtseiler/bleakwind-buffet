@@ -16,7 +16,7 @@ namespace BleakwindBuffet.Data.Sides
     /// <summary>
     /// Creating an addition to the side menu under the sides namespace
     /// </summary>
-    public class VokunSalad : Side
+    public class VokunSalad : Side, IOrderItem
     {
         /// <summary>
         /// Creating an addition to the side menu under the sides namespace

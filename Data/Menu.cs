@@ -35,37 +35,21 @@ namespace BleakwindBuffet.Data
         public static IEnumerable<IOrderItem> Sides()
         {
             List<IOrderItem> sides = new List<IOrderItem>();
-            sides.Add(new DragonbornWaffleFries());
-            DragonbornWaffleFries dbMed = new DragonbornWaffleFries();
-            sideIncrease(dbMed, Size.Medium);
-            sides.Add(dbMed);
-            DragonbornWaffleFries dbLarge = new DragonbornWaffleFries();
-            sideIncrease(dbLarge, Size.Large);
-            sides.Add(dbLarge);
-
-            sides.Add(new FriedMiraak());
-            FriedMiraak fmMed = new FriedMiraak();
-            sideIncrease(fmMed, Size.Medium);
-            sides.Add(fmMed);
-            FriedMiraak fmLarge = new FriedMiraak();
-            sideIncrease(fmLarge, Size.Large);
-            sides.Add(fmLarge);
-
-            sides.Add(new MadOtarGrits());
-            MadOtarGrits mogMed = new MadOtarGrits();
-            sideIncrease(mogMed, Size.Medium);
-            sides.Add(mogMed);
-            MadOtarGrits mogLarge = new MadOtarGrits();
-            sideIncrease(mogLarge, Size.Large);
-            sides.Add(mogLarge);
-
-            sides.Add(new VokunSalad());
-            VokunSalad vsMed = new VokunSalad();
-            sideIncrease(vsMed, Size.Medium);
-            sides.Add(vsMed);
-            VokunSalad vsLarge = new VokunSalad();
-            sideIncrease(vsLarge, Size.Large);
-            sides.Add(vsLarge);
+            foreach(Size s in Enum.GetValues(typeof(Size)))
+            {
+                DragonbornWaffleFries db = new DragonbornWaffleFries();
+                FriedMiraak fm = new FriedMiraak();
+                MadOtarGrits mog = new MadOtarGrits();
+                VokunSalad vs = new VokunSalad();
+                db.Size = s;
+                fm.Size = s;
+                mog.Size = s;
+                vs.Size = s;
+                sides.Add(db);
+                sides.Add(fm);
+                sides.Add(mog);
+                sides.Add(vs);
+            }
             return sides;
         }
 
@@ -76,58 +60,29 @@ namespace BleakwindBuffet.Data
         public static IEnumerable<IOrderItem> Drinks()
         {
             List<IOrderItem> drinks = new List<IOrderItem>();
-            drinks.Add(new AretinoAppleJuice());
-            AretinoAppleJuice aaMed = new AretinoAppleJuice();
-            drinkIncrease(aaMed, Size.Medium);
-            drinks.Add(aaMed);
-            AretinoAppleJuice aaLarge = new AretinoAppleJuice();
-            drinkIncrease(aaLarge, Size.Large);
-            drinks.Add(aaLarge);
-
-            drinks.Add(new CandlehearthCoffee());
-            CandlehearthCoffee ccMed = new CandlehearthCoffee();
-            drinkIncrease(ccMed, Size.Medium);
-            drinks.Add(ccMed);
-            CandlehearthCoffee ccLarge = new CandlehearthCoffee();
-            drinkIncrease(ccLarge, Size.Large);
-            drinks.Add(ccLarge);
-
-            drinks.Add(new MarkarthMilk());
-            MarkarthMilk mmMed = new MarkarthMilk();
-            drinkIncrease(mmMed, Size.Medium);
-            drinks.Add(mmMed);
-            MarkarthMilk mmLarge = new MarkarthMilk();
-            drinkIncrease(mmLarge, Size.Large);
-            drinks.Add(mmLarge);
-
-            drinks.Add(new WarriorWater());
-            WarriorWater wwMed = new WarriorWater();
-            drinkIncrease(wwMed, Size.Medium);
-            drinks.Add(wwMed);
-            WarriorWater wwLarge = new WarriorWater();
-            drinkIncrease(wwLarge, Size.Large);
-            drinks.Add(wwLarge);
+            foreach (Size s in Enum.GetValues(typeof(Size)))
+            {
+                AretinoAppleJuice aa = new AretinoAppleJuice();
+                CandlehearthCoffee cc = new CandlehearthCoffee();
+                MarkarthMilk mm = new MarkarthMilk();
+                WarriorWater ww = new WarriorWater();
+                aa.Size = s;
+                cc.Size = s;
+                mm.Size = s;
+                ww.Size = s;
+                drinks.Add(aa);
+                drinks.Add(cc);
+                drinks.Add(mm);
+                drinks.Add(ww);
+                foreach (SodaFlavor f in Enum.GetValues(typeof(SodaFlavor)))
+                {
+                    SailorSoda ss = new SailorSoda();
+                    ss.Size = s;
+                    ss.Flavor = f;
+                    drinks.Add(ss);
+                }
+            }
             return drinks;
-        }
-
-        /// <summary>
-        /// Changes the size of the side
-        /// </summary>
-        /// <param name="side"></param>
-        /// <param name="s"></param>
-        public static void sideIncrease(Side side, Size s)
-        {
-            side.Size = s;
-        }
-
-        /// <summary>
-        /// Changes the size of the drink
-        /// </summary>
-        /// <param name="drink"></param>
-        /// <param name="s"></param>
-        public static void drinkIncrease(Drink drink, Size s)
-        {
-            drink.Size = s;
         }
 
         /// <summary>
