@@ -199,6 +199,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             dd.Lettuce = includeLettuce;
             if (!includeLettuce) Assert.Contains("Hold lettuce", dd.SpecialInstructions);
             dd.Mayo = includeMayo;
+            if (!includeMayo) Assert.Contains("Hold mayo", dd.SpecialInstructions);
         }
 
         [Fact]

@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Jack Seiler
+ * Class name: IOrderItem.cs
+ * Purpose: gives the interface for the menu
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 

@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Jack Seiler
+ * Class name: Menu.cs
+ * Purpose: gives details of the menu
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
