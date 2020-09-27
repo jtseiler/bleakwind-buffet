@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PointOfSale"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="900">
+             d:DesignHeight="450" d:DesignWidth="800">
     <UserControl.Resources>
         <Style TargetType="Button">
             <Setter Property="Height" Value="50px"/>
@@ -21,7 +21,7 @@
         </Grid.ColumnDefinitions>
 
         <StackPanel Grid.Column="0">
-            <TextBlock TextAlignment="Center">Entrees</TextBlock>
+            <TextBlock FontSize="20" TextAlignment="Center">Entrees</TextBlock>
             <Button Name="AddBriarheartBurger">Briarheart Burger</Button>
             <Button Name="AddDoubleDraugr">Double Draugr</Button>
             <Button Name="AddGardenOrcOmelette">Garden Orc Omelette</Button>
@@ -32,7 +32,7 @@
         </StackPanel>
 
         <StackPanel Grid.Column="1">
-            <TextBlock TextAlignment="Center">Sides</TextBlock>
+            <TextBlock FontSize="20" TextAlignment="Center">Sides</TextBlock>
             <Button Name="AddDragonbornWaffleFries">Dragonborn Waffle Fries</Button>
             <Button Name="AddFriedMiraak">Fired Miraak</Button>
             <Button Name="AddMadOtarGrits">Mad Otar Grits</Button>
@@ -40,7 +40,7 @@
         </StackPanel>
 
         <StackPanel Grid.Column="2">
-            <TextBlock TextAlignment="Center">Drinks</TextBlock>
+            <TextBlock FontSize="20" TextAlignment="Center">Drinks</TextBlock>
             <Button Name="AddAretinoAppleJuice">Aretino Apple Juice</Button>
             <Button Name="AddCandlehearthCoffee">Candlehearth Coffee</Button>
             <Button Name="AddMarkarthMilk">Markarth Milk</Button>
@@ -49,8 +49,10 @@
         </StackPanel>
 
         <StackPanel Grid.Column="3">
-            <TextBlock TextAlignment="Center">Order</TextBlock>
+            <TextBlock FontSize="20" TextAlignment="Center">Order</TextBlock>
             <ListView Name="OrderListView"></ListView>
+           
         </StackPanel>
+        
     </Grid>
 </UserControl>
