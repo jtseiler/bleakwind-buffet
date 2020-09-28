@@ -6,7 +6,12 @@
              xmlns:local="clr-namespace:PointOfSale.CustomizeEntrees"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
-    </Grid>
+    <StackPanel>
+        <TextBlock FontSize="30" Text="Customize Philly Poacher!"/>
+        <StackPanel>
+            <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0">Sirloin</CheckBox>
+            <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0">Onion</CheckBox>
+            <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0">Roll</CheckBox>
+        </StackPanel>
+    </StackPanel>
 </UserControl>

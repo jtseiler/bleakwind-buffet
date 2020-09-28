@@ -6,7 +6,13 @@
              xmlns:local="clr-namespace:PointOfSale.CustomizeEntrees"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
-    </Grid>
+    <StackPanel>
+        <TextBlock FontSize="30" Text="Customize Garden Orc Omelette!"/>
+        <StackPanel>
+            <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0">Broccoli</CheckBox>
+            <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0">Tomato</CheckBox>
+            <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0">Mushrooms</CheckBox>
+            <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0">Cheddar</CheckBox>
+        </StackPanel>
+    </StackPanel>
 </UserControl>

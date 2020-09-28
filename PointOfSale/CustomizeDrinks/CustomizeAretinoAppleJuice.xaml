@@ -7,6 +7,10 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-            
+        <StackPanel>
+            <ListBox Name="selectSize" SelectedIndex="0" Margin="8"/>
+            <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0">Ice</CheckBox>
+            <Button Click="Update_Click">Update Order</Button>
+        </StackPanel>
     </Grid>
 </UserControl>
