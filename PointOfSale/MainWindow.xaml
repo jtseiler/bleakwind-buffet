@@ -16,7 +16,7 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <Frame x:Name="frame" Content="" Height="720" NavigationUIVisibility="Hidden" Grid.ColumnSpan="3" Margin="0,0,0,-16" />
+        <Frame x:Name="frame" Content="" NavigationUIVisibility="Hidden" Grid.ColumnSpan="3" Margin="0,284,0,-16" />
 
         <StackPanel Grid.Column="0">
             <TextBlock FontSize="20" TextAlignment="Center"><Run Text="Entrees"/></TextBlock>

@@ -12,6 +12,7 @@
             <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0">Sirloin</CheckBox>
             <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0">Onion</CheckBox>
             <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0">Roll</CheckBox>
+            <Button Content="Done" Margin="9" ClickMode="Release"/>
         </StackPanel>
     </StackPanel>
 </UserControl>

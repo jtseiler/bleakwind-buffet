@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Jack Seiler
+ * Class name: OrderControl.xaml.cs
+ * Purpose: gives details of this particular order
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -22,9 +27,10 @@ namespace PointOfSale
     /// </summary>
     public partial class OrderControl : UserControl
     {
-        
-
-        
+        public OrderControl()
+        {
+            InitializeComponent();
+        }
 
     }
 }

@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Jack Seiler
+ * Class name: MainWindow.xaml.cs
+ * Purpose: gives details of this particular order on the screen
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

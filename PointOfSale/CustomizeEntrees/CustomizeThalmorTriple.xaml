@@ -19,6 +19,7 @@
             <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0">Mayo</CheckBox>
             <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0">Bacon</CheckBox>
             <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0">Egg</CheckBox>
+            <Button Content="Done" Margin="9" ClickMode="Release"/>
         </StackPanel>
     </StackPanel>
 </UserControl>
