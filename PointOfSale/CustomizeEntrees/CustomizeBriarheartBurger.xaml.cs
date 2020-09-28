@@ -22,5 +22,6 @@ namespace PointOfSale.CustomizeEntrees
         {
             InitializeComponent();
         }
+
     }
 }

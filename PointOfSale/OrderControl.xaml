@@ -12,47 +12,4 @@
             <Setter Property="FontSize" Value="20"/>
         </Style>
     </UserControl.Resources>
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-
-        <StackPanel Grid.Column="0">
-            <TextBlock FontSize="20" TextAlignment="Center">Entrees</TextBlock>
-            <Button Name="AddBriarheartBurger">Briarheart Burger</Button>
-            <Button Name="AddDoubleDraugr">Double Draugr</Button>
-            <Button Name="AddGardenOrcOmelette">Garden Orc Omelette</Button>
-            <Button Name="AddPhillyPoacher">Philly Poacher</Button>
-            <Button Name="AddSmokehouseSkeleton">Smokehouse Skeleton</Button>
-            <Button Name="AddThalmorTriple">Thalmor Triple</Button>
-            <Button Name="AddThugsTBone">Thugs T-Bone</Button>
-        </StackPanel>
-
-        <StackPanel Grid.Column="1">
-            <TextBlock FontSize="20" TextAlignment="Center">Sides</TextBlock>
-            <Button Name="AddDragonbornWaffleFries">Dragonborn Waffle Fries</Button>
-            <Button Name="AddFriedMiraak">Fired Miraak</Button>
-            <Button Name="AddMadOtarGrits">Mad Otar Grits</Button>
-            <Button Name="AddVokunSalad">Vokun Salad</Button>
-        </StackPanel>
-
-        <StackPanel Grid.Column="2">
-            <TextBlock FontSize="20" TextAlignment="Center">Drinks</TextBlock>
-            <Button Name="AddAretinoAppleJuice">Aretino Apple Juice</Button>
-            <Button Name="AddCandlehearthCoffee">Candlehearth Coffee</Button>
-            <Button Name="AddMarkarthMilk">Markarth Milk</Button>
-            <Button Name="AddSailorSoda">Sailor Soda</Button>
-            <Button Name="AddWarriorWater">Warrior Water</Button>
-        </StackPanel>
-
-        <StackPanel Grid.Column="3">
-            <TextBlock FontSize="20" TextAlignment="Center">Order</TextBlock>
-            <ListView Name="OrderListView"></ListView>
-           
-        </StackPanel>
-        
-    </Grid>
 </UserControl>
