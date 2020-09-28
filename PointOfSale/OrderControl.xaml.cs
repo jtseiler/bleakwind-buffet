@@ -24,6 +24,8 @@ namespace PointOfSale
         public OrderControl()
         {
             InitializeComponent();
+            this.DataContext = new Order();
+
             AddBriarheartBurger.Click += OnAddBriarheartBurgerButtonClicked;
             AddDoubleDraugr.Click += OnAddDoubleDraugrButtonClicked;
             AddGardenOrcOmelette.Click += OnAddGardenOrcOmeletteButtonClicked;
