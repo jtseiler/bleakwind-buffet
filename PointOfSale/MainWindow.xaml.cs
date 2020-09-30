@@ -36,7 +36,7 @@ namespace PointOfSale
             InitializeComponent();
         }
 
-
+/*
         // <summary>
         /// Adds Vokun Salad to the Order list
         /// </summary>
@@ -185,5 +185,7 @@ namespace PointOfSale
         {
             frame.NavigationService.Navigate(new CustomizeWarriorWater());
         }
+
+*/
     }
 }

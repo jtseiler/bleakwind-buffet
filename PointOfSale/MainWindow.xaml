@@ -8,48 +8,6 @@
         Title="MainWindow" Height="720" Width="1280">
 
     <Grid>
-
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-
-        <Frame x:Name="frame" Content="" NavigationUIVisibility="Hidden" Grid.ColumnSpan="3" Margin="0,284,0,-16" />
-
-        <StackPanel Grid.Column="0">
-            <TextBlock FontSize="20" TextAlignment="Center"><Run Text="Entrees"/></TextBlock>
-            <Button x:Name="AddBriarheartBurger" Content="Briarheart Burger" Click="AddBriarheartBurger_Click_1"/>
-            <Button x:Name="AddDoubleDraugr" Content="Double Draugr" Click="AddDoubleDraugr_Click"/>
-            <Button x:Name="AddGardenOrcOmelette" Content="Garden Orc Omelette" Click="AddGardenOrcOmelette_Click"/>
-            <Button x:Name="AddPhillyPoacher" Content="Philly Poacher" Click="AddPhillyPoacher_Click"/>
-            <Button x:Name="AddSmokehouseSkeleton" Content="Smokehouse Skeleton" Click="AddSmokehouseSkeleton_Click"/>
-            <Button x:Name="AddThalmorTriple" Content="Thalmor Triple" Click="AddThalmorTriple_Click"/>
-            <Button x:Name="AddThugsTBone" Content="Thugs T-Bone"/>
-        </StackPanel>
-
-        <StackPanel Grid.Column="1">
-            <TextBlock FontSize="20" TextAlignment="Center"><Run Text="Sides"/></TextBlock>
-            <Button x:Name="AddDragonbornWaffleFries" Content="Dragonborn Waffle Fries" Click="AddDragonbornWaffleFries_Click"/>
-            <Button x:Name="AddFriedMiraak" Content="Fired Miraak" Click="AddFriedMiraak_Click"/>
-            <Button x:Name="AddMadOtarGrits" Content="Mad Otar Grits" Click="AddMadOtarGrits_Click"/>
-            <Button x:Name="AddVokunSalad" Content="Vokun Salad" Click="AddVokunSalad_Click"/>
-        </StackPanel>
-
-        <StackPanel Grid.Column="2">
-            <TextBlock FontSize="20" TextAlignment="Center"><Run Text="Drinks"/></TextBlock>
-            <Button x:Name="AddAretinoAppleJuice" Content="Aretino Apple Juice" Click="AddAretinoAppleJuice_Click"/>
-            <Button x:Name="AddCandlehearthCoffee" Content="Candlehearth Coffee" Click="AddCandlehearthCoffee_Click"/>
-            <Button x:Name="AddMarkarthMilk" Content="Markarth Milk" Click="AddMarkarthMilk_Click"/>
-            <Button x:Name="AddSailorSoda" Content="Sailor Soda" Click="AddSailorSoda_Click"/>
-            <Button x:Name="AddWarriorWater" Content="Warrior Water" Click="AddWarriorWater_Click"/>
-        </StackPanel>
-
-        <StackPanel Grid.Column="3">
-            <TextBlock FontSize="20" TextAlignment="Center"><Run Text="Order"/></TextBlock>
-            <ListView x:Name="OrderListView"/>
-        </StackPanel>
-
+        <local:OrderControl></local:OrderControl>
     </Grid>
 </Window>

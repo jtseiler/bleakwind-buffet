@@ -6,10 +6,38 @@
              xmlns:local="clr-namespace:PointOfSale"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <UserControl.Resources>
-        <Style TargetType="Button">
-            <Setter Property="Height" Value="50px"/>
-            <Setter Property="FontSize" Value="20"/>
-        </Style>
-    </UserControl.Resources>
+
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Column="4" Grid.RowSpan="3" Margin="0,20,20,20" BorderBrush="Black" BorderThickness="2">
+            <StackPanel Grid.Column="3" Grid.RowSpan="3">
+                <TextBlock FontSize="20" TextAlignment="Center">Order:</TextBlock>
+                <ListView Name="OrderListView"></ListView>
+            </StackPanel>
+        </Border>
+        
+        <Border Grid.ColumnSpan="3" Grid.RowSpan="3" Margin="20,20,20,20" BorderBrush="Black" BorderThickness="2">
+            <TextBlock Grid.ColumnSpan="3" Grid.Row="1" Margin="0,0,200,370" FontSize="25" FontWeight="Bold">Bleakwind Buffet Menu Items</TextBlock>
+        </Border>
+
+        <StackPanel Grid.Column="0" Grid.RowSpan="3">
+
+        </StackPanel>
+
+    </Grid>
+
+    
 </UserControl>
