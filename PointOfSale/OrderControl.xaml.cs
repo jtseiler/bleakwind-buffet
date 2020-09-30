@@ -27,6 +27,11 @@ namespace PointOfSale
     /// </summary>
     public partial class OrderControl : UserControl
     {
+        /// <summary>
+        /// The ancestor of this control
+        /// </summary>
+        public MainWindow Ancestor { get; set; }
+
         public OrderControl()
         {
             InitializeComponent();

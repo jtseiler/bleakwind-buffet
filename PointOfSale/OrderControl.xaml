@@ -7,6 +7,12 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
 
+    <UserControl.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Height" Value="47px"/>
+            <Setter Property="FontSize" Value="15"/>
+        </Style>
+    </UserControl.Resources>
     <Grid>
 
         <Grid.ColumnDefinitions>
@@ -33,11 +39,34 @@
             <TextBlock Grid.ColumnSpan="3" Grid.Row="1" Margin="0,0,200,370" FontSize="25" FontWeight="Bold">Bleakwind Buffet Menu Items</TextBlock>
         </Border>
 
-        <StackPanel Grid.Column="0" Grid.RowSpan="3">
+        <StackPanel Grid.Column="0" Grid.RowSpan="3" Margin="25,70,0,20">
+            <TextBlock FontSize="20" FontWeight="Medium" TextAlignment="Center">Entrees</TextBlock>
+            <Button>Briarheart Burger</Button>
+            <Button>Double Draugr</Button>
+            <Button>Garden Orc Omelette</Button>
+            <Button>Philly Poacher</Button>
+            <Button>Smokehouse Skeleton</Button>
+            <Button>Thalmor Triple</Button>
+            <Button>Thugs T-Bone</Button>
+        </StackPanel>
 
+        <StackPanel Grid.Column="1" Grid.RowSpan="3" Margin="20,70,0,20">
+            <TextBlock FontSize="20" FontWeight="Medium" TextAlignment="Center">Sides</TextBlock>
+            <Button>Dragonborn Waffle Fries</Button>
+            <Button>Fried Miraak</Button>
+            <Button>Mad Otar Grits</Button>
+            <Button>Vokun Salad</Button>
+        </StackPanel>
+
+        <StackPanel Grid.Column="2" Grid.RowSpan="3" Margin="20,70,25,20">
+            <TextBlock FontSize="20" FontWeight="Medium" TextAlignment="Center">Drinks</TextBlock>
+            <Button>Aretino Apple Juice</Button>
+            <Button>Candlehearth Coffee</Button>
+            <Button>Markarth Milk</Button>
+            <Button>Sailor Soda</Button>
+            <Button>Warrior Water</Button>
         </StackPanel>
 
     </Grid>
 
-    
 </UserControl>
