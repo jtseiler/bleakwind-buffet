@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Jack Seiler
+ * Class name: CustomizeDoubleDraugr.xaml.cs
+ * Purpose: gives details of the double draugr
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -18,14 +23,26 @@ namespace PointOfSale.CustomizeEntrees
     /// </summary>
     public partial class CustomzieDoubleDraugr : UserControl
     {
+        /// <summary>
+        /// creates mainwindow ancestor property
+        /// </summary>
         MainWindow ancestor;
 
+        /// <summary>
+        /// constructs an object stating this item as the ancestor
+        /// </summary>
+        /// <param name="ancestor"></param>
         public CustomzieDoubleDraugr(MainWindow ancestor)
         {
             InitializeComponent();
             this.ancestor = ancestor;
         }
 
+        /// <summary>
+        /// click event handler for switching screens
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void OnSwitchScreen(object sender, RoutedEventArgs e)
         {
             ancestor.SwitchScreen(Screen.Home);

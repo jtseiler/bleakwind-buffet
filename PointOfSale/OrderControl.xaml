@@ -44,12 +44,12 @@
 
         <StackPanel Grid.Column="0" Grid.RowSpan="3" Margin="25,70,0,20">
             <TextBlock FontSize="20" FontWeight="Medium" TextAlignment="Center">Entrees</TextBlock>
-            <Button Click="onSwitchScreen" Name="brair">Briarheart Burger</Button>
-            <Button Click="onSwitchScreen" Name="draugr">Double Draugr</Button>
-            <Button Click="onSwitchScreen" Name="orc">Garden Orc Omelette</Button>
-            <Button Click="onSwitchScreen" Name="philly">Philly Poacher</Button>
-            <Button Click="onSwitchScreen" Name="skeleton">Smokehouse Skeleton</Button>
-            <Button Click="onSwitchScreen" Name="thalmor">Thalmor Triple</Button>
+            <Button Click="onSwitchScreen">Briarheart Burger</Button>
+            <Button Click="onSwitchScreen">Double Draugr</Button>
+            <Button Click="onSwitchScreen">Garden Orc Omelette</Button>
+            <Button Click="onSwitchScreen">Philly Poacher</Button>
+            <Button Click="onSwitchScreen">Smokehouse Skeleton</Button>
+            <Button Click="onSwitchScreen">Thalmor Triple</Button>
             <Button>Thugs T-Bone</Button>
         </StackPanel>
 
