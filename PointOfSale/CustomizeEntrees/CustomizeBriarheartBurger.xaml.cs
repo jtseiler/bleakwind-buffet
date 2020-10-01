@@ -20,15 +20,16 @@ namespace PointOfSale.CustomizeEntrees
     {
         MainWindow ancestor;
 
-        public CustomizeBriarheartBurger()
+        public CustomizeBriarheartBurger(MainWindow ancestor)
         {
             InitializeComponent();
-            //this.ancestor = ancestor;
+            this.ancestor = ancestor;
         }
 
         void OnSwitchScreen(object sender, RoutedEventArgs e)
         {
             ancestor.SwitchScreen();
         }
+
     }
 }

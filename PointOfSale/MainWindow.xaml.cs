@@ -41,10 +41,21 @@ namespace PointOfSale
             //screens.Add(Screen.OtherDescendant, new CustomizeBriarheartBurger(this));
         }
 
-        public void SwitchScreen()
+        public void SwitchScreen(String name)
         {
+            switch(name)
+            {
+                case "Descendant":
+                    switchableContent.Child = new CustomizeBriarheartBurger(this);
+                    break;
+                case "Other Descendant":
+                    var descendant = new OrderControl();
+                    descendant.Ancestor = this;
+                    switchableContent.Child = descendant;
+                    break;
+            }
             //switchableContent.Child = screens[screen];
-            switchableContent.Child = new CustomizeBriarheartBurger();
+            
         }
 /*
         // <summary>

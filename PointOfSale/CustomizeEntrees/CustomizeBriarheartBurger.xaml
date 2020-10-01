@@ -14,7 +14,7 @@
             <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0">Mustard</CheckBox>
             <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0">Pickle</CheckBox>
             <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0">Cheese</CheckBox>
-            <Button Content="Done" Margin="9" ClickMode="Release"/>
+            <Button Click="OnSwitchScreen" Content="Done" Margin="9" ClickMode="Release"/>
         </StackPanel>
     </StackPanel>
 </UserControl>
