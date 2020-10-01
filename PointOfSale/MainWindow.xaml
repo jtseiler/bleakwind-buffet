@@ -7,7 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="720" Width="1280">
 
-    <Grid>
-        <local:OrderControl></local:OrderControl>
-    </Grid>
+    <Border x:Name="switchableContent">
+        <local:OrderControl x:Name="descendant"/>
+    </Border>
+    
 </Window>

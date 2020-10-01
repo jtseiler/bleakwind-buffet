@@ -37,5 +37,10 @@ namespace PointOfSale
             InitializeComponent();
         }
 
+        void onSwitchScreen(object sender, RoutedEventArgs e)
+        {
+            Ancestor.SwitchScreen();
+        }
+
     }
 }

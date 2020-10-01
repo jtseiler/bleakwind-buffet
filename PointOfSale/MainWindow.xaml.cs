@@ -31,11 +31,21 @@ namespace PointOfSale
     /// </summary>
     public partial class MainWindow : Window
     {
+        //Dictionary<Screen, UserControl> screens = new Dictionary<Screen, UserControl>();
+
         public MainWindow()
         {
             InitializeComponent();
+            descendant.Ancestor = this;
+            //screens.Add(Screen.Descendant, descendant);
+            //screens.Add(Screen.OtherDescendant, new CustomizeBriarheartBurger(this));
         }
 
+        public void SwitchScreen()
+        {
+            //switchableContent.Child = screens[screen];
+            switchableContent.Child = new CustomizeBriarheartBurger();
+        }
 /*
         // <summary>
         /// Adds Vokun Salad to the Order list

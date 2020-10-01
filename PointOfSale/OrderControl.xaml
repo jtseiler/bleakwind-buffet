@@ -34,14 +34,14 @@
                 <ListView Name="OrderListView"></ListView>
             </StackPanel>
         </Border>
-        
+
         <Border Grid.ColumnSpan="3" Grid.RowSpan="3" Margin="20,20,20,20" BorderBrush="Black" BorderThickness="2">
             <TextBlock Grid.ColumnSpan="3" Grid.Row="1" Margin="0,0,200,370" FontSize="25" FontWeight="Bold">Bleakwind Buffet Menu Items</TextBlock>
         </Border>
 
         <StackPanel Grid.Column="0" Grid.RowSpan="3" Margin="25,70,0,20">
             <TextBlock FontSize="20" FontWeight="Medium" TextAlignment="Center">Entrees</TextBlock>
-            <Button>Briarheart Burger</Button>
+            <Button Click="onSwitchScreen">Briarheart Burger</Button>
             <Button>Double Draugr</Button>
             <Button>Garden Orc Omelette</Button>
             <Button>Philly Poacher</Button>
