@@ -66,12 +66,36 @@ namespace PointOfSale
                 case "System.Windows.Controls.Button: Thalmor Triple":
                     Ancestor.SwitchScreen(Screen.custThalmorTriple);
                     break;
+                case "System.Windows.Controls.Button: Dragonborn Waffle Fries":
+                    Ancestor.SwitchScreen(Screen.custGardenOrcOmelette);
+                    break;
+                case "System.Windows.Controls.Button: Fried Miraak":
+                    Ancestor.SwitchScreen(Screen.custPhillyPoacher);
+                    break;
+                case "System.Windows.Controls.Button: Mad Otar Grits":
+                    Ancestor.SwitchScreen(Screen.custSmokehouseSkeleton);
+                    break;
+                case "System.Windows.Controls.Button: Vokun Salad":
+                    Ancestor.SwitchScreen(Screen.custThalmorTriple);
+                    break;
+                case "System.Windows.Controls.Button: Aretino Apple Juice":
+                    Ancestor.SwitchScreen(Screen.custGardenOrcOmelette);
+                    break;
+                case "System.Windows.Controls.Button: Candlehearth Coffee":
+                    Ancestor.SwitchScreen(Screen.custPhillyPoacher);
+                    break;
+                case "System.Windows.Controls.Button: Markarth Milk":
+                    Ancestor.SwitchScreen(Screen.custSmokehouseSkeleton);
+                    break;
+                case "System.Windows.Controls.Button: Sailor Soda":
+                    Ancestor.SwitchScreen(Screen.custThalmorTriple);
+                    break;
+                case "System.Windows.Controls.Button: Warrior Water":
+                    Ancestor.SwitchScreen(Screen.custThalmorTriple);
+                    break;
             }
-                
-                
 
-            //Ancestor.SwitchScreen(GetScreen());
-            }
+        }
 
     }
 }
