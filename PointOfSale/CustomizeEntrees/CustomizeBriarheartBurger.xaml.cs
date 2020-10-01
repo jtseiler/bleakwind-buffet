@@ -28,7 +28,7 @@ namespace PointOfSale.CustomizeEntrees
 
         void OnSwitchScreen(object sender, RoutedEventArgs e)
         {
-            ancestor.SwitchScreen();
+            ancestor.SwitchScreen(Screen.custBriarheartBurger);
         }
 
     }

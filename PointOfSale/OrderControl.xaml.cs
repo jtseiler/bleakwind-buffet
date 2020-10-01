@@ -39,7 +39,8 @@ namespace PointOfSale
 
         void onSwitchScreen(object sender, RoutedEventArgs e)
         {
-            Ancestor.SwitchScreen("Other Descant");
+            Ancestor.SwitchScreen(Screen.OtherDescendant);
+
         }
 
     }

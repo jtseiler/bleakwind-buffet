@@ -9,7 +9,22 @@ namespace PointOfSale
     /// </summary>
     public enum Screen
     {
-        Descendant,
-        OtherDescendant
+        custBriarheartBurger,
+        custDoubleDraugr,
+        custGardenOrcOmelette,
+        custPhillyPoacher,
+        custSmokehouseSkeleton,
+        custThalmorTriple,
+        custThugsTBone,
+        custDragonbornWaffleFries,
+        custFriedMiraak,
+        custMadOtarGrits,
+        custVokunSalad,
+        custAretinoAppleJuice,
+        custCandlehearthCoffee,
+        custMarkarthMilk,
+        custSailorSoda,
+        custWarriorWater,
+        Home
     }
 }

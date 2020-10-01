@@ -31,31 +31,34 @@ namespace PointOfSale
     /// </summary>
     public partial class MainWindow : Window
     {
-        //Dictionary<Screen, UserControl> screens = new Dictionary<Screen, UserControl>();
+        Dictionary<Screen, UserControl> screens = new Dictionary<Screen, UserControl>();
 
         public MainWindow()
         {
             InitializeComponent();
             descendant.Ancestor = this;
-            //screens.Add(Screen.Descendant, descendant);
-            //screens.Add(Screen.OtherDescendant, new CustomizeBriarheartBurger(this));
+            screens.Add(Screen.Home, descendant);
+            screens.Add(Screen.custBriarheartBurger, new CustomizeBriarheartBurger(this));
+            screens.Add(Screen.custDoubleDraugr, new CustomizeBriarheartBurger(this));
+            screens.Add(Screen.custGardenOrcOmelette, new CustomizeBriarheartBurger(this));
+            screens.Add(Screen.custPhillyPoacher, new CustomizeBriarheartBurger(this));
+            screens.Add(Screen.custSmokehouseSkeleton, new CustomizeBriarheartBurger(this));
+            screens.Add(Screen.custThalmorTriple, new CustomizeBriarheartBurger(this));
+            screens.Add(Screen.custThugsTBone, new CustomizeBriarheartBurger(this));
+            screens.Add(Screen.custAretinoAppleJuice, new CustomizeBriarheartBurger(this));
+            screens.Add(Screen.custCandlehearthCoffee, new CustomizeBriarheartBurger(this));
+            screens.Add(Screen.custMarkarthMilk, new CustomizeBriarheartBurger(this));
+            screens.Add(Screen.custSailorSoda, new CustomizeBriarheartBurger(this));
+            screens.Add(Screen.custWarriorWater, new CustomizeBriarheartBurger(this));
+            screens.Add(Screen.custDragonbornWaffleFries, new CustomizeBriarheartBurger(this));
+            screens.Add(Screen.custFriedMiraak, new CustomizeBriarheartBurger(this));
+            screens.Add(Screen.custMadOtarGrits, new CustomizeBriarheartBurger(this));
+            screens.Add(Screen.custVokunSalad, new CustomizeBriarheartBurger(this));
         }
 
-        public void SwitchScreen(String name)
+        public void SwitchScreen(Screen screen)
         {
-            switch(name)
-            {
-                case "Descendant":
-                    switchableContent.Child = new CustomizeBriarheartBurger(this);
-                    break;
-                case "Other Descendant":
-                    var descendant = new OrderControl();
-                    descendant.Ancestor = this;
-                    switchableContent.Child = descendant;
-                    break;
-            }
-            //switchableContent.Child = screens[screen];
-            
+            switchableContent.Child = screens[screen];
         }
 /*
         // <summary>

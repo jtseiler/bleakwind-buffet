@@ -18,9 +18,17 @@ namespace PointOfSale.CustomizeEntrees
     /// </summary>
     public partial class CustomizeGardenOrcOmelette : UserControl
     {
-        public CustomizeGardenOrcOmelette()
+        MainWindow ancestor;
+
+        public CustomizeGardenOrcOmelette(MainWindow ancestor)
         {
             InitializeComponent();
+            this.ancestor = ancestor;
+        }
+
+        void OnSwitchScreen(object sender, RoutedEventArgs e)
+        {
+            ancestor.SwitchScreen(Screen.custGardenOrcOmelette);
         }
     }
 }
