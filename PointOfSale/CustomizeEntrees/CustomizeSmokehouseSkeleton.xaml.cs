@@ -18,9 +18,17 @@ namespace PointOfSale.CustomizeEntrees
     /// </summary>
     public partial class CustomizeSmokehouseSkeleton : UserControl
     {
-        public CustomizeSmokehouseSkeleton()
+        MainWindow ancestor;
+
+        public CustomizeSmokehouseSkeleton(MainWindow ancestor)
         {
             InitializeComponent();
+            this.ancestor = ancestor;
+        }
+
+        void OnSwitchScreen(object sender, RoutedEventArgs e)
+        {
+            ancestor.SwitchScreen(Screen.Home);
         }
     }
 }

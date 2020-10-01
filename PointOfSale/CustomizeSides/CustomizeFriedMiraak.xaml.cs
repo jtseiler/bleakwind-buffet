@@ -18,9 +18,17 @@ namespace PointOfSale.CustomizeSides
     /// </summary>
     public partial class CustomizeFriedMiraak : UserControl
     {
-        public CustomizeFriedMiraak()
+        MainWindow ancestor;
+
+        public CustomizeFriedMiraak(MainWindow ancestor)
         {
             InitializeComponent();
+            this.ancestor = ancestor;
+        }
+
+        void OnSwitchScreen(object sender, RoutedEventArgs e)
+        {
+            ancestor.SwitchScreen(Screen.Home);
         }
     }
 }

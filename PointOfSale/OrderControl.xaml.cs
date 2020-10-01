@@ -39,8 +39,7 @@ namespace PointOfSale
 
         void onSwitchScreen(object sender, RoutedEventArgs e)
         {
-            Ancestor.SwitchScreen(Screen.OtherDescendant);
-
+            Ancestor.SwitchScreen(Screen.custBriarheartBurger);
         }
 
     }

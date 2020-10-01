@@ -18,9 +18,17 @@ namespace PointOfSale.CustomizeEntrees
     /// </summary>
     public partial class CustomizePhillyPoacher : UserControl
     {
-        public CustomizePhillyPoacher()
+        MainWindow ancestor;
+
+        public CustomizePhillyPoacher(MainWindow ancestor)
         {
             InitializeComponent();
+            this.ancestor = ancestor;
+        }
+
+        void OnSwitchScreen(object sender, RoutedEventArgs e)
+        {
+            ancestor.SwitchScreen(Screen.Home);
         }
     }
 }

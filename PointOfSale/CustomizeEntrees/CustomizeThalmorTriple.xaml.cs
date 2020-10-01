@@ -18,9 +18,17 @@ namespace PointOfSale.CustomizeEntrees
     /// </summary>
     public partial class CustomizeThalmorTriple : UserControl
     {
-        public CustomizeThalmorTriple()
+        MainWindow ancestor;
+
+        public CustomizeThalmorTriple(MainWindow ancestor)
         {
             InitializeComponent();
+            this.ancestor = ancestor;
+        }
+
+        void OnSwitchScreen(object sender, RoutedEventArgs e)
+        {
+            ancestor.SwitchScreen(Screen.Home);
         }
     }
 }

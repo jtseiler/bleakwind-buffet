@@ -18,9 +18,17 @@ namespace PointOfSale.CustomizeDrinks
     /// </summary>
     public partial class CustomizeAretinoAppleJuice : UserControl
     {
-        public CustomizeAretinoAppleJuice()
+        MainWindow ancestor;
+
+        public CustomizeAretinoAppleJuice(MainWindow ancestor)
         {
             InitializeComponent();
+            this.ancestor = ancestor;
+        }
+
+        void OnSwitchScreen(object sender, RoutedEventArgs e)
+        {
+            ancestor.SwitchScreen(Screen.Home);
         }
     }
 }

@@ -18,9 +18,17 @@ namespace PointOfSale.CustomizeEntrees
     /// </summary>
     public partial class CustomzieDoubleDraugr : UserControl
     {
-        public CustomzieDoubleDraugr()
+        MainWindow ancestor;
+
+        public CustomzieDoubleDraugr(MainWindow ancestor)
         {
             InitializeComponent();
+            this.ancestor = ancestor;
+        }
+
+        void OnSwitchScreen(object sender, RoutedEventArgs e)
+        {
+            ancestor.SwitchScreen(Screen.Home);
         }
     }
 }

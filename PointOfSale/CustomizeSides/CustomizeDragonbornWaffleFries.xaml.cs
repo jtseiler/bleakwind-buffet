@@ -18,9 +18,17 @@ namespace PointOfSale.CustomizeSides
     /// </summary>
     public partial class CustomizeDragonvornWaffleFries : UserControl
     {
-        public CustomizeDragonvornWaffleFries()
+        MainWindow ancestor;
+
+        public CustomizeDragonvornWaffleFries(MainWindow ancestor)
         {
             InitializeComponent();
+            this.ancestor = ancestor;
+        }
+
+        void OnSwitchScreen(object sender, RoutedEventArgs e)
+        {
+            ancestor.SwitchScreen(Screen.Home);
         }
     }
 }

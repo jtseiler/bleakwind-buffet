@@ -18,9 +18,17 @@ namespace PointOfSale.CustomizeDrinks
     /// </summary>
     public partial class CustomizeCandlehearthCoffee : UserControl
     {
-        public CustomizeCandlehearthCoffee()
+        MainWindow ancestor;
+
+        public CustomizeCandlehearthCoffee(MainWindow ancestor)
         {
             InitializeComponent();
+            this.ancestor = ancestor;
+        }
+
+        void OnSwitchScreen(object sender, RoutedEventArgs e)
+        {
+            ancestor.SwitchScreen(Screen.Home);
         }
     }
 }

@@ -18,9 +18,17 @@ namespace PointOfSale.CustomizeDrinks
     /// </summary>
     public partial class CustomizeWarriorWater : UserControl
     {
-        public CustomizeWarriorWater()
+        MainWindow ancestor;
+
+        public CustomizeWarriorWater(MainWindow ancestor)
         {
             InitializeComponent();
+            this.ancestor = ancestor;
+        }
+
+        void OnSwitchScreen(object sender, RoutedEventArgs e)
+        {
+            ancestor.SwitchScreen(Screen.Home);
         }
     }
 }

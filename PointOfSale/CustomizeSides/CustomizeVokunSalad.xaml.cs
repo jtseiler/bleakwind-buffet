@@ -18,9 +18,17 @@ namespace PointOfSale.CustomizeSides
     /// </summary>
     public partial class CustomizeVokunSalad : UserControl
     {
-        public CustomizeVokunSalad()
+        MainWindow ancestor;
+
+        public CustomizeVokunSalad(MainWindow ancestor)
         {
             InitializeComponent();
+            this.ancestor = ancestor;
+        }
+
+        void OnSwitchScreen(object sender, RoutedEventArgs e)
+        {
+            ancestor.SwitchScreen(Screen.Home);
         }
     }
 }

@@ -18,9 +18,17 @@ namespace PointOfSale.CustomizeSides
     /// </summary>
     public partial class CustomizeMadOtarGrits : UserControl
     {
-        public CustomizeMadOtarGrits()
+        MainWindow ancestor;
+
+        public CustomizeMadOtarGrits(MainWindow ancestor)
         {
             InitializeComponent();
+            this.ancestor = ancestor;
+        }
+
+        void OnSwitchScreen(object sender, RoutedEventArgs e)
+        {
+            ancestor.SwitchScreen(Screen.Home);
         }
     }
 }

@@ -18,9 +18,17 @@ namespace PointOfSale.CustomizeDrinks
     /// </summary>
     public partial class CustomizeSailorSoda : UserControl
     {
-        public CustomizeSailorSoda()
+        MainWindow ancestor;
+
+        public CustomizeSailorSoda(MainWindow ancestor)
         {
             InitializeComponent();
+            this.ancestor = ancestor;
+        }
+
+        void OnSwitchScreen(object sender, RoutedEventArgs e)
+        {
+            ancestor.SwitchScreen(Screen.Home);
         }
     }
 }
