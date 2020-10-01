@@ -31,8 +31,14 @@ namespace PointOfSale
     /// </summary>
     public partial class MainWindow : Window
     {
+        /// <summary>
+        /// creates dictionary to hold all of our screens
+        /// </summary>
         Dictionary<Screen, UserControl> screens = new Dictionary<Screen, UserControl>();
 
+        /// <summary>
+        /// contructor that adds all screens to the dictionary
+        /// </summary>
         public MainWindow()
         {
             InitializeComponent();
@@ -56,6 +62,10 @@ namespace PointOfSale
             screens.Add(Screen.custVokunSalad, new CustomizeBriarheartBurger(this));
         }
 
+        /// <summary>
+        /// method that switches to the correct screen.
+        /// </summary>
+        /// <param name="screen"></param>
         public void SwitchScreen(Screen screen)
         {
             switchableContent.Child = screens[screen];

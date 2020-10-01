@@ -37,6 +37,11 @@ namespace PointOfSale
             InitializeComponent();
         }
 
+        /// <summary>
+        /// event handler that switches screens between home screen and item customization
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void onSwitchScreen(object sender, RoutedEventArgs e)
         {
             Ancestor.SwitchScreen(Screen.custBriarheartBurger);

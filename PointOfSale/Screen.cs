@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Jack Seiler
+ * Class name: Screen.cs
+ * Purpose: gives all possible screens
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 
