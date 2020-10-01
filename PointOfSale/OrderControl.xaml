@@ -42,29 +42,29 @@
         <StackPanel Grid.Column="0" Grid.RowSpan="3" Margin="25,70,0,20">
             <TextBlock FontSize="20" FontWeight="Medium" TextAlignment="Center">Entrees</TextBlock>
             <Button Click="onSwitchScreen">Briarheart Burger</Button>
-            <Button>Double Draugr</Button>
-            <Button>Garden Orc Omelette</Button>
-            <Button>Philly Poacher</Button>
-            <Button>Smokehouse Skeleton</Button>
-            <Button>Thalmor Triple</Button>
+            <Button Click="onSwitchScreen">Double Draugr</Button>
+            <Button Click="onSwitchScreen">Garden Orc Omelette</Button>
+            <Button Click="onSwitchScreen">Philly Poacher</Button>
+            <Button Click="onSwitchScreen">Smokehouse Skeleton</Button>
+            <Button Click="onSwitchScreen">Thalmor Triple</Button>
             <Button>Thugs T-Bone</Button>
         </StackPanel>
 
         <StackPanel Grid.Column="1" Grid.RowSpan="3" Margin="20,70,0,20">
             <TextBlock FontSize="20" FontWeight="Medium" TextAlignment="Center">Sides</TextBlock>
-            <Button>Dragonborn Waffle Fries</Button>
-            <Button>Fried Miraak</Button>
-            <Button>Mad Otar Grits</Button>
-            <Button>Vokun Salad</Button>
+            <Button Click="onSwitchScreen">Dragonborn Waffle Fries</Button>
+            <Button Click="onSwitchScreen">Fried Miraak</Button>
+            <Button Click="onSwitchScreen">Mad Otar Grits</Button>
+            <Button Click="onSwitchScreen">Vokun Salad</Button>
         </StackPanel>
 
         <StackPanel Grid.Column="2" Grid.RowSpan="3" Margin="20,70,25,20">
             <TextBlock FontSize="20" FontWeight="Medium" TextAlignment="Center">Drinks</TextBlock>
-            <Button>Aretino Apple Juice</Button>
-            <Button>Candlehearth Coffee</Button>
-            <Button>Markarth Milk</Button>
-            <Button>Sailor Soda</Button>
-            <Button>Warrior Water</Button>
+            <Button Click="onSwitchScreen">Aretino Apple Juice</Button>
+            <Button Click="onSwitchScreen">Candlehearth Coffee</Button>
+            <Button Click="onSwitchScreen">Markarth Milk</Button>
+            <Button Click="onSwitchScreen">Sailor Soda</Button>
+            <Button Click="onSwitchScreen">Warrior Water</Button>
         </StackPanel>
 
     </Grid>

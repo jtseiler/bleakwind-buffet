@@ -11,7 +11,7 @@
             <TextBlock FontSize="30" Text="Customize Markarth Milk!"/>
             <ListBox Name="selectSize" SelectedIndex="0" Margin="8"/>
             <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0">Ice</CheckBox>
-            <Button Content="Done" Margin="9" ClickMode="Release"/>
+            <Button Click="OnSwitchScreen" Content="Done" Margin="9" ClickMode="Release"/>
         </StackPanel>
     </Grid>
 </UserControl>
