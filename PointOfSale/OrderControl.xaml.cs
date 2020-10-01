@@ -32,6 +32,7 @@ namespace PointOfSale
         /// </summary>
         public MainWindow Ancestor { get; set; }
 
+
         public OrderControl()
         {
             InitializeComponent();
@@ -44,8 +45,33 @@ namespace PointOfSale
         /// <param name="e"></param>
         void onSwitchScreen(object sender, RoutedEventArgs e)
         {
-            Ancestor.SwitchScreen(Screen.custBriarheartBurger);
-        }
+            var buttons = (Button)sender;
+            switch (buttons.ToString())
+            {
+                case "System.Windows.Controls.Button: Briarheart Burger":
+                    Ancestor.SwitchScreen(Screen.custBriarheartBurger);
+                    break;
+                case "System.Windows.Controls.Button: Double Draugr":
+                    Ancestor.SwitchScreen(Screen.custDoubleDraugr);
+                    break;
+                case "System.Windows.Controls.Button: Garden Orc Omelette":
+                    Ancestor.SwitchScreen(Screen.custGardenOrcOmelette);
+                    break;
+                case "System.Windows.Controls.Button: Philly Poacher":
+                    Ancestor.SwitchScreen(Screen.custPhillyPoacher);
+                    break;
+                case "System.Windows.Controls.Button: Smokehouse Skeleton":
+                    Ancestor.SwitchScreen(Screen.custSmokehouseSkeleton);
+                    break;
+                case "System.Windows.Controls.Button: Thalmor Triple":
+                    Ancestor.SwitchScreen(Screen.custThalmorTriple);
+                    break;
+            }
+                
+                
+
+            //Ancestor.SwitchScreen(GetScreen());
+            }
 
     }
 }

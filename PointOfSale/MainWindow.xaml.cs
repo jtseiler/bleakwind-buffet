@@ -45,21 +45,20 @@ namespace PointOfSale
             descendant.Ancestor = this;
             screens.Add(Screen.Home, descendant);
             screens.Add(Screen.custBriarheartBurger, new CustomizeBriarheartBurger(this));
-            screens.Add(Screen.custDoubleDraugr, new CustomizeBriarheartBurger(this));
-            screens.Add(Screen.custGardenOrcOmelette, new CustomizeBriarheartBurger(this));
-            screens.Add(Screen.custPhillyPoacher, new CustomizeBriarheartBurger(this));
-            screens.Add(Screen.custSmokehouseSkeleton, new CustomizeBriarheartBurger(this));
-            screens.Add(Screen.custThalmorTriple, new CustomizeBriarheartBurger(this));
-            screens.Add(Screen.custThugsTBone, new CustomizeBriarheartBurger(this));
-            screens.Add(Screen.custAretinoAppleJuice, new CustomizeBriarheartBurger(this));
-            screens.Add(Screen.custCandlehearthCoffee, new CustomizeBriarheartBurger(this));
-            screens.Add(Screen.custMarkarthMilk, new CustomizeBriarheartBurger(this));
-            screens.Add(Screen.custSailorSoda, new CustomizeBriarheartBurger(this));
-            screens.Add(Screen.custWarriorWater, new CustomizeBriarheartBurger(this));
-            screens.Add(Screen.custDragonbornWaffleFries, new CustomizeBriarheartBurger(this));
-            screens.Add(Screen.custFriedMiraak, new CustomizeBriarheartBurger(this));
-            screens.Add(Screen.custMadOtarGrits, new CustomizeBriarheartBurger(this));
-            screens.Add(Screen.custVokunSalad, new CustomizeBriarheartBurger(this));
+            screens.Add(Screen.custDoubleDraugr, new CustomzieDoubleDraugr(this));
+            screens.Add(Screen.custGardenOrcOmelette, new CustomizeGardenOrcOmelette(this));
+            screens.Add(Screen.custPhillyPoacher, new CustomizePhillyPoacher(this));
+            screens.Add(Screen.custSmokehouseSkeleton, new CustomizeSmokehouseSkeleton(this));
+            screens.Add(Screen.custThalmorTriple, new CustomizeThalmorTriple(this));
+            screens.Add(Screen.custAretinoAppleJuice, new CustomizeAretinoAppleJuice(this));
+            screens.Add(Screen.custCandlehearthCoffee, new CustomizeCandlehearthCoffee(this));
+            screens.Add(Screen.custMarkarthMilk, new CustomizeMarkarthMilk(this));
+            screens.Add(Screen.custSailorSoda, new CustomizeSailorSoda(this));
+            screens.Add(Screen.custWarriorWater, new CustomizeWarriorWater(this));
+            screens.Add(Screen.custDragonbornWaffleFries, new CustomizeDragonvornWaffleFries(this));
+            screens.Add(Screen.custFriedMiraak, new CustomizeFriedMiraak(this));
+            screens.Add(Screen.custMadOtarGrits, new CustomizeMadOtarGrits(this));
+            screens.Add(Screen.custVokunSalad, new CustomizeVokunSalad(this));
         }
 
         /// <summary>
@@ -70,6 +69,8 @@ namespace PointOfSale
         {
             switchableContent.Child = screens[screen];
         }
+
+
 /*
         // <summary>
         /// Adds Vokun Salad to the Order list

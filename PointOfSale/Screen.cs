@@ -14,6 +14,7 @@ namespace PointOfSale
     /// </summary>
     public enum Screen
     {
+        Home,
         custBriarheartBurger,
         custDoubleDraugr,
         custGardenOrcOmelette,
@@ -29,7 +30,6 @@ namespace PointOfSale
         custCandlehearthCoffee,
         custMarkarthMilk,
         custSailorSoda,
-        custWarriorWater,
-        Home
+        custWarriorWater
     }
 }
