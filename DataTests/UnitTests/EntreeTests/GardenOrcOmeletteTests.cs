@@ -13,6 +13,70 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
     public class GardenOrcOmeletteTests
     {
         [Fact]
+        public void ChangingBroccoliNotifiesBroccoliProperty()
+        {
+            var go = new GardenOrcOmelette();
+
+            Assert.PropertyChanged(go, "Broccoli", () =>
+            {
+                go.Broccoli = true;
+            });
+
+            Assert.PropertyChanged(go, "Broccoli", () =>
+            {
+                go.Broccoli = false;
+            });
+        }
+
+        [Fact]
+        public void ChangingMushroomsNotifiesMushroomsProperty()
+        {
+            var go = new GardenOrcOmelette();
+
+            Assert.PropertyChanged(go, "Mushrooms", () =>
+            {
+                go.Mushrooms = true;
+            });
+
+            Assert.PropertyChanged(go, "Mushrooms", () =>
+            {
+                go.Mushrooms = false;
+            });
+        }
+
+        [Fact]
+        public void ChangingCheddarNotifiesCheddarProperty()
+        {
+            var go = new GardenOrcOmelette();
+
+            Assert.PropertyChanged(go, "Cheddar", () =>
+            {
+                go.Cheddar = true;
+            });
+
+            Assert.PropertyChanged(go, "Cheddar", () =>
+            {
+                go.Cheddar = false;
+            });
+        }
+
+        [Fact]
+        public void ChangingTomatoNotifiesTomatoProperty()
+        {
+            var go = new GardenOrcOmelette();
+
+            Assert.PropertyChanged(go, "Tomato", () =>
+            {
+                go.Tomato = true;
+            });
+
+            Assert.PropertyChanged(go, "Tomato", () =>
+            {
+                go.Tomato = false;
+            });
+        }
+
+        [Fact]
         public void ShouldBeAIOrderItem()
         {
             GardenOrcOmelette oo = new GardenOrcOmelette();
