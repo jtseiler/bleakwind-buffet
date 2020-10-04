@@ -17,12 +17,12 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         {
             var ss = new SmokehouseSkeleton();
 
-            Assert.PropertyChanged(ss, "SausageLink", () =>
+            Assert.PropertyChanged(ss, "Sausage Link", () =>
             {
                 ss.SausageLink = true;
             });
 
-            Assert.PropertyChanged(ss, "SausageLink", () =>
+            Assert.PropertyChanged(ss, "Sausage Link", () =>
             {
                 ss.SausageLink = false;
             });
