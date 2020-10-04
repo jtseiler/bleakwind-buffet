@@ -69,17 +69,44 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// property for choice of ice default to false
         /// </summary>
-        public bool Ice { get; set; } = false;
+        private bool ice = false;
+        public override bool Ice
+        {
+            get { return ice; }
+            set
+            {
+                ice = value;
+                NotifyOfPropertyChange("Ice");
+            }
+        }
 
         /// <summary>
         /// Property giving choice of added cream, default to false
         /// </summary>
-        public bool RoomForCream { get; set; } = false;
+        private bool roomForCream = false;
+        public bool RoomForCream
+        {
+            get { return roomForCream; }
+            set
+            {
+                roomForCream = value;
+                NotifyOfPropertyChange("RoomForCream");
+            }
+        }
 
         /// <summary>
         /// Property giving choice of decaf, default to fault
         /// </summary>
-        public bool Decaf { get; set; } = false;
+        private bool decaf = false;
+        public bool Decaf
+        {
+            get { return decaf; }
+            set
+            {
+                decaf = value;
+                NotifyOfPropertyChange("Decaf");
+            }
+        }
 
         /// <summary>
         /// special instructions should customer want any unusal additions or subractions from their item

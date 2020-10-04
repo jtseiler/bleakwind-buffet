@@ -20,27 +20,66 @@ namespace BleakwindBuffet.Data.Entrees
         // <summary>
         /// Property to keep track of the price
         /// </summary>
-        public override double Price => 7.23;
+        public override double Price
+        {
+            get
+            {
+                return 7.23;
+            }
+        }
 
         /// <summary>
         /// variable to keep track of the items calories
         /// </summary>
-        public override uint Calories => 784;
+        public override uint Calories
+        {
+            get
+            {
+                return 784;
+            }
+        }
 
         /// <summary>
         /// property for the choice of Sirloin, default to true
         /// </summary>
-        public bool Sirloin { get; set; } = true;
+        private bool sirloin = true;
+        public bool Sirloin
+        {
+            get { return sirloin; }
+            set
+            {
+                sirloin = value;
+                NotifyOfPropertyChange("Sirloin");
+            }
+        }
 
         /// <summary>
         /// property for the choice of onions, default to true
         /// </summary>
-        public bool Onion { get; set; } = true;
+        private bool onion = true;
+        public bool Onion
+        {
+            get { return onion; }
+            set
+            {
+                onion = value;
+                NotifyOfPropertyChange("Onion");
+            }
+        }
 
         /// <summary>
         /// property for the choice of a roll, default to true
         /// </summary>
-        public bool Roll { get; set; } = true;
+        private bool roll = true;
+        public bool Roll
+        {
+            get { return roll; }
+            set
+            {
+                roll = value;
+                NotifyOfPropertyChange("Roll");
+            }
+        }
 
         /// <summary>
         /// special instructions should customer want any unusal additions or subractions from their item

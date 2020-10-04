@@ -69,7 +69,16 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// property for choice of ice default to false
         /// </summary>
-        public bool Ice { get; set; } = true;
+        private bool ice = true;
+        public override bool Ice
+        {
+            get { return ice; }
+            set
+            {
+                ice = value;
+                NotifyOfPropertyChange("Ice");
+            }
+        }
 
         /// <summary>
         /// Property representing the Flavor of the given soda

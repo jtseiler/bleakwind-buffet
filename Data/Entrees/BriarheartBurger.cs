@@ -20,37 +20,94 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Property to keep track of the price
         /// </summary>
-        public override double Price => 6.32;
+        public override double Price
+        {
+            get
+            {
+                return 6.32;
+            }
+        }
 
         /// <summary>
         /// variable to keep track of the items calories
         /// </summary>
-        public override uint Calories => 743;
+        public override uint Calories
+        {
+            get
+            {
+                return 743;
+            }
+        }
 
         /// <summary>
         /// property for the choice of ketchup, default to true
         /// </summary>
-        public bool Ketchup { get; set; } = true;
+        private bool ketchup = true;
+        public bool Ketchup
+        {
+            get { return ketchup; }
+            set
+            {
+                ketchup = value;
+                NotifyOfPropertyChange("Ketchup");
+            }
+        }
 
         /// <summary>
         /// property for the choice of a bun, default to true
         /// </summary>
-        public bool Bun { get; set; } = true;
+        private bool bun = true;
+        public bool Bun
+        {
+            get { return bun; }
+            set
+            {
+                bun = value;
+                NotifyOfPropertyChange("Bun");
+            }
+        }
 
         /// <summary>
         /// property for the choice of a bun, default to true
         /// </summary>
-        public bool Mustard { get; set; } = true;
+        private bool mustard = true;
+        public bool Mustard
+        {
+            get { return mustard; }
+            set
+            {
+                mustard = value;
+                NotifyOfPropertyChange("Mustard");
+            }
+        }
 
         /// <summary>
         /// property for the choice of pickles, default to true
         /// </summary>
-        public bool Pickle { get; set; } = true;
+        private bool pickle = true;
+        public bool Pickle
+        {
+            get { return pickle; }
+            set
+            {
+                pickle = value;
+                NotifyOfPropertyChange("Pickle");
+            }
+        }
 
         /// <summary>
         /// property for the choice of cheese, default to true
         /// </summary>
-        public bool Cheese { get; set; } = true;
+        private bool cheese = true;
+        public bool Cheese
+        {
+            get { return cheese; }
+            set
+            {
+                cheese = value;
+                NotifyOfPropertyChange("Cheese");
+            }
+        }
 
         /// <summary>
         /// special instructions should customer want any unusal additions or subractions from their item

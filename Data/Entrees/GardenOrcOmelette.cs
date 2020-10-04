@@ -20,32 +20,80 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Property to keep track of the price
         /// </summary>
-        public override double Price => 4.57;
+        public override double Price
+        {
+            get
+            {
+                return 4.57;
+            }
+        }
 
         /// <summary>
         /// variable to keep track of the items calories
         /// </summary>
-        public override uint Calories => 404;
+        public override uint Calories
+        {
+            get
+            {
+                return 404;
+            }
+        }
 
         /// <summary>
         /// property for the choice of broccoli, default to true
         /// </summary>
-        public bool Broccoli { get; set; } = true;
+        private bool broccoli = true;
+        public bool Broccoli
+        {
+            get { return broccoli; }
+            set
+            {
+                broccoli = value;
+                NotifyOfPropertyChange("Broccoli");
+            }
+        }
 
         /// <summary>
         /// property for the choice of mushroom, default to true
         /// </summary>
-        public bool Mushrooms { get; set; } = true;
+        private bool mushrooms = true;
+        public bool Mushrooms
+        {
+            get { return mushrooms; }
+            set
+            {
+                mushrooms = value;
+                NotifyOfPropertyChange("Mushrooms");
+            }
+        }
 
         /// <summary>
         /// property for the choice of tomatoes, default to true
         /// </summary>
-        public bool Tomato { get; set; } = true;
+        private bool tomato = true;
+        public bool Tomato
+        {
+            get { return tomato; }
+            set
+            {
+                tomato = value;
+                NotifyOfPropertyChange("Tomato");
+            }
+        }
 
         /// <summary>
         /// property for the choice of cheddar, default to true
         /// </summary>
-        public bool Cheddar { get; set; } = true;
+        private bool cheddar = true;
+        public bool Cheddar
+        {
+            get { return cheddar; }
+            set
+            {
+                cheddar = value;
+                NotifyOfPropertyChange("Cheddar");
+            }
+        }
 
         /// <summary>
         /// special instructions should customer want any unusal additions or subractions from their item

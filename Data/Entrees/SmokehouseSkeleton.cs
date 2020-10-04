@@ -20,32 +20,80 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Property to keep track of the price
         /// </summary>
-        public override double Price => 5.62;
+        public override double Price
+        {
+            get
+            {
+                return 5.62;
+            }
+        }
 
         /// <summary>
         /// variable to keep track of the items calories
         /// </summary>
-        public override uint Calories => 602;
+        public override uint Calories
+        {
+            get
+            {
+                return 602;
+            }
+        }
 
         /// <summary>
         /// property for the choice of sausage, default set to true
         /// </summary>
-        public bool SausageLink { get; set; } = true;
+        private bool sausageLink = true;
+        public bool SausageLink
+        {
+            get { return sausageLink; }
+            set
+            {
+                sausageLink = value;
+                NotifyOfPropertyChange("Sausage Link");
+            }
+        }
 
         /// <summary>
         /// property for the choice of eggs, default set to true
         /// </summary>
-        public bool Egg { get; set; } = true;
+        private bool egg = true;
+        public bool Egg
+        {
+            get { return egg; }
+            set
+            {
+                egg = value;
+                NotifyOfPropertyChange("Egg");
+            }
+        }
 
         /// <summary>
         /// property for the choice of hashbrowns, default set to true
         /// </summary>
-        public bool HashBrowns { get; set; } = true;
+        private bool hashbrowns = true;
+        public bool HashBrowns
+        {
+            get { return hashbrowns; }
+            set
+            {
+                hashbrowns = value;
+                NotifyOfPropertyChange("HashBrowns");
+            }
+        }
 
         /// <summary>
         /// property for the choice of pancakes, default set to true
         /// </summary>
-        public bool Pancake { get; set; } = true;
+        private bool pancake = true;
+        public bool Pancake
+        {
+            get { return pancake; }
+            set
+            {
+                pancake = value;
+                NotifyOfPropertyChange("Pancake");
+            }
+        }
 
         /// <summary>
         /// special instructions should customer want any unusal additions or subractions from their item

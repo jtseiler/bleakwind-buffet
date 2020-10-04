@@ -2,18 +2,36 @@
 using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data.Enums;
+using System.ComponentModel;
 
 namespace BleakwindBuffet.Data.Sides
 {
     /// <summary>
     /// A base class representing the common propeerties of sides
     /// </summary>
-    public abstract class Side : IOrderItem
+    public abstract class Side : IOrderItem, INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private Size size;
         /// <summary>
         /// The size of the side
         /// </summary>
-        public virtual Size Size { get; set; }
+        public virtual Size Size
+        {
+            get
+            {
+                return size;
+            }
+            set
+            {
+                size = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Size"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Calories"));
+            }
+        }
+
 
         /// <summary>
         /// The price of the side
@@ -30,6 +48,16 @@ namespace BleakwindBuffet.Data.Sides
         /// The special instructions for the side
         /// </summary>
         public abstract List<string> SpecialInstructions { get; }
+
+        /// <summary>
+        /// Helper method to notify of boolean customization property changes
+        /// </summary>
+        /// <param name="propertyName"></param>
+        protected void NotifyOfPropertyChange(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+        }
     }
 }
 

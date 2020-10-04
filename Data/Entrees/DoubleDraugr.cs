@@ -20,52 +20,137 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Property to keep track of the price
         /// </summary>
-        public override double Price => 7.32;
+        public override double Price
+        {
+            get
+            {
+                return 7.32;
+            }
+        }
 
         /// <summary>
         /// variable to keep track of the items calories
         /// </summary>
-        public override uint Calories => 843;
+        public override uint Calories
+        {
+            get
+            {
+                return 843;
+            }
+        }
 
         /// <summary>
         /// property for the choice of ketchup, default to true
         /// </summary>
-        public bool Ketchup { get; set; } = true;
+        private bool ketchup = true;
+        public bool Ketchup
+        {
+            get { return ketchup; }
+            set
+            {
+                ketchup = value;
+                NotifyOfPropertyChange("Ketchup");
+            }
+        }
 
         /// <summary>
         /// property for the choice of a bun, default to true
         /// </summary>
-        public bool Bun { get; set; } = true;
+        private bool bun = true;
+        public bool Bun
+        {
+            get { return bun; }
+            set
+            {
+                bun = value;
+                NotifyOfPropertyChange("Bun");
+            }
+        }
 
         /// <summary>
         /// property for the choice of a bun, default to true
         /// </summary>
-        public bool Mustard { get; set; } = true;
+        private bool mustard = true;
+        public bool Mustard
+        {
+            get { return mustard; }
+            set
+            {
+                mustard = value;
+                NotifyOfPropertyChange("Mustard");
+            }
+        }
 
         /// <summary>
         /// property for the choice of pickles, default to true
         /// </summary>
-        public bool Pickle { get; set; } = true;
+        private bool pickle = true;
+        public bool Pickle
+        {
+            get { return pickle; }
+            set
+            {
+                pickle = value;
+                NotifyOfPropertyChange("Pickle");
+            }
+        }
 
         /// <summary>
         /// property for the choice of cheese, default to true
         /// </summary>
-        public bool Cheese { get; set; } = true;
+        private bool cheese = true;
+        public bool Cheese
+        {
+            get { return cheese; }
+            set
+            {
+                cheese = value;
+                NotifyOfPropertyChange("Cheese");
+            }
+        }
+
 
         /// <summary>
         /// property for the choice of tomatoes, default to true
         /// </summary>
-        public bool Tomato { get; set; } = true;
+        private bool tomato = true;
+        public bool Tomato
+        {
+            get { return tomato; }
+            set
+            {
+                tomato = value;
+                NotifyOfPropertyChange("Tomato");
+            }
+        }
 
         /// <summary>
         /// property for the choice of lettuce, default to true
         /// </summary>
-        public bool Lettuce { get; set; } = true;
+        private bool lettuce = true;
+        public bool Lettuce
+        {
+            get { return lettuce; }
+            set
+            {
+                lettuce = value;
+                NotifyOfPropertyChange("Lettuce");
+            }
+        }
 
         /// <summary>
         /// property for the choice of mayo, default to true
         /// </summary>
-        public bool Mayo { get; set; } = true;
+        private bool mayo = true;
+        public bool Mayo
+        {
+            get { return mayo; }
+            set
+            {
+                mayo = value;
+                NotifyOfPropertyChange("Mayo");
+            }
+        }
 
         /// <summary>
         /// special instructions should customer want any unusal additions or subractions from their item

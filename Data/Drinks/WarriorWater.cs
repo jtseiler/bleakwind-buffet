@@ -53,12 +53,30 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// property for choice of ice default to true
         /// </summary>
-        public bool Ice { get; set; } = true;
+        private bool ice = true;
+        public override bool Ice
+        {
+            get { return ice; }
+            set
+            {
+                ice = value;
+                NotifyOfPropertyChange("Ice");
+            }
+        }
 
         /// <summary>
         /// propety for the choice of lemon, default to false
         /// </summary>
-        public bool Lemon { get; set; } = false;
+        private bool lemon = false;
+        public bool Lemon
+        {
+            get { return lemon; }
+            set
+            {
+                lemon = value;
+                NotifyOfPropertyChange("Lemon");
+            }
+        }
 
         /// <summary>
         /// special instructions should customer want any unusal additions or subractions from their item
