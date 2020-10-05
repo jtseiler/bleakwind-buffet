@@ -6,14 +6,16 @@
              xmlns:local="clr-namespace:PointOfSale.CustomizeEntrees"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <StackPanel>
-        <TextBlock FontSize="30" Text="Customize Smokehouse Skeleton!"/>
+    <Border BorderThickness="2" BorderBrush="Black">
         <StackPanel>
-            <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0">Sauasage Link</CheckBox>
-            <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0">Pancake</CheckBox>
-            <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0">Hash Browns</CheckBox>
-            <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0">Egg</CheckBox>
-            <Button Click="OnSwitchScreen" Content="Done" Margin="9" ClickMode="Release"/>
+            <TextBlock FontSize="30" FontWeight="Bold" Text="Customize Smokehouse Skeleton!"/>
+            <StackPanel>
+                <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0" IsChecked="{Binding Path = SausageLink}">Sauasage Link</CheckBox>
+                <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0" IsChecked="{Binding Path = Pancake}">Pancake</CheckBox>
+                <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0" IsChecked="{Binding Path = HashBrowns}">Hash Browns</CheckBox>
+                <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0" IsChecked="{Binding Path = Egg}">Egg</CheckBox>
+                <Button Click="OnSwitchScreen" Content="Done" FontSize="20" FontWeight="Medium" Height="40" Margin="9" ClickMode="Release"/>
+            </StackPanel>
         </StackPanel>
-    </StackPanel>
+    </Border>
 </UserControl>

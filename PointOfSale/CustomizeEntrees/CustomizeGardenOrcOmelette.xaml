@@ -6,14 +6,16 @@
              xmlns:local="clr-namespace:PointOfSale.CustomizeEntrees"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <StackPanel>
-        <TextBlock FontSize="30" Text="Customize Garden Orc Omelette!"/>
+    <Border BorderThickness="2" BorderBrush="Black">
         <StackPanel>
-            <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0">Broccoli</CheckBox>
-            <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0">Tomato</CheckBox>
-            <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0">Mushrooms</CheckBox>
-            <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0">Cheddar</CheckBox>
-            <Button Click="OnSwitchScreen" Content="Done" Margin="9" ClickMode="Release"/>
+            <TextBlock FontSize="30" FontWeight="Bold" Text="Customize Garden Orc Omelette!"/>
+            <StackPanel>
+                <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0" IsChecked="{Binding Path = Broccoli}">Broccoli</CheckBox>
+                <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0" IsChecked="{Binding Path = Tomato}">Tomato</CheckBox>
+                <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0" IsChecked="{Binding Path = Mushrooms}">Mushrooms</CheckBox>
+                <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0" IsChecked="{Binding Path = Cheddar}">Cheddar</CheckBox>
+                <Button Click="OnSwitchScreen" Content="Done" FontSize="20" FontWeight="Medium" Height="40" Margin="9" ClickMode="Release"/>
+            </StackPanel>
         </StackPanel>
-    </StackPanel>
+    </Border>
 </UserControl>
