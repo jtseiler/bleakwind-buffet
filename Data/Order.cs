@@ -6,9 +6,11 @@ using System.Collections.Specialized;
 
 namespace BleakwindBuffet.Data
 {
-    public class Order : INotifyPropertyChanged//, INotifyCollectionChanged, ICollection<IOrderItem>
+    public class Order : INotifyPropertyChanged, INotifyCollectionChanged, ICollection<IOrderItem>
     {
+        public event NotifyCollectionChangedEventHandler CollectionChanged;
 
+        public event PropertyChangedEventHandler PropertyChanged;
 
 
         /// <summary>
@@ -18,10 +20,6 @@ namespace BleakwindBuffet.Data
         {
             orderNumber += 1;
         }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        
 
         private static uint orderNumber = 0;
         /// <summary>
@@ -74,7 +72,11 @@ namespace BleakwindBuffet.Data
         public void Add(IOrderItem item)
         {
             items.Add(item);
-            OnItemPropertyChanged();
+            CollectionChanged?.Invoke(this, new NotifyCollectionChangedEventArgs());
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subtotal"));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Calories"));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Tax"));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Total"));
         }
 
         /// <summary>
@@ -83,9 +85,12 @@ namespace BleakwindBuffet.Data
         /// <param name="item"></param>
         public void Remove(IOrderItem item)
         {
-
             items.Remove(item);
-            OnItemPropertyChanged();
+            CollectionChanged?.Invoke(this, new NotifyCollectionChangedEventArgs());
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subtotal"));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Calories"));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Tax"));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Total"));
         }
 
         /// <summary>
