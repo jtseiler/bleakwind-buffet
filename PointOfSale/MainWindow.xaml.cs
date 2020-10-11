@@ -36,6 +36,7 @@ namespace PointOfSale
         /// </summary>
         Dictionary<Screen, UserControl> screens = new Dictionary<Screen, UserControl>();
 
+
         /// <summary>
         /// contructor that adds all screens to the dictionary
         /// </summary>

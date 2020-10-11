@@ -17,6 +17,7 @@ namespace BleakwindBuffet.Data.Entrees
     /// </summary>
     public class BriarheartBurger : Entree, IOrderItem
     {
+
         /// <summary>
         /// Property to keep track of the price
         /// </summary>

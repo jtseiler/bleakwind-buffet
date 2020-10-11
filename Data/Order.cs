@@ -51,6 +51,17 @@ namespace BleakwindBuffet.Data
         }
 
         /// <summary>
+        /// Cost of the order including the sales tax
+        /// </summary>
+        public double Total
+        {
+            get
+            {
+                return Subtotal * 0.12;
+            }
+        }
+
+        /// <summary>
         /// Adds an item to the order
         /// </summary>
         /// <param name="item"></param>

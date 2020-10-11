@@ -7,11 +7,19 @@ using Xunit;
 
 using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Entrees;
+using System.ComponentModel;
 
 namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
 {
     public class GardenOrcOmeletteTests
     {
+        [Fact]
+        public void ShouldBeAINotifyPropertyChanged()
+        {
+            var goc = new GardenOrcOmelette();
+            Assert.IsAssignableFrom<INotifyPropertyChanged>(goc);
+        }
+
         [Fact]
         public void ChangingBroccoliNotifiesBroccoliProperty()
         {
