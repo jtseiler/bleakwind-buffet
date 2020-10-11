@@ -6,7 +6,7 @@ using System.Collections.Specialized;
 
 namespace BleakwindBuffet.Data
 {
-    public class Order : INotifyPropertyChanged, INotifyCollectionChanged, ICollection<IOrderItem>
+    public class Order : INotifyPropertyChanged, INotifyCollectionChanged//, ICollection<IOrderItem>
     {
         public event NotifyCollectionChangedEventHandler CollectionChanged;
 
@@ -72,7 +72,7 @@ namespace BleakwindBuffet.Data
         public void Add(IOrderItem item)
         {
             items.Add(item);
-            CollectionChanged?.Invoke(this, new NotifyCollectionChangedEventArgs());
+            //CollectionChanged?.Invoke(this, new NotifyCollectionChangedEventArgs());
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subtotal"));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Calories"));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Tax"));
@@ -86,7 +86,7 @@ namespace BleakwindBuffet.Data
         public void Remove(IOrderItem item)
         {
             items.Remove(item);
-            CollectionChanged?.Invoke(this, new NotifyCollectionChangedEventArgs());
+            //CollectionChanged?.Invoke(this, new NotifyCollectionChangedEventArgs());
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subtotal"));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Calories"));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Tax"));
