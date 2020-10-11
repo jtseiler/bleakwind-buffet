@@ -3,6 +3,7 @@
  * Class name: CustomizeBriarheartBurger.xaml.cs
  * Purpose: gives details of the briarheartburger
  */
+using BleakwindBuffet.Data.Entrees;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -36,6 +37,11 @@ namespace PointOfSale.CustomizeEntrees
         {
             InitializeComponent();
             this.ancestor = ancestor;
+
+            //var bb = new BriarheartBurger();
+            //CustomizeBriarheartBurger Briar = new CustomizeBriarheartBurger(ancestor);
+            //Briar.DataContext = bb;
+
         }
 
         /// <summary>

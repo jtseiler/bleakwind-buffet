@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using System.Text;
 using System.ComponentModel;
+using System.Collections.Specialized;
 
 namespace BleakwindBuffet.Data
 {
-    public class Order : INotifyPropertyChanged
+    public class Order : INotifyPropertyChanged//, INotifyCollectionChanged, ICollection<IOrderItem>
     {
+
+
+
         /// <summary>
         /// Constrcutor
         /// </summary>
@@ -16,6 +20,8 @@ namespace BleakwindBuffet.Data
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
+
+        
 
         private static uint orderNumber = 0;
         /// <summary>
