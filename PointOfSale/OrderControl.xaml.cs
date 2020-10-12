@@ -19,6 +19,7 @@ using BleakwindBuffet.Data.Entrees;
 using BleakwindBuffet.Data.Drinks;
 using BleakwindBuffet.Data.Sides;
 using PointOfSale.CustomizeEntrees;
+using BleakwindBuffet.Data;
 
 namespace PointOfSale
 {
@@ -94,8 +95,30 @@ namespace PointOfSale
                     Ancestor.SwitchScreen(Screen.custWarriorWater);
                     break;
             }
-
         }
 
+        Order newOrder = new Order();
+        public void DisplayCurrentOrder()
+        {
+            OrderListView.Items.Clear();
+            OrderListView.Items.Add("       Order #" + newOrder.OrderNumber);
+            foreach(IOrderItem item in newOrder.Items)
+            {
+                OrderListView.Items.Add(item.ToString() + " $" + item.Price);
+                foreach(string specialInstructions in item.SpecialInstructions)
+                {
+                    OrderListView.Items.Add("-" + specialInstructions);
+                }
+                Button removeEditButton = new Button();
+                removeEditButton.Margin = new Thickness(20, 0, 0, 0);
+                removeEditButton.Content = "Remove/Edit Order";
+                //need help hooking up clcik event
+                //removeEditButton.Click = (object sender, RoutedEventArgs e) => { ItemReSelectionClickEvent(sender, e, item) };
+                OrderListView.Items.Add(removeEditButton);
+            }
+            OrderListView.Items.Add("Subtotal:      $" + newOrder.Subtotal);
+            OrderListView.Items.Add("Tax:      $" + newOrder.SalesTaxRate);
+            OrderListView.Items.Add("Total:      $" + newOrder.Total);
+        }
     }
 }
