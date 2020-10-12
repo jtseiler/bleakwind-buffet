@@ -52,6 +52,11 @@ namespace PointOfSale.CustomizeEntrees
         void OnSwitchScreen(object sender, RoutedEventArgs e)
         {
             ancestor.SwitchScreen(Screen.Home);
+            var bb = new BriarheartBurger();
+            CustomizeBriarheartBurger Briar = new CustomizeBriarheartBurger(ancestor);
+            Briar.DataContext = bb;
+            OrderListView.Items.Add(item.ToString() + " $" + item.Price);
+            OrderListView.Items.Add("-" + specialInstructions);
         }
 
     }

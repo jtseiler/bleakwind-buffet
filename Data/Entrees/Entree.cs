@@ -1,4 +1,4 @@
-﻿/*
+﻿ /*
  * Author: Jack Seiler
  * Class name: Entree.cs
  * Purpose: gives details of this particular entree
