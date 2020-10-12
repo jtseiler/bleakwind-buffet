@@ -10,6 +10,8 @@ using System.Text;
 using BleakwindBuffet.Data.Entrees;
 using BleakwindBuffet.Data.Drinks;
 using BleakwindBuffet.Data.Sides;
+using System.Runtime.CompilerServices;
+using BleakwindBuffet.Data.Enums;
 
 namespace BleakwindBuffet.Data
 {
@@ -31,7 +33,38 @@ namespace BleakwindBuffet.Data
             Entree = e;
             Side = s;
             Drink = d;
+            Entree.PropertyChanged += NotifyComboChanged;
+            Side.PropertyChanged += NotifyComboChanged;
+            Drink.PropertyChanged += NotifyComboChanged;
         }
+
+        /// <summary>
+        /// method to help change item properties when size is changed
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void NotifyComboChanged(object sender, PropertyChangedEventArgs e)
+        {
+            NotifyPropertyChanged();
+            NotifyPropertyChanged("Price");
+            NotifyPropertyChanged("SpecialInstructions");
+            NotifyPropertyChanged("Calories");
+            this.PropertyChanged -= NotifyComboChanged;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="propertyName"></param>
+        protected void NotifyPropertyChanged([CallerMemberName] String propertyName = "")
+        {
+            if(PropertyChanged != null)
+            {
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+
+        public virtual Size size { get; set; }
 
         /// <summary>
         /// property to hold the sum of all the calories for the combo
@@ -91,6 +124,7 @@ namespace BleakwindBuffet.Data
                 if (value != this.entree)
                 {
                     this.entree = value;
+                    NotifyPropertyChanged();
                     PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
                     PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Calories"));
                     PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
@@ -113,6 +147,7 @@ namespace BleakwindBuffet.Data
                 if (value != this.side)
                 {
                     this.side = value;
+                    NotifyPropertyChanged();
                     PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
                     PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Calories"));
                     PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
@@ -135,6 +170,7 @@ namespace BleakwindBuffet.Data
                 if (value != this.drink)
                 {
                     this.drink = value;
+                    NotifyPropertyChanged();
                     PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
                     PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Calories"));
                     PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));

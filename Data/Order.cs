@@ -38,6 +38,9 @@ namespace BleakwindBuffet.Data
         /// </summary>
         public IEnumerable<IOrderItem> Items { get { return items.ToArray(); } }
 
+        public double SalesTaxRate { get; set; } = 0.12;
+
+        private double subtotal = 0;
         /// <summary>
         /// Cost of the order
         /// </summary>
@@ -72,7 +75,7 @@ namespace BleakwindBuffet.Data
         public void Add(IOrderItem item)
         {
             items.Add(item);
-            //CollectionChanged?.Invoke(this, new NotifyCollectionChangedEventArgs());
+            CollectionChanged?.Invoke(this, new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Add, item));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subtotal"));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Calories"));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Tax"));
@@ -85,12 +88,16 @@ namespace BleakwindBuffet.Data
         /// <param name="item"></param>
         public void Remove(IOrderItem item)
         {
-            items.Remove(item);
-            //CollectionChanged?.Invoke(this, new NotifyCollectionChangedEventArgs());
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subtotal"));
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Calories"));
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Tax"));
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Total"));
+            if(items.Contains(item))
+            {
+                var itemIndex = items.IndexOf(item);
+                items.Remove(item);
+                CollectionChanged?.Invoke(this, new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Add, item));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subtotal"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Calories"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Tax"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Total"));
+            }
         }
 
         /// <summary>
