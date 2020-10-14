@@ -3,6 +3,7 @@
  * Class name: CustomizeVokunSalad.xaml.cs
  * Purpose: gives details of Vokun salad
  */
+using BleakwindBuffet.Data.Sides;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -45,6 +46,10 @@ namespace PointOfSale.CustomizeSides
         /// <param name="e"></param>
         void OnSwitchScreen(object sender, RoutedEventArgs e)
         {
+            var vs = new VokunSalad();
+            CustomizeVokunSalad cvs = new CustomizeVokunSalad(ancestor);
+            cvs.DataContext = vs;
+            ancestor.newOrder.Add(vs);
             ancestor.SwitchScreen(Screen.Home);
         }
     }

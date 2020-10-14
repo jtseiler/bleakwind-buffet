@@ -3,6 +3,7 @@
  * Class name: CustomizeWarriorWater.xaml.cs
  * Purpose: gives details of the water
  */
+using BleakwindBuffet.Data.Drinks;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -45,6 +46,10 @@ namespace PointOfSale.CustomizeDrinks
         /// <param name="e"></param>
         void OnSwitchScreen(object sender, RoutedEventArgs e)
         {
+            var ww = new WarriorWater();
+            CustomizeWarriorWater cww = new CustomizeWarriorWater(ancestor);
+            cww.DataContext = ww;
+            ancestor.newOrder.Add(ww);
             ancestor.SwitchScreen(Screen.Home);
         }
     }

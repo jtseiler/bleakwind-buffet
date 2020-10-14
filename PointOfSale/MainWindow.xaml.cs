@@ -57,7 +57,7 @@ namespace PointOfSale
             screens.Add(Screen.custMarkarthMilk, new CustomizeMarkarthMilk(this));
             screens.Add(Screen.custSailorSoda, new CustomizeSailorSoda(this));
             screens.Add(Screen.custWarriorWater, new CustomizeWarriorWater(this));
-            screens.Add(Screen.custDragonbornWaffleFries, new CustomizeDragonvornWaffleFries(this));
+            screens.Add(Screen.custDragonbornWaffleFries, new CustomizeDragonbornWaffleFries(this));
             screens.Add(Screen.custFriedMiraak, new CustomizeFriedMiraak(this));
             screens.Add(Screen.custMadOtarGrits, new CustomizeMadOtarGrits(this));
             screens.Add(Screen.custVokunSalad, new CustomizeVokunSalad(this));

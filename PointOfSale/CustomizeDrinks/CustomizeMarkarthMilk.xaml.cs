@@ -3,6 +3,7 @@
  * Class name: CustomizeMarkarthMilk.xaml.cs
  * Purpose: gives details of the dragonbornwafflefires
  */
+using BleakwindBuffet.Data.Drinks;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -45,6 +46,10 @@ namespace PointOfSale.CustomizeDrinks
         /// <param name="e"></param>
         void OnSwitchScreen(object sender, RoutedEventArgs e)
         {
+            var mm = new MarkarthMilk();
+            CustomizeMarkarthMilk cmm = new CustomizeMarkarthMilk(ancestor);
+            cmm.DataContext = mm;
+            ancestor.newOrder.Add(mm);
             ancestor.SwitchScreen(Screen.Home);
         }
     }

@@ -54,9 +54,7 @@ namespace PointOfSale.CustomizeEntrees
             CustomizeBriarheartBurger cbb = new CustomizeBriarheartBurger(ancestor);
             cbb.DataContext = bb;
             ancestor.newOrder.Add(bb);
-            
             ancestor.SwitchScreen(Screen.Home);
-            
         }
 
     }

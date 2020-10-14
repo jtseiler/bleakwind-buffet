@@ -43,7 +43,6 @@ namespace BleakwindBuffet.Data
         /// </summary>
         public IEnumerable<IOrderItem> Items { get { return items.ToArray(); } }
 
-        public double SalesTaxRate { get; set; } = 0.12;
 
         private double subtotal = 0;
         /// <summary>
@@ -62,6 +61,16 @@ namespace BleakwindBuffet.Data
             }
         }
 
+
+        public double SalesTax
+        {
+            get
+            {
+                return Math.Round(Subtotal * 0.12, 2);
+            }
+        }
+
+
         /// <summary>
         /// Cost of the order including the sales tax
         /// </summary>
@@ -69,7 +78,7 @@ namespace BleakwindBuffet.Data
         {
             get
             {
-                return Subtotal * 0.12;
+                return Subtotal * 1.12;
             }
         }
 

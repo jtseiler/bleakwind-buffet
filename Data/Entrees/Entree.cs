@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data.Enums;
 using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace BleakwindBuffet.Data.Entrees
 {
@@ -41,10 +42,9 @@ namespace BleakwindBuffet.Data.Entrees
         /// Helper method to notify of boolean customization property changes
         /// </summary>
         /// <param name="propertyName"></param>
-        protected void NotifyOfPropertyChange(string propertyName)
+        protected void NotifyOfPropertyChange([CallerMemberName] string propertyName = "")
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
         }
     }
 }

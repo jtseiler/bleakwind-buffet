@@ -3,6 +3,7 @@
  * Class name: CustomizeMadOtarGrits.xaml.cs
  * Purpose: gives details of garden orc omelette
  */
+using BleakwindBuffet.Data.Sides;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -45,6 +46,10 @@ namespace PointOfSale.CustomizeSides
         /// <param name="e"></param>
         void OnSwitchScreen(object sender, RoutedEventArgs e)
         {
+            var mog = new MadOtarGrits();
+            CustomizeMadOtarGrits cmog = new CustomizeMadOtarGrits(ancestor);
+            cmog.DataContext = mog;
+            ancestor.newOrder.Add(mog);
             ancestor.SwitchScreen(Screen.Home);
         }
     }

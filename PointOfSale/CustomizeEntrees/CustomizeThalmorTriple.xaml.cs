@@ -3,6 +3,7 @@
  * Class name: CustomizeThalmorTriple.xaml.cs
  * Purpose: gives details of the thalmortriple
  */
+using BleakwindBuffet.Data.Entrees;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -45,6 +46,10 @@ namespace PointOfSale.CustomizeEntrees
         /// <param name="e"></param>
         void OnSwitchScreen(object sender, RoutedEventArgs e)
         {
+            var tt = new ThalmorTriple();
+            CustomizeThalmorTriple ctt = new CustomizeThalmorTriple(ancestor);
+            ctt.DataContext = tt;
+            ancestor.newOrder.Add(tt);
             ancestor.SwitchScreen(Screen.Home);
         }
     }

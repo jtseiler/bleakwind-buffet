@@ -3,6 +3,7 @@
  * Class name: CustomizeSmokehouseSkeleton.xaml.cs
  * Purpose: gives details of the smokehouseskeleton
  */
+using BleakwindBuffet.Data.Entrees;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -45,6 +46,10 @@ namespace PointOfSale.CustomizeEntrees
         /// <param name="e"></param>
         void OnSwitchScreen(object sender, RoutedEventArgs e)
         {
+            var ss = new SmokehouseSkeleton();
+            CustomizeSmokehouseSkeleton css = new CustomizeSmokehouseSkeleton(ancestor);
+            css.DataContext = ss;
+            ancestor.newOrder.Add(ss);
             ancestor.SwitchScreen(Screen.Home);
         }
     }

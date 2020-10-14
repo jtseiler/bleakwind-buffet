@@ -3,6 +3,7 @@
  * Class name: CustomizePhillyPoacher.xaml.cs
  * Purpose: gives details of the phillypoacher
  */
+using BleakwindBuffet.Data.Entrees;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -45,6 +46,10 @@ namespace PointOfSale.CustomizeEntrees
         /// <param name="e"></param>
         void OnSwitchScreen(object sender, RoutedEventArgs e)
         {
+            var pp = new PhillyPoacher();
+            CustomizePhillyPoacher cpp = new CustomizePhillyPoacher(ancestor);
+            cpp.DataContext = pp;
+            ancestor.newOrder.Add(pp);
             ancestor.SwitchScreen(Screen.Home);
         }
     }

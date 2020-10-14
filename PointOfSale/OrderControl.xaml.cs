@@ -55,45 +55,59 @@ namespace PointOfSale
                     break;
                 case "System.Windows.Controls.Button: Double Draugr":
                     Ancestor.SwitchScreen(Screen.custDoubleDraugr);
+                    DisplayCurrentOrder();
                     break;
                 case "System.Windows.Controls.Button: Garden Orc Omelette":
-                    Ancestor.SwitchScreen(Screen.custGardenOrcOmelette);
+                    Ancestor.SwitchScreen(Screen.custGardenOrcOmelette); 
+                    DisplayCurrentOrder();
                     break;
                 case "System.Windows.Controls.Button: Philly Poacher":
                     Ancestor.SwitchScreen(Screen.custPhillyPoacher);
+                    DisplayCurrentOrder();
                     break;
                 case "System.Windows.Controls.Button: Smokehouse Skeleton":
                     Ancestor.SwitchScreen(Screen.custSmokehouseSkeleton);
+                    DisplayCurrentOrder();
                     break;
                 case "System.Windows.Controls.Button: Thalmor Triple":
                     Ancestor.SwitchScreen(Screen.custThalmorTriple);
+                    DisplayCurrentOrder();
                     break;
                 case "System.Windows.Controls.Button: Dragonborn Waffle Fries":
                     Ancestor.SwitchScreen(Screen.custDragonbornWaffleFries);
+                    DisplayCurrentOrder();
                     break;
                 case "System.Windows.Controls.Button: Fried Miraak":
                     Ancestor.SwitchScreen(Screen.custFriedMiraak);
+                    DisplayCurrentOrder();
                     break;
                 case "System.Windows.Controls.Button: Mad Otar Grits":
                     Ancestor.SwitchScreen(Screen.custMadOtarGrits);
+                    DisplayCurrentOrder();
                     break;
                 case "System.Windows.Controls.Button: Vokun Salad":
                     Ancestor.SwitchScreen(Screen.custVokunSalad);
+                    DisplayCurrentOrder();
                     break;
                 case "System.Windows.Controls.Button: Aretino Apple Juice":
                     Ancestor.SwitchScreen(Screen.custAretinoAppleJuice);
+                    DisplayCurrentOrder();
                     break;
                 case "System.Windows.Controls.Button: Candlehearth Coffee":
                     Ancestor.SwitchScreen(Screen.custCandlehearthCoffee);
+                    DisplayCurrentOrder();
                     break;
                 case "System.Windows.Controls.Button: Markarth Milk":
                     Ancestor.SwitchScreen(Screen.custMarkarthMilk);
+                    DisplayCurrentOrder();
                     break;
                 case "System.Windows.Controls.Button: Sailor Soda":
                     Ancestor.SwitchScreen(Screen.custSailorSoda);
+                    DisplayCurrentOrder();
                     break;
                 case "System.Windows.Controls.Button: Warrior Water":
                     Ancestor.SwitchScreen(Screen.custWarriorWater);
+                    DisplayCurrentOrder();
                     break;
             }
         }
@@ -118,7 +132,7 @@ namespace PointOfSale
                 //OrderListView.Items.Add(removeEditButton);
             }
             OrderListView.Items.Add("Subtotal:      $" + Ancestor.newOrder.Subtotal);
-            OrderListView.Items.Add("Tax:      $" + Ancestor.newOrder.SalesTaxRate);
+            OrderListView.Items.Add("Tax:      $" + Ancestor.newOrder.SalesTax);
             OrderListView.Items.Add("Total:      $" + Ancestor.newOrder.Total);
         }
 

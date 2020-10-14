@@ -3,6 +3,7 @@
  * Class name: CustomizeDoubleDraugr.xaml.cs
  * Purpose: gives details of the double draugr
  */
+using BleakwindBuffet.Data.Entrees;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -45,6 +46,10 @@ namespace PointOfSale.CustomizeEntrees
         /// <param name="e"></param>
         void OnSwitchScreen(object sender, RoutedEventArgs e)
         {
+            var dd = new DoubleDraugr();
+            CustomzieDoubleDraugr cdd = new CustomzieDoubleDraugr(ancestor);
+            cdd.DataContext = dd;
+            ancestor.newOrder.Add(dd);
             ancestor.SwitchScreen(Screen.Home);
         }
     }

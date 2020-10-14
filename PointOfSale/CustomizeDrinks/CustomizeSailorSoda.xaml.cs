@@ -3,6 +3,7 @@
  * Class name: CustomizeSailorSoda.xaml.cs
  * Purpose: gives details of the sailor soda
  */
+using BleakwindBuffet.Data.Drinks;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -45,6 +46,10 @@ namespace PointOfSale.CustomizeDrinks
         /// <param name="e"></param>
         void OnSwitchScreen(object sender, RoutedEventArgs e)
         {
+            var ss = new SailorSoda();
+            CustomizeSailorSoda css = new CustomizeSailorSoda(ancestor);
+            css.DataContext = ss;
+            ancestor.newOrder.Add(ss);
             ancestor.SwitchScreen(Screen.Home);
         }
     }

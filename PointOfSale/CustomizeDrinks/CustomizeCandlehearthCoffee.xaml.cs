@@ -3,6 +3,7 @@
  * Class name: CustomizeCandlehearthCoffee.xaml.cs
  * Purpose: gives details of the candlehearth coffee
  */
+using BleakwindBuffet.Data.Drinks;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -45,6 +46,10 @@ namespace PointOfSale.CustomizeDrinks
         /// <param name="e"></param>
         void OnSwitchScreen(object sender, RoutedEventArgs e)
         {
+            var cc = new CandlehearthCoffee ();
+            CustomizeCandlehearthCoffee ccc = new CustomizeCandlehearthCoffee(ancestor);
+            ccc.DataContext = cc;
+            ancestor.newOrder.Add(cc);
             ancestor.SwitchScreen(Screen.Home);
         }
     }

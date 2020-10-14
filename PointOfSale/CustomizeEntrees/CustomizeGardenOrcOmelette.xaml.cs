@@ -3,6 +3,7 @@
  * Class name: CustomizeGardenOrcOmelette.xaml.cs
  * Purpose: gives details of garden orc omelette
  */
+using BleakwindBuffet.Data.Entrees;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -45,6 +46,10 @@ namespace PointOfSale.CustomizeEntrees
         /// <param name="e"></param>
         void OnSwitchScreen(object sender, RoutedEventArgs e)
         {
+            var goc = new GardenOrcOmelette();
+            CustomizeGardenOrcOmelette cgoc = new CustomizeGardenOrcOmelette(ancestor);
+            cgoc.DataContext = goc;
+            ancestor.newOrder.Add(goc);
             ancestor.SwitchScreen(Screen.Home);
         }
     }

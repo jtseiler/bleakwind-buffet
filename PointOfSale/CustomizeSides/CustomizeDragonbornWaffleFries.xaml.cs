@@ -3,6 +3,7 @@
  * Class name: CustomizeDragonbornWaffleFries.xaml.cs
  * Purpose: gives details of the dragonbornwafflefires
  */
+using BleakwindBuffet.Data.Sides;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -21,7 +22,7 @@ namespace PointOfSale.CustomizeSides
     /// <summary>
     /// Interaction logic for CustomizeDragonvornWaffleFries.xaml
     /// </summary>
-    public partial class CustomizeDragonvornWaffleFries : UserControl
+    public partial class CustomizeDragonbornWaffleFries : UserControl
     {
         /// <summary>
         /// creates mainwindow ancestor property
@@ -32,7 +33,7 @@ namespace PointOfSale.CustomizeSides
         /// constructs an object stating this item as the ancestor
         /// </summary>
         /// <param name="ancestor"></param>
-        public CustomizeDragonvornWaffleFries(MainWindow ancestor)
+        public CustomizeDragonbornWaffleFries(MainWindow ancestor)
         {
             InitializeComponent();
             this.ancestor = ancestor;
@@ -45,6 +46,10 @@ namespace PointOfSale.CustomizeSides
         /// <param name="e"></param>
         void OnSwitchScreen(object sender, RoutedEventArgs e)
         {
+            var dwf = new DragonbornWaffleFries();
+            CustomizeDragonbornWaffleFries cdwf = new CustomizeDragonbornWaffleFries(ancestor);
+            cdwf.DataContext = dwf;
+            ancestor.newOrder.Add(dwf);
             ancestor.SwitchScreen(Screen.Home);
         }
     }

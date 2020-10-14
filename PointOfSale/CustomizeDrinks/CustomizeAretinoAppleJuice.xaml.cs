@@ -3,6 +3,7 @@
  * Class name: CustomizeAretinoAppleJuice.xaml.cs
  * Purpose: gives details of the AretinoAppleJuice
  */
+using BleakwindBuffet.Data.Drinks;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -45,6 +46,10 @@ namespace PointOfSale.CustomizeDrinks
         /// <param name="e"></param>
         void OnSwitchScreen(object sender, RoutedEventArgs e)
         {
+            var aa = new AretinoAppleJuice();
+            CustomizeAretinoAppleJuice caa = new CustomizeAretinoAppleJuice(ancestor);
+            caa.DataContext = aa;
+            ancestor.newOrder.Add(aa);
             ancestor.SwitchScreen(Screen.Home);
         }
     }

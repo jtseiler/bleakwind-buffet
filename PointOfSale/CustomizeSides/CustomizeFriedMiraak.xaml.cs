@@ -3,6 +3,7 @@
  * Class name: CustomizeFriedMiraak.xaml.cs
  * Purpose: gives details of friedmiraak
  */
+using BleakwindBuffet.Data.Sides;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -45,6 +46,10 @@ namespace PointOfSale.CustomizeSides
         /// <param name="e"></param>
         void OnSwitchScreen(object sender, RoutedEventArgs e)
         {
+            var fm = new FriedMiraak();
+            CustomizeFriedMiraak cfm = new CustomizeFriedMiraak(ancestor);
+            cfm.DataContext = fm;
+            ancestor.newOrder.Add(fm);
             ancestor.SwitchScreen(Screen.Home);
         }
     }
