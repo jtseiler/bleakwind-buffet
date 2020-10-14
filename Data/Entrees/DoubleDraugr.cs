@@ -5,6 +5,7 @@
  */
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 
 /// <summary>
@@ -15,7 +16,7 @@ namespace BleakwindBuffet.Data.Entrees
     /// <summary>
     /// Creating an addition to the drink menu under the entree namespace
     /// </summary>
-    public class DoubleDraugr : Entree, IOrderItem
+    public class DoubleDraugr : Entree, IOrderItem, INotifyPropertyChanged
     {
         /// <summary>
         /// Property to keep track of the price
@@ -49,7 +50,7 @@ namespace BleakwindBuffet.Data.Entrees
             set
             {
                 ketchup = value;
-                NotifyOfPropertyChange("Ketchup");
+                NotifyOfPropertyChange();
             }
         }
 
@@ -63,7 +64,7 @@ namespace BleakwindBuffet.Data.Entrees
             set
             {
                 bun = value;
-                NotifyOfPropertyChange("Bun");
+                NotifyOfPropertyChange();
             }
         }
 
@@ -77,7 +78,7 @@ namespace BleakwindBuffet.Data.Entrees
             set
             {
                 mustard = value;
-                NotifyOfPropertyChange("Mustard");
+                NotifyOfPropertyChange();
             }
         }
 
@@ -91,7 +92,7 @@ namespace BleakwindBuffet.Data.Entrees
             set
             {
                 pickle = value;
-                NotifyOfPropertyChange("Pickle");
+                NotifyOfPropertyChange();
             }
         }
 
@@ -105,7 +106,7 @@ namespace BleakwindBuffet.Data.Entrees
             set
             {
                 cheese = value;
-                NotifyOfPropertyChange("Cheese");
+                NotifyOfPropertyChange();
             }
         }
 
@@ -120,7 +121,7 @@ namespace BleakwindBuffet.Data.Entrees
             set
             {
                 tomato = value;
-                NotifyOfPropertyChange("Tomato");
+                NotifyOfPropertyChange();
             }
         }
 
@@ -134,7 +135,7 @@ namespace BleakwindBuffet.Data.Entrees
             set
             {
                 lettuce = value;
-                NotifyOfPropertyChange("Lettuce");
+                NotifyOfPropertyChange();
             }
         }
 
@@ -148,7 +149,7 @@ namespace BleakwindBuffet.Data.Entrees
             set
             {
                 mayo = value;
-                NotifyOfPropertyChange("Mayo");
+                NotifyOfPropertyChange();
             }
         }
 

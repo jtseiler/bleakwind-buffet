@@ -5,6 +5,7 @@
  */
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 
 /// <summary>
@@ -15,7 +16,7 @@ namespace BleakwindBuffet.Data.Entrees
     /// <summary>
     /// Creating an addition to the drink menu under the entree namespace
     /// </summary>
-    public class PhillyPoacher : Entree, IOrderItem
+    public class PhillyPoacher : Entree, IOrderItem, INotifyPropertyChanged
     {
         // <summary>
         /// Property to keep track of the price
@@ -49,7 +50,7 @@ namespace BleakwindBuffet.Data.Entrees
             set
             {
                 sirloin = value;
-                NotifyOfPropertyChange("Sirloin");
+                NotifyOfPropertyChange();
             }
         }
 
@@ -63,7 +64,7 @@ namespace BleakwindBuffet.Data.Entrees
             set
             {
                 onion = value;
-                NotifyOfPropertyChange("Onion");
+                NotifyOfPropertyChange();
             }
         }
 
@@ -77,7 +78,7 @@ namespace BleakwindBuffet.Data.Entrees
             set
             {
                 roll = value;
-                NotifyOfPropertyChange("Roll");
+                NotifyOfPropertyChange();
             }
         }
 

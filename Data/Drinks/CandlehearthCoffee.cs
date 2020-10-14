@@ -5,6 +5,7 @@
  */
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 using BleakwindBuffet.Data.Enums;
 
@@ -16,7 +17,7 @@ namespace BleakwindBuffet.Data.Drinks
     /// <summary>
     /// Creating an addition to the drink menu under the drink namespace
     /// </summary>
-    public class CandlehearthCoffee : Drink, IOrderItem
+    public class CandlehearthCoffee : Drink, IOrderItem, INotifyPropertyChanged
     {
         /// <summary>
         /// Property to keep track of the price
@@ -76,7 +77,7 @@ namespace BleakwindBuffet.Data.Drinks
             set
             {
                 ice = value;
-                NotifyOfPropertyChange("Ice");
+                NotifyOfPropertyChange();
             }
         }
 
@@ -90,7 +91,7 @@ namespace BleakwindBuffet.Data.Drinks
             set
             {
                 roomForCream = value;
-                NotifyOfPropertyChange("RoomForCream");
+                NotifyOfPropertyChange();
             }
         }
 
@@ -104,7 +105,7 @@ namespace BleakwindBuffet.Data.Drinks
             set
             {
                 decaf = value;
-                NotifyOfPropertyChange("Decaf");
+                NotifyOfPropertyChange();
             }
         }
 

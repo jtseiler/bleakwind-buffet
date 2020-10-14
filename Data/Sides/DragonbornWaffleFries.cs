@@ -5,6 +5,7 @@
  */
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 using BleakwindBuffet.Data.Enums;
 
@@ -16,7 +17,7 @@ namespace BleakwindBuffet.Data.Sides
     /// <summary>
     /// Creating an addition to the side menu under the sides namespace
     /// </summary>
-    public class DragonbornWaffleFries : Side, IOrderItem
+    public class DragonbornWaffleFries : Side, IOrderItem, INotifyPropertyChanged
     {
         /// <summary>
         /// Property to keep track of the price
