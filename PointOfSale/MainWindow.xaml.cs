@@ -23,6 +23,7 @@ using PointOfSale.CustomizeDrinks;
 using BleakwindBuffet.Data.Entrees;
 using BleakwindBuffet.Data.Drinks;
 using BleakwindBuffet.Data.Sides;
+using BleakwindBuffet.Data;
 
 namespace PointOfSale
 {
@@ -36,7 +37,7 @@ namespace PointOfSale
         /// </summary>
         Dictionary<Screen, UserControl> screens = new Dictionary<Screen, UserControl>();
 
-
+       public Order newOrder = new Order();
         /// <summary>
         /// contructor that adds all screens to the dictionary
         /// </summary>

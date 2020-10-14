@@ -97,12 +97,12 @@ namespace PointOfSale
             }
         }
 
-        Order newOrder = new Order();
+        
         public void DisplayCurrentOrder()
         {
             OrderListView.Items.Clear();
-            OrderListView.Items.Add("       Order #" + newOrder.OrderNumber);
-            foreach(IOrderItem item in newOrder.Items)
+            OrderListView.Items.Add("       Order #" + Ancestor.newOrder.OrderNumber);
+            foreach(IOrderItem item in Ancestor.newOrder.Items)
             {
                 OrderListView.Items.Add(item.ToString() + " $" + item.Price);
                 foreach(string specialInstructions in item.SpecialInstructions)
@@ -116,9 +116,9 @@ namespace PointOfSale
                 //removeEditButton.Click = (object sender, RoutedEventArgs e) => { ItemReSelectionClickEvent(sender, e, item) };
                 OrderListView.Items.Add(removeEditButton);
             }
-            OrderListView.Items.Add("Subtotal:      $" + newOrder.Subtotal);
-            OrderListView.Items.Add("Tax:      $" + newOrder.SalesTaxRate);
-            OrderListView.Items.Add("Total:      $" + newOrder.Total);
+            OrderListView.Items.Add("Subtotal:      $" + Ancestor.newOrder.Subtotal);
+            OrderListView.Items.Add("Tax:      $" + Ancestor.newOrder.SalesTaxRate);
+            OrderListView.Items.Add("Total:      $" + Ancestor.newOrder.Total);
         }
     }
 }
