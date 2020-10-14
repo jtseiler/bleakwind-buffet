@@ -51,6 +51,7 @@ namespace PointOfSale
             {
                 case "System.Windows.Controls.Button: Briarheart Burger":
                     Ancestor.SwitchScreen(Screen.custBriarheartBurger);
+                    DisplayCurrentOrder();
                     break;
                 case "System.Windows.Controls.Button: Double Draugr":
                     Ancestor.SwitchScreen(Screen.custDoubleDraugr);
@@ -109,16 +110,21 @@ namespace PointOfSale
                 {
                     OrderListView.Items.Add("-" + specialInstructions);
                 }
-                Button removeEditButton = new Button();
-                removeEditButton.Margin = new Thickness(20, 0, 0, 0);
-                removeEditButton.Content = "Remove/Edit Order";
+                //Button removeEditButton = new Button();
+                //removeEditButton.Margin = new Thickness(20, 0, 0, 0);
+                //removeEditButton.Content = "Remove/Edit Order";
                 //need help hooking up clcik event
                 //removeEditButton.Click = (object sender, RoutedEventArgs e) => { ItemReSelectionClickEvent(sender, e, item) };
-                OrderListView.Items.Add(removeEditButton);
+                //OrderListView.Items.Add(removeEditButton);
             }
             OrderListView.Items.Add("Subtotal:      $" + Ancestor.newOrder.Subtotal);
             OrderListView.Items.Add("Tax:      $" + Ancestor.newOrder.SalesTaxRate);
             OrderListView.Items.Add("Total:      $" + Ancestor.newOrder.Total);
+        }
+
+        private void OrderListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }
