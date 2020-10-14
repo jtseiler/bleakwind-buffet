@@ -40,7 +40,6 @@ namespace PointOfSale.CustomizeEntrees
             InitializeComponent();
             this.ancestor = ancestor;
             DataContext = bb;
-            ancestor.newOrder.Add(bb);
         }
 
         /// <summary>

@@ -46,7 +46,6 @@ namespace PointOfSale
         /// <param name="e"></param>
         void onSwitchScreen(object sender, RoutedEventArgs e)
         {
-            DisplayCurrentOrder();
             var buttons = (Button)sender;
             switch (buttons.ToString())
             {
