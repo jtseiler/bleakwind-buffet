@@ -78,7 +78,7 @@ namespace BleakwindBuffet.Data
         {
             get
             {
-                return Subtotal * 1.12;
+                return Math.Round(Subtotal * 1.12);
             }
         }
 

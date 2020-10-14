@@ -31,11 +31,9 @@
         <Border Grid.Column="4" Grid.RowSpan="3" Margin="0,20,20,20" BorderBrush="Black" BorderThickness="2">
             <StackPanel Grid.Column="3" Grid.RowSpan="3">
                 <TextBlock FontSize="20" TextAlignment="Center">Order:</TextBlock>
-                <ListView Name="OrderListView" Height="302" SelectionChanged="OrderListView_SelectionChanged"></ListView>
-                <Grid Height="375">
-                    <Button Height="40" Margin="0,265,0,50">Cancel Order</Button>
-                    <Button Height="40" Margin="0,310,0,0">Complete Order</Button>
-                </Grid>
+                <ListView Name="OrderListView" Height="302" SelectionChanged="OrderListView_SelectionChanged"/>
+                <Button Height="40" Margin="0,0,0,0">Cancel Order</Button>
+                <Button Height="40" Margin="0,0,0,50">Complete Order</Button>
             </StackPanel>
         </Border>
 
