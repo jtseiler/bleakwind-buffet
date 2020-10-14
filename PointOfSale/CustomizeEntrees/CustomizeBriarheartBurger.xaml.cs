@@ -35,12 +35,12 @@ namespace PointOfSale.CustomizeEntrees
         /// constructs an object stating this item as the ancestor
         /// </summary>
         /// <param name="ancestor"></param>
-        public CustomizeBriarheartBurger(MainWindow ancestor)
+        public CustomizeBriarheartBurger(MainWindow ancestor, BriarheartBurger bb)
         {
             InitializeComponent();
             this.ancestor = ancestor;
-
-            
+            DataContext = bb;
+            ancestor.newOrder.Add(bb);
         }
 
         /// <summary>
@@ -50,10 +50,6 @@ namespace PointOfSale.CustomizeEntrees
         /// <param name="e"></param>
         void OnSwitchScreen(object sender, RoutedEventArgs e)
         {
-            var bb = new BriarheartBurger();
-            CustomizeBriarheartBurger cbb = new CustomizeBriarheartBurger(ancestor);
-            cbb.DataContext = bb;
-            ancestor.newOrder.Add(bb);
             ancestor.SwitchScreen(Screen.Home);
         }
 

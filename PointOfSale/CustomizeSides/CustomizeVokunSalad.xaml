@@ -1,18 +1,19 @@
-﻿<UserControl x:Class="PointOfSale.CustomizeSides.CustomizeVokunSalad"
+﻿<UserControl
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PointOfSale.CustomizeSides"
+             xmlns:Sides="clr-namespace:BleakwindBuffet.Data.Sides;assembly=Data" x:Class="PointOfSale.CustomizeSides.CustomizeVokunSalad"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Border BorderThickness="2" BorderBrush="Black">
         <StackPanel Margin="20,20,20,20">
             <TextBlock FontSize="30" FontWeight="Bold" Text="Customize Vokun Salad!"/>
             <StackPanel Margin="0,10,0,0">
-                <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0" IsChecked="{Binding Path = Small}">Small</CheckBox>
-                <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0" IsChecked="{Binding Path = Medium}">Medium</CheckBox>
-                <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0" IsChecked="{Binding Path = Large}">Large</CheckBox>
+                <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0" IsChecked="{Binding Small, Mode=TwoWay}" Content="Small"/>
+                <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0" IsChecked="{Binding Medium, Mode=TwoWay}" Content="Medium"/>
+                <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0" IsChecked="{Binding Large, Mode=TwoWay}" Content="Large"/>
                 <Button Click="OnSwitchScreen" Content="Done" FontSize="20" FontWeight="Medium" Height="40" Margin="9" ClickMode="Release"/>
             </StackPanel>
         </StackPanel>

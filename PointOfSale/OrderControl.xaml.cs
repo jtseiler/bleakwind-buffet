@@ -46,12 +46,13 @@ namespace PointOfSale
         /// <param name="e"></param>
         void onSwitchScreen(object sender, RoutedEventArgs e)
         {
+            DisplayCurrentOrder();
             var buttons = (Button)sender;
             switch (buttons.ToString())
             {
                 case "System.Windows.Controls.Button: Briarheart Burger":
-                    Ancestor.SwitchScreen(Screen.custBriarheartBurger);
                     DisplayCurrentOrder();
+                    Ancestor.SwitchScreen(Screen.custBriarheartBurger);
                     break;
                 case "System.Windows.Controls.Button: Double Draugr":
                     Ancestor.SwitchScreen(Screen.custDoubleDraugr);

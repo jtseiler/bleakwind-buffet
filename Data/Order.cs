@@ -57,7 +57,7 @@ namespace BleakwindBuffet.Data
                 {
                     total += item.Price;
                 }
-                return total;
+                return Math.Round(total);
             }
         }
 

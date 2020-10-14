@@ -46,7 +46,7 @@ namespace PointOfSale
             InitializeComponent();
             descendant.Ancestor = this;
             screens.Add(Screen.Home, descendant);
-            screens.Add(Screen.custBriarheartBurger, new CustomizeBriarheartBurger(this));
+            screens.Add(Screen.custBriarheartBurger, new CustomizeBriarheartBurger(this, new BriarheartBurger()));
             screens.Add(Screen.custDoubleDraugr, new CustomzieDoubleDraugr(this));
             screens.Add(Screen.custGardenOrcOmelette, new CustomizeGardenOrcOmelette(this));
             screens.Add(Screen.custPhillyPoacher, new CustomizePhillyPoacher(this));
