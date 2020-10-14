@@ -33,10 +33,12 @@ namespace PointOfSale.CustomizeEntrees
         /// constructs an object stating this item as the ancestor
         /// </summary>
         /// <param name="ancestor"></param>
-        public CustomizeThalmorTriple(MainWindow ancestor)
+        public CustomizeThalmorTriple(MainWindow ancestor, ThalmorTriple tt)
         {
             InitializeComponent();
             this.ancestor = ancestor;
+            DataContext = tt;
+            ancestor.newOrder.Add(tt);
         }
 
         /// <summary>
@@ -46,10 +48,6 @@ namespace PointOfSale.CustomizeEntrees
         /// <param name="e"></param>
         void OnSwitchScreen(object sender, RoutedEventArgs e)
         {
-            var tt = new ThalmorTriple();
-            CustomizeThalmorTriple ctt = new CustomizeThalmorTriple(ancestor);
-            ctt.DataContext = tt;
-            ancestor.newOrder.Add(tt);
             ancestor.SwitchScreen(Screen.Home);
         }
     }

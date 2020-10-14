@@ -33,10 +33,12 @@ namespace PointOfSale.CustomizeSides
         /// constructs an object stating this item as the ancestor
         /// </summary>
         /// <param name="ancestor"></param>
-        public CustomizeMadOtarGrits(MainWindow ancestor)
+        public CustomizeMadOtarGrits(MainWindow ancestor, MadOtarGrits mog)
         {
             InitializeComponent();
             this.ancestor = ancestor;
+            DataContext = mog;
+            ancestor.newOrder.Add(mog);
         }
 
         /// <summary>
@@ -46,10 +48,6 @@ namespace PointOfSale.CustomizeSides
         /// <param name="e"></param>
         void OnSwitchScreen(object sender, RoutedEventArgs e)
         {
-            var mog = new MadOtarGrits();
-            CustomizeMadOtarGrits cmog = new CustomizeMadOtarGrits(ancestor);
-            cmog.DataContext = mog;
-            ancestor.newOrder.Add(mog);
             ancestor.SwitchScreen(Screen.Home);
         }
     }

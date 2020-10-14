@@ -52,6 +52,5 @@ namespace PointOfSale.CustomizeEntrees
         {
             ancestor.SwitchScreen(Screen.Home);
         }
-
     }
 }

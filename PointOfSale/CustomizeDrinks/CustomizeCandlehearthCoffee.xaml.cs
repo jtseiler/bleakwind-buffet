@@ -33,10 +33,12 @@ namespace PointOfSale.CustomizeDrinks
         /// constructs an object stating this item as the ancestor
         /// </summary>
         /// <param name="ancestor"></param>
-        public CustomizeCandlehearthCoffee(MainWindow ancestor)
+        public CustomizeCandlehearthCoffee(MainWindow ancestor, CandlehearthCoffee cc)
         {
             InitializeComponent();
             this.ancestor = ancestor;
+            DataContext = cc;
+            ancestor.newOrder.Add(cc);
         }
 
         /// <summary>
@@ -46,10 +48,6 @@ namespace PointOfSale.CustomizeDrinks
         /// <param name="e"></param>
         void OnSwitchScreen(object sender, RoutedEventArgs e)
         {
-            var cc = new CandlehearthCoffee ();
-            CustomizeCandlehearthCoffee ccc = new CustomizeCandlehearthCoffee(ancestor);
-            ccc.DataContext = cc;
-            ancestor.newOrder.Add(cc);
             ancestor.SwitchScreen(Screen.Home);
         }
     }

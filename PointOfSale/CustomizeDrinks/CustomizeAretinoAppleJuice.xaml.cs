@@ -33,10 +33,12 @@ namespace PointOfSale.CustomizeDrinks
         /// constructs an object stating this item as the ancestor
         /// </summary>
         /// <param name="ancestor"></param>
-        public CustomizeAretinoAppleJuice(MainWindow ancestor)
+        public CustomizeAretinoAppleJuice(MainWindow ancestor, AretinoAppleJuice aa)
         {
             InitializeComponent();
             this.ancestor = ancestor;
+            DataContext = aa;
+            ancestor.newOrder.Add(aa);
         }
 
         /// <summary>
@@ -46,10 +48,6 @@ namespace PointOfSale.CustomizeDrinks
         /// <param name="e"></param>
         void OnSwitchScreen(object sender, RoutedEventArgs e)
         {
-            var aa = new AretinoAppleJuice();
-            CustomizeAretinoAppleJuice caa = new CustomizeAretinoAppleJuice(ancestor);
-            caa.DataContext = aa;
-            ancestor.newOrder.Add(aa);
             ancestor.SwitchScreen(Screen.Home);
         }
     }

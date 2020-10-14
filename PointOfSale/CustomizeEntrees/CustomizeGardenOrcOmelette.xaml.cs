@@ -33,10 +33,12 @@ namespace PointOfSale.CustomizeEntrees
         /// constructs an object stating this item as the ancestor
         /// </summary>
         /// <param name="ancestor"></param>
-        public CustomizeGardenOrcOmelette(MainWindow ancestor)
+        public CustomizeGardenOrcOmelette(MainWindow ancestor, GardenOrcOmelette goc)
         {
             InitializeComponent();
             this.ancestor = ancestor;
+            DataContext = goc;
+            ancestor.newOrder.Add(goc);
         }
 
         /// <summary>
@@ -46,10 +48,6 @@ namespace PointOfSale.CustomizeEntrees
         /// <param name="e"></param>
         void OnSwitchScreen(object sender, RoutedEventArgs e)
         {
-            var goc = new GardenOrcOmelette();
-            CustomizeGardenOrcOmelette cgoc = new CustomizeGardenOrcOmelette(ancestor);
-            cgoc.DataContext = goc;
-            ancestor.newOrder.Add(goc);
             ancestor.SwitchScreen(Screen.Home);
         }
     }

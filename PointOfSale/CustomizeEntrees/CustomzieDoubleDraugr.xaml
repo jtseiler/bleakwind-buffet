@@ -10,14 +10,14 @@
         <StackPanel>
             <TextBlock FontSize="30" FontWeight="Bold" Text="Customize Double Draugr!"/>
             <StackPanel>
-                <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0" IsChecked="{Binding Path = Bun}">Bun</CheckBox>
-                <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0" IsChecked="{Binding Path = Ketchup}">Ketchup</CheckBox>
-                <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0" IsChecked="{Binding Path = Mustard}">Mustard</CheckBox>
-                <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0" IsChecked="{Binding Path = Pickle}">Pickle</CheckBox>
-                <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0" IsChecked="{Binding Path = Cheese}">Cheese</CheckBox>
-                <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0" IsChecked="{Binding Path = Tomato}">Tomato</CheckBox>
-                <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0" IsChecked="{Binding Path = Lettuce}">Lettuce</CheckBox>
-                <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0" IsChecked="{Binding Path = Mayo}">Mayo</CheckBox>
+                <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0" IsChecked="{Binding Path = Bun, Mode=TwoWay}">Bun</CheckBox>
+                <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0" IsChecked="{Binding Path = Ketchup, Mode=TwoWay}">Ketchup</CheckBox>
+                <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0" IsChecked="{Binding Path = Mustard, Mode=TwoWay}">Mustard</CheckBox>
+                <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0" IsChecked="{Binding Path = Pickle, Mode=TwoWay}">Pickle</CheckBox>
+                <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0" IsChecked="{Binding Path = Cheese, Mode=TwoWay}">Cheese</CheckBox>
+                <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0" IsChecked="{Binding Path = Tomato, Mode=TwoWay}">Tomato</CheckBox>
+                <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0" IsChecked="{Binding Path = Lettuce, Mode=TwoWay}">Lettuce</CheckBox>
+                <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0" IsChecked="{Binding Path = Mayo, Mode=TwoWay}">Mayo</CheckBox>
                 <Button Click="OnSwitchScreen" Content="Done" FontSize="20" FontWeight="Medium" Height="40" Margin="9" ClickMode="Release"/>
             </StackPanel>
         </StackPanel>

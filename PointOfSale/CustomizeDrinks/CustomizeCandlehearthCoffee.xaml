@@ -13,9 +13,9 @@
                 <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0" IsChecked="{Binding Path = Small}">Small</CheckBox>
                 <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0" IsChecked="{Binding Path = Medium}">Medium</CheckBox>
                 <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0" IsChecked="{Binding Path = Large}">Large</CheckBox>
-                <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0" IsChecked="{Binding Path = Ice}">Ice</CheckBox>
-                <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0" IsChecked="{Binding Path = RoomForCream}">Room For Cream</CheckBox>
-                <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0" IsChecked="{Binding Path = Decaf}">Decaf</CheckBox>
+                <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0" IsChecked="{Binding Path = Ice, Mode=TwoWay}">Ice</CheckBox>
+                <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0" IsChecked="{Binding Path = RoomForCream, Mode=TwoWay}">Room For Cream</CheckBox>
+                <CheckBox FontSize="20" Margin="5" Padding="5,-8,0,0" IsChecked="{Binding Path = Decaf, Mode=TwoWay}">Decaf</CheckBox>
                 <Button Click="OnSwitchScreen" Content="Done" FontSize="20" FontWeight="Medium" Height="40" Margin="9" ClickMode="Release"/>
             </StackPanel>
         </StackPanel>

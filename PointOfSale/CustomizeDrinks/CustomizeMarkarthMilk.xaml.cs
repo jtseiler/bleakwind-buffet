@@ -33,10 +33,12 @@ namespace PointOfSale.CustomizeDrinks
         /// constructs an object stating this item as the ancestor
         /// </summary>
         /// <param name="ancestor"></param>
-        public CustomizeMarkarthMilk(MainWindow ancestor)
+        public CustomizeMarkarthMilk(MainWindow ancestor, MarkarthMilk mm)
         {
             InitializeComponent();
             this.ancestor = ancestor;
+            DataContext = mm;
+            ancestor.newOrder.Add(mm);
         }
 
         /// <summary>
@@ -46,10 +48,6 @@ namespace PointOfSale.CustomizeDrinks
         /// <param name="e"></param>
         void OnSwitchScreen(object sender, RoutedEventArgs e)
         {
-            var mm = new MarkarthMilk();
-            CustomizeMarkarthMilk cmm = new CustomizeMarkarthMilk(ancestor);
-            cmm.DataContext = mm;
-            ancestor.newOrder.Add(mm);
             ancestor.SwitchScreen(Screen.Home);
         }
     }

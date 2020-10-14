@@ -33,10 +33,12 @@ namespace PointOfSale.CustomizeDrinks
         /// constructs an object stating this item as the ancestor
         /// </summary>
         /// <param name="ancestor"></param>
-        public CustomizeSailorSoda(MainWindow ancestor)
+        public CustomizeSailorSoda(MainWindow ancestor, SailorSoda ss)
         {
             InitializeComponent();
             this.ancestor = ancestor;
+            DataContext = ss;
+            ancestor.newOrder.Add(ss);
         }
 
         /// <summary>
@@ -46,10 +48,6 @@ namespace PointOfSale.CustomizeDrinks
         /// <param name="e"></param>
         void OnSwitchScreen(object sender, RoutedEventArgs e)
         {
-            var ss = new SailorSoda();
-            CustomizeSailorSoda css = new CustomizeSailorSoda(ancestor);
-            css.DataContext = ss;
-            ancestor.newOrder.Add(ss);
             ancestor.SwitchScreen(Screen.Home);
         }
     }

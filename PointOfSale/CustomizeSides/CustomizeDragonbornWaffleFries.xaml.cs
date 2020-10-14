@@ -33,10 +33,12 @@ namespace PointOfSale.CustomizeSides
         /// constructs an object stating this item as the ancestor
         /// </summary>
         /// <param name="ancestor"></param>
-        public CustomizeDragonbornWaffleFries(MainWindow ancestor)
+        public CustomizeDragonbornWaffleFries(MainWindow ancestor, DragonbornWaffleFries dwf)
         {
             InitializeComponent();
             this.ancestor = ancestor;
+            DataContext = dwf;
+            ancestor.newOrder.Add(dwf);
         }
 
         /// <summary>
@@ -46,10 +48,6 @@ namespace PointOfSale.CustomizeSides
         /// <param name="e"></param>
         void OnSwitchScreen(object sender, RoutedEventArgs e)
         {
-            var dwf = new DragonbornWaffleFries();
-            CustomizeDragonbornWaffleFries cdwf = new CustomizeDragonbornWaffleFries(ancestor);
-            cdwf.DataContext = dwf;
-            ancestor.newOrder.Add(dwf);
             ancestor.SwitchScreen(Screen.Home);
         }
     }

@@ -33,10 +33,12 @@ namespace PointOfSale.CustomizeSides
         /// constructs an object stating this item as the ancestor
         /// </summary>
         /// <param name="ancestor"></param>
-        public CustomizeVokunSalad(MainWindow ancestor)
+        public CustomizeVokunSalad(MainWindow ancestor, VokunSalad vs)
         {
             InitializeComponent();
             this.ancestor = ancestor;
+            DataContext = vs;
+            ancestor.newOrder.Add(vs);
         }
 
         /// <summary>
@@ -46,10 +48,6 @@ namespace PointOfSale.CustomizeSides
         /// <param name="e"></param>
         void OnSwitchScreen(object sender, RoutedEventArgs e)
         {
-            var vs = new VokunSalad();
-            CustomizeVokunSalad cvs = new CustomizeVokunSalad(ancestor);
-            cvs.DataContext = vs;
-            ancestor.newOrder.Add(vs);
             ancestor.SwitchScreen(Screen.Home);
         }
     }

@@ -33,10 +33,12 @@ namespace PointOfSale.CustomizeDrinks
         /// constructs an object stating this item as the ancestor
         /// </summary>
         /// <param name="ancestor"></param>
-        public CustomizeWarriorWater(MainWindow ancestor)
+        public CustomizeWarriorWater(MainWindow ancestor, WarriorWater ww)
         {
             InitializeComponent();
             this.ancestor = ancestor;
+            DataContext = ww;
+            ancestor.newOrder.Add(ww);
         }
 
         /// <summary>
@@ -46,10 +48,6 @@ namespace PointOfSale.CustomizeDrinks
         /// <param name="e"></param>
         void OnSwitchScreen(object sender, RoutedEventArgs e)
         {
-            var ww = new WarriorWater();
-            CustomizeWarriorWater cww = new CustomizeWarriorWater(ancestor);
-            cww.DataContext = ww;
-            ancestor.newOrder.Add(ww);
             ancestor.SwitchScreen(Screen.Home);
         }
     }

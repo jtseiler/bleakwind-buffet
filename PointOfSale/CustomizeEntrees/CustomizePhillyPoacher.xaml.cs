@@ -33,10 +33,12 @@ namespace PointOfSale.CustomizeEntrees
         /// constructs an object stating this item as the ancestor
         /// </summary>
         /// <param name="ancestor"></param>
-        public CustomizePhillyPoacher(MainWindow ancestor)
+        public CustomizePhillyPoacher(MainWindow ancestor, PhillyPoacher pp)
         {
             InitializeComponent();
             this.ancestor = ancestor;
+            DataContext = pp;
+            ancestor.newOrder.Add(pp);
         }
 
         /// <summary>
@@ -46,10 +48,6 @@ namespace PointOfSale.CustomizeEntrees
         /// <param name="e"></param>
         void OnSwitchScreen(object sender, RoutedEventArgs e)
         {
-            var pp = new PhillyPoacher();
-            CustomizePhillyPoacher cpp = new CustomizePhillyPoacher(ancestor);
-            cpp.DataContext = pp;
-            ancestor.newOrder.Add(pp);
             ancestor.SwitchScreen(Screen.Home);
         }
     }

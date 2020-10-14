@@ -33,10 +33,12 @@ namespace PointOfSale.CustomizeSides
         /// constructs an object stating this item as the ancestor
         /// </summary>
         /// <param name="ancestor"></param>
-        public CustomizeFriedMiraak(MainWindow ancestor)
+        public CustomizeFriedMiraak(MainWindow ancestor, FriedMiraak fm)
         {
             InitializeComponent();
             this.ancestor = ancestor;
+            DataContext = fm;
+            ancestor.newOrder.Add(fm);
         }
 
         /// <summary>
@@ -46,10 +48,6 @@ namespace PointOfSale.CustomizeSides
         /// <param name="e"></param>
         void OnSwitchScreen(object sender, RoutedEventArgs e)
         {
-            var fm = new FriedMiraak();
-            CustomizeFriedMiraak cfm = new CustomizeFriedMiraak(ancestor);
-            cfm.DataContext = fm;
-            ancestor.newOrder.Add(fm);
             ancestor.SwitchScreen(Screen.Home);
         }
     }

@@ -33,10 +33,12 @@ namespace PointOfSale.CustomizeEntrees
         /// constructs an object stating this item as the ancestor
         /// </summary>
         /// <param name="ancestor"></param>
-        public CustomzieDoubleDraugr(MainWindow ancestor)
+        public CustomzieDoubleDraugr(MainWindow ancestor, DoubleDraugr dd)
         {
             InitializeComponent();
             this.ancestor = ancestor;
+            DataContext = dd;
+            ancestor.newOrder.Add(dd);
         }
 
         /// <summary>
@@ -46,10 +48,6 @@ namespace PointOfSale.CustomizeEntrees
         /// <param name="e"></param>
         void OnSwitchScreen(object sender, RoutedEventArgs e)
         {
-            var dd = new DoubleDraugr();
-            CustomzieDoubleDraugr cdd = new CustomzieDoubleDraugr(ancestor);
-            cdd.DataContext = dd;
-            ancestor.newOrder.Add(dd);
             ancestor.SwitchScreen(Screen.Home);
         }
     }
