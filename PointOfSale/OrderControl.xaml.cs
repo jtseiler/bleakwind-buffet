@@ -124,9 +124,9 @@ namespace PointOfSale
                 {
                     OrderListView.Items.Add("-" + specialInstructions);
                 }
-                //Button removeEditButton = new Button();
+                Button removeEditButton = new Button();
                 //removeEditButton.Margin = new Thickness(20, 0, 0, 0);
-                //removeEditButton.Content = "Remove/Edit Order";
+                removeEditButton.Content = "Remove/Edit Order";
                 //need help hooking up clcik event
                 //removeEditButton.Click = (object sender, RoutedEventArgs e) => { ItemReSelectionClickEvent(sender, e, item) };
                 //OrderListView.Items.Add(removeEditButton);
@@ -139,6 +139,19 @@ namespace PointOfSale
         private void OrderListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
+        }
+
+
+        /// <summary>
+        /// Click event for the CANCEL ORDER BUTTON
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            OrderListView.Items.Clear();
+            Order order = new Order();
+            DataContext = order;
         }
     }
 }

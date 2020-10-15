@@ -119,8 +119,11 @@ namespace BleakwindBuffet.Data
         /// </summary>
         public void OnItemPropertyChanged()
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Items"));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subtotal"));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Calories"));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Tax"));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Total"));
         }
     }
 }
