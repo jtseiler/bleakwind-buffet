@@ -29,7 +29,8 @@ namespace PointOfSale.CustomizeEntrees
         /// </summary>
         MainWindow ancestor;
 
-       // MainWindow window = (MainWindow)Application.Current.MainWindow();
+        // MainWindow window = (MainWindow)Application.Current.MainWindow();
+        //BriarheartBurger bb;
 
         /// <summary>
         /// constructs an object stating this item as the ancestor
@@ -40,6 +41,9 @@ namespace PointOfSale.CustomizeEntrees
             InitializeComponent();
             this.ancestor = ancestor;
             DataContext = bb;
+            ancestor.newOrder.Add(bb);
+
+            //this.bb = bb;
         }
 
         /// <summary>
