@@ -33,7 +33,7 @@
                 <TextBlock FontSize="20" TextAlignment="Center">Order:</TextBlock>
                 <ListView Name="OrderListView" Height="302" SelectionChanged="OrderListView_SelectionChanged"/>
                 <Button Height="40" Margin="0,0,0,0" Click="Button_Click">Cancel Order</Button>
-                <Button Height="40" Margin="0,0,0,50">Complete Order</Button>
+                <Button Height="40" Margin="0,0,0,50" Click="onSwitchScreen">Complete Order</Button>
             </StackPanel>
         </Border>
 

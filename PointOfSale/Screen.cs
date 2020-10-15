@@ -30,6 +30,7 @@ namespace PointOfSale
         custCandlehearthCoffee,
         custMarkarthMilk,
         custSailorSoda,
-        custWarriorWater
+        custWarriorWater,
+        completeOrder
     }
 }

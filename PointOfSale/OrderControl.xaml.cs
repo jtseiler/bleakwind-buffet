@@ -109,6 +109,9 @@ namespace PointOfSale
                     Ancestor.SwitchScreen(Screen.custWarriorWater);
                     DisplayCurrentOrder();
                     break;
+                case "System.Windows.Controls.Button: Complete Order":
+                    Ancestor.SwitchScreen(Screen.completeOrder);
+                    break;
             }
         }
 
