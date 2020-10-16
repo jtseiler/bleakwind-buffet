@@ -16,6 +16,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static PointOfSale.OrderControl;
 
 namespace PointOfSale.CustomizeEntrees
 {
@@ -28,9 +29,6 @@ namespace PointOfSale.CustomizeEntrees
         /// creates mainwindow ancestor property
         /// </summary>
         MainWindow ancestor;
-
-        // MainWindow window = (MainWindow)Application.Current.MainWindow();
-        //BriarheartBurger bb;
 
         /// <summary>
         /// constructs an object stating this item as the ancestor

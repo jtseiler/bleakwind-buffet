@@ -211,5 +211,6 @@ namespace PointOfSale
             Order order = new Order();
             DataContext = order;
         }
+
     }
 }
