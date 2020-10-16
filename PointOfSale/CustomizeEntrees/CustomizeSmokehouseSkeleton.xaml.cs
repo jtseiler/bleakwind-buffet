@@ -33,12 +33,10 @@ namespace PointOfSale.CustomizeEntrees
         /// constructs an object stating this item as the ancestor
         /// </summary>
         /// <param name="ancestor"></param>
-        public CustomizeSmokehouseSkeleton(MainWindow ancestor, SmokehouseSkeleton ss)
+        public CustomizeSmokehouseSkeleton(MainWindow ancestor)
         {
             InitializeComponent();
             this.ancestor = ancestor;
-            DataContext = ss;
-            ancestor.newOrder.Add(ss);
         }
 
         /// <summary>

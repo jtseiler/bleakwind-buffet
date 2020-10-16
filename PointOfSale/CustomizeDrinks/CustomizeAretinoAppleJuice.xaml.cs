@@ -33,12 +33,10 @@ namespace PointOfSale.CustomizeDrinks
         /// constructs an object stating this item as the ancestor
         /// </summary>
         /// <param name="ancestor"></param>
-        public CustomizeAretinoAppleJuice(MainWindow ancestor, AretinoAppleJuice aa)
+        public CustomizeAretinoAppleJuice(MainWindow ancestor)
         {
             InitializeComponent();
             this.ancestor = ancestor;
-            DataContext = aa;
-            ancestor.newOrder.Add(aa);
         }
 
         /// <summary>

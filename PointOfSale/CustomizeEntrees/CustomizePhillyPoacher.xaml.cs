@@ -33,12 +33,10 @@ namespace PointOfSale.CustomizeEntrees
         /// constructs an object stating this item as the ancestor
         /// </summary>
         /// <param name="ancestor"></param>
-        public CustomizePhillyPoacher(MainWindow ancestor, PhillyPoacher pp)
+        public CustomizePhillyPoacher(MainWindow ancestor)
         {
             InitializeComponent();
             this.ancestor = ancestor;
-            DataContext = pp;
-            ancestor.newOrder.Add(pp);
         }
 
         /// <summary>

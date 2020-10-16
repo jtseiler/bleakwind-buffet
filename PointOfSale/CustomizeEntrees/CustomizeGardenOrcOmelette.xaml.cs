@@ -33,12 +33,10 @@ namespace PointOfSale.CustomizeEntrees
         /// constructs an object stating this item as the ancestor
         /// </summary>
         /// <param name="ancestor"></param>
-        public CustomizeGardenOrcOmelette(MainWindow ancestor, GardenOrcOmelette goc)
+        public CustomizeGardenOrcOmelette(MainWindow ancestor)
         {
             InitializeComponent();
             this.ancestor = ancestor;
-            DataContext = goc;
-            ancestor.newOrder.Add(goc);
         }
 
         /// <summary>

@@ -36,14 +36,10 @@ namespace PointOfSale.CustomizeEntrees
         /// constructs an object stating this item as the ancestor
         /// </summary>
         /// <param name="ancestor"></param>
-        public CustomizeBriarheartBurger(MainWindow ancestor, BriarheartBurger bb)
+        public CustomizeBriarheartBurger(MainWindow ancestor)
         {
             InitializeComponent();
             this.ancestor = ancestor;
-            DataContext = bb;
-            ancestor.newOrder.Add(bb);
-
-            //this.bb = bb;
         }
 
         /// <summary>

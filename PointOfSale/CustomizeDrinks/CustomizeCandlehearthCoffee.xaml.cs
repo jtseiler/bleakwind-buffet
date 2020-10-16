@@ -33,12 +33,10 @@ namespace PointOfSale.CustomizeDrinks
         /// constructs an object stating this item as the ancestor
         /// </summary>
         /// <param name="ancestor"></param>
-        public CustomizeCandlehearthCoffee(MainWindow ancestor, CandlehearthCoffee cc)
+        public CustomizeCandlehearthCoffee(MainWindow ancestor)
         {
             InitializeComponent();
             this.ancestor = ancestor;
-            DataContext = cc;
-            ancestor.newOrder.Add(cc);
         }
 
         /// <summary>

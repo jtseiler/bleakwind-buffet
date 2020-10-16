@@ -33,12 +33,10 @@ namespace PointOfSale.CustomizeSides
         /// constructs an object stating this item as the ancestor
         /// </summary>
         /// <param name="ancestor"></param>
-        public CustomizeMadOtarGrits(MainWindow ancestor, MadOtarGrits mog)
+        public CustomizeMadOtarGrits(MainWindow ancestor)
         {
             InitializeComponent();
             this.ancestor = ancestor;
-            DataContext = mog;
-            ancestor.newOrder.Add(mog);
         }
 
         /// <summary>

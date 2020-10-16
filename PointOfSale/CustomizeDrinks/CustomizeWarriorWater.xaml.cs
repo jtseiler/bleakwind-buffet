@@ -33,12 +33,10 @@ namespace PointOfSale.CustomizeDrinks
         /// constructs an object stating this item as the ancestor
         /// </summary>
         /// <param name="ancestor"></param>
-        public CustomizeWarriorWater(MainWindow ancestor, WarriorWater ww)
+        public CustomizeWarriorWater(MainWindow ancestor)
         {
             InitializeComponent();
             this.ancestor = ancestor;
-            DataContext = ww;
-            ancestor.newOrder.Add(ww);
         }
 
         /// <summary>

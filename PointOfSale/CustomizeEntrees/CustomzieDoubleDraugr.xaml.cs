@@ -33,12 +33,10 @@ namespace PointOfSale.CustomizeEntrees
         /// constructs an object stating this item as the ancestor
         /// </summary>
         /// <param name="ancestor"></param>
-        public CustomzieDoubleDraugr(MainWindow ancestor, DoubleDraugr dd)
+        public CustomzieDoubleDraugr(MainWindow ancestor)
         {
             InitializeComponent();
             this.ancestor = ancestor;
-            DataContext = dd;
-            ancestor.newOrder.Add(dd);
         }
 
         /// <summary>

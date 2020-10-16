@@ -33,12 +33,10 @@ namespace PointOfSale.CustomizeDrinks
         /// constructs an object stating this item as the ancestor
         /// </summary>
         /// <param name="ancestor"></param>
-        public CustomizeMarkarthMilk(MainWindow ancestor, MarkarthMilk mm)
+        public CustomizeMarkarthMilk(MainWindow ancestor)
         {
             InitializeComponent();
             this.ancestor = ancestor;
-            DataContext = mm;
-            ancestor.newOrder.Add(mm);
         }
 
         /// <summary>

@@ -33,12 +33,10 @@ namespace PointOfSale.CustomizeSides
         /// constructs an object stating this item as the ancestor
         /// </summary>
         /// <param name="ancestor"></param>
-        public CustomizeFriedMiraak(MainWindow ancestor, FriedMiraak fm)
+        public CustomizeFriedMiraak(MainWindow ancestor)
         {
             InitializeComponent();
             this.ancestor = ancestor;
-            DataContext = fm;
-            ancestor.newOrder.Add(fm);
         }
 
         /// <summary>

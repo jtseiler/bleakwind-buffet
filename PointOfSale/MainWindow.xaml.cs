@@ -47,31 +47,33 @@ namespace PointOfSale
             descendant.Ancestor = this;
             screens.Add(Screen.Home, descendant);
             screens.Add(Screen.completeOrder, new CompleteOrder(this));
-            screens.Add(Screen.custBriarheartBurger, new CustomizeBriarheartBurger(this, new BriarheartBurger()));
-            screens.Add(Screen.custDoubleDraugr, new CustomzieDoubleDraugr(this, new DoubleDraugr())); ;
-            screens.Add(Screen.custGardenOrcOmelette, new CustomizeGardenOrcOmelette(this, new GardenOrcOmelette()));
-            screens.Add(Screen.custPhillyPoacher, new CustomizePhillyPoacher(this, new PhillyPoacher()));
-            screens.Add(Screen.custSmokehouseSkeleton, new CustomizeSmokehouseSkeleton(this, new SmokehouseSkeleton()));
-            screens.Add(Screen.custThalmorTriple, new CustomizeThalmorTriple(this, new ThalmorTriple()));
-            screens.Add(Screen.custAretinoAppleJuice, new CustomizeAretinoAppleJuice(this, new AretinoAppleJuice()));
-            screens.Add(Screen.custCandlehearthCoffee, new CustomizeCandlehearthCoffee(this, new CandlehearthCoffee()));
-            screens.Add(Screen.custMarkarthMilk, new CustomizeMarkarthMilk(this, new MarkarthMilk()));
-            screens.Add(Screen.custSailorSoda, new CustomizeSailorSoda(this, new SailorSoda()));
-            screens.Add(Screen.custWarriorWater, new CustomizeWarriorWater(this, new WarriorWater()));
-            screens.Add(Screen.custDragonbornWaffleFries, new CustomizeDragonbornWaffleFries(this, new DragonbornWaffleFries()));
-            screens.Add(Screen.custFriedMiraak, new CustomizeFriedMiraak(this, new FriedMiraak()));
-            screens.Add(Screen.custMadOtarGrits, new CustomizeMadOtarGrits(this, new MadOtarGrits()));
-            screens.Add(Screen.custVokunSalad, new CustomizeVokunSalad(this, new VokunSalad()));
+            screens.Add(Screen.custBriarheartBurger, new CustomizeBriarheartBurger(this));
+            screens.Add(Screen.custDoubleDraugr, new CustomzieDoubleDraugr(this)); ;
+            screens.Add(Screen.custGardenOrcOmelette, new CustomizeGardenOrcOmelette(this));
+            screens.Add(Screen.custPhillyPoacher, new CustomizePhillyPoacher(this));
+            screens.Add(Screen.custSmokehouseSkeleton, new CustomizeSmokehouseSkeleton(this));
+            screens.Add(Screen.custThalmorTriple, new CustomizeThalmorTriple(this));
+            screens.Add(Screen.custAretinoAppleJuice, new CustomizeAretinoAppleJuice(this));
+            screens.Add(Screen.custCandlehearthCoffee, new CustomizeCandlehearthCoffee(this));
+            screens.Add(Screen.custMarkarthMilk, new CustomizeMarkarthMilk(this));
+            screens.Add(Screen.custSailorSoda, new CustomizeSailorSoda(this));
+            screens.Add(Screen.custWarriorWater, new CustomizeWarriorWater(this));
+            screens.Add(Screen.custDragonbornWaffleFries, new CustomizeDragonbornWaffleFries(this));
+            screens.Add(Screen.custFriedMiraak, new CustomizeFriedMiraak(this));
+            screens.Add(Screen.custMadOtarGrits, new CustomizeMadOtarGrits(this));
+            screens.Add(Screen.custVokunSalad, new CustomizeVokunSalad(this));
         }
 
         /// <summary>
         /// method that switches to the correct screen.
         /// </summary>
         /// <param name="screen"></param>
-        public void SwitchScreen(Screen screen)
+        public void SwitchScreen(Screen screen, IOrderItem item = null) 
         {
+            screens[screen].DataContext = item; 
             switchableContent.Child = screens[screen];
         }
+
 
     }
 }
