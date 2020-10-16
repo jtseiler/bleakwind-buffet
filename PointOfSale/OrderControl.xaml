@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PointOfSale"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="680" d:DesignWidth="800">
 
     <UserControl.Resources>
         <Style TargetType="Button">
@@ -13,7 +13,7 @@
             <Setter Property="FontSize" Value="15"/>
         </Style>
     </UserControl.Resources>
-    <Grid>
+    <Grid Height="680" VerticalAlignment="Top">
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -31,9 +31,9 @@
         <Border Grid.Column="4" Grid.RowSpan="3" Margin="0,20,20,20" BorderBrush="Black" BorderThickness="2">
             <StackPanel Grid.Column="3" Grid.RowSpan="3">
                 <TextBlock FontSize="20" TextAlignment="Center">Order:</TextBlock>
-                <ListView Name="OrderListView" Height="302" SelectionChanged="OrderListView_SelectionChanged"/>
+                <ListView Name="OrderListView" Height="528"/>
                 <Button Height="40" Margin="0,0,0,0" Click="Button_Click">Cancel Order</Button>
-                <Button Height="40" Margin="0,0,0,50" Click="onSwitchScreen">Complete Order</Button>
+                <Button Height="40" Click="onSwitchScreen" Content="Complete Order"/>
             </StackPanel>
         </Border>
 

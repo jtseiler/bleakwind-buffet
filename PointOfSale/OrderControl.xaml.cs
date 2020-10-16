@@ -122,30 +122,35 @@ namespace PointOfSale
             OrderListView.Items.Add("       Order #" + Ancestor.newOrder.OrderNumber);
             foreach(IOrderItem item in Ancestor.newOrder.Items)
             {
+                OrderListView.FontSize = 17;
+                OrderListView.FontWeight = FontWeight.FromOpenTypeWeight(5);
                 OrderListView.Items.Add(item.ToString() + " $" + item.Price);
                 foreach(string specialInstructions in item.SpecialInstructions)
                 {
                     OrderListView.Items.Add("-" + specialInstructions);
                 }
-                Button removeEditButton = new Button();
-                removeEditButton.Margin = new Thickness(5);
-                removeEditButton.Width = 250;
-                removeEditButton.Height = 30;
-                removeEditButton.Content = "Remove/Edit Order";
-                //need help hooking up clcik event
-                //removeEditButton.Click = (object sender, RoutedEventArgs e) => { ItemReSelectionClickEvent(sender, e, item) };
-                OrderListView.Items.Add(removeEditButton);
+
+                Button editButton = new Button();
+                editButton.Margin = new Thickness(1);
+                editButton.VerticalAlignment = VerticalAlignment.Center;
+                editButton.Width = 250;
+                editButton.Height = 20;
+                editButton.FontSize = 15;
+                editButton.Content = "Edit Item";
+                OrderListView.Items.Add(editButton);
+
+                Button removeButton = new Button();
+                removeButton.Margin = new Thickness(1);
+                removeButton.Width = 250;
+                removeButton.Height = 20;
+                removeButton.FontSize = 15;
+                removeButton.Content = "Remove Item";
+                OrderListView.Items.Add(removeButton);
             }
             OrderListView.Items.Add("Subtotal:      $" + Ancestor.newOrder.Subtotal);
             OrderListView.Items.Add("Tax:      $" + Ancestor.newOrder.SalesTax);
             OrderListView.Items.Add("Total:      $" + Ancestor.newOrder.Total);
         }
-
-        private void OrderListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
 
         /// <summary>
         /// Click event for the CANCEL ORDER BUTTON
