@@ -38,12 +38,14 @@ namespace PointOfSale
         Dictionary<Screen, UserControl> screens = new Dictionary<Screen, UserControl>();
 
        public Order newOrder = new Order();
+
         /// <summary>
         /// contructor that adds all screens to the dictionary
         /// </summary>
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = newOrder;
             descendant.Ancestor = this;
             screens.Add(Screen.Home, descendant);
             screens.Add(Screen.completeOrder, new CompleteOrder(this));
