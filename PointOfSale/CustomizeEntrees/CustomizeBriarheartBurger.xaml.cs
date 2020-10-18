@@ -30,6 +30,8 @@ namespace PointOfSale.CustomizeEntrees
         /// </summary>
         MainWindow ancestor;
 
+        OrderControl orderControl;
+
         /// <summary>
         /// constructs an object stating this item as the ancestor
         /// </summary>

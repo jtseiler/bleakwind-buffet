@@ -123,11 +123,11 @@ namespace PointOfSale
                         break;
 
                     case "System.Windows.Controls.Button: Aretino Apple Juice":
-                        DisplayCurrentOrder();
                         AretinoAppleJuice newaa = new AretinoAppleJuice();
                         Ancestor.newOrder.Add(newaa);
                         Ancestor.SwitchScreen(Screen.custAretinoAppleJuice, newaa);
-                        break;
+                        DisplayCurrentOrder();
+                    break;
 
                     case "System.Windows.Controls.Button: Candlehearth Coffee":
                         CandlehearthCoffee newcc = new CandlehearthCoffee();
@@ -137,11 +137,11 @@ namespace PointOfSale
                         break;
 
                     case "System.Windows.Controls.Button: Markarth Milk":
-                        DisplayCurrentOrder();
                         MarkarthMilk newmm = new MarkarthMilk();
                         Ancestor.newOrder.Add(newmm);
                         Ancestor.SwitchScreen(Screen.custMarkarthMilk, newmm);
-                        break;
+                        DisplayCurrentOrder();
+                    break;
 
                     case "System.Windows.Controls.Button: Sailor Soda":
                         SailorSoda newsoda = new SailorSoda();
@@ -161,8 +161,14 @@ namespace PointOfSale
                         Ancestor.SwitchScreen(Screen.completeOrder);
                         break;
                 }
-                
+            DisplayCurrentOrder();
+
             //}
+        }
+
+        public void CreateACombo_Click(object sender, RoutedEventArgs e)
+        {
+            Combo combo = new Combo(/*entree, side, drink*/);
         }
 
         
