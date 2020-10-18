@@ -44,8 +44,8 @@
         <StackPanel Grid.Column="0" Grid.RowSpan="3" Margin="25,70,0,20">
             <TextBlock FontSize="20" FontWeight="Medium" TextAlignment="Center">Entrees</TextBlock>
             <Button Name="AddBriarheartBurger" Click="onSwitchScreen">Briarheart Burger</Button>
-            <Button Click="onSwitchScreen">Double Draugr</Button>
-            <Button Click="onSwitchScreen">Garden Orc Omelette</Button>
+            <Button Name="AddDoubleDraugr" Click="onSwitchScreen">Double Draugr</Button>
+            <Button Name="AddGardenOrcOmelette" Click="onSwitchScreen">Garden Orc Omelette</Button>
             <Button Click="onSwitchScreen">Philly Poacher</Button>
             <Button Click="onSwitchScreen">Smokehouse Skeleton</Button>
             <Button Click="onSwitchScreen">Thalmor Triple</Button>
@@ -67,6 +67,7 @@
             <Button Click="onSwitchScreen">Markarth Milk</Button>
             <Button Click="onSwitchScreen">Sailor Soda</Button>
             <Button Click="onSwitchScreen">Warrior Water</Button>
+            <Button FontWeight="Bold" Margin="0,275,0,0">Create a Combo</Button>
         </StackPanel>
 
     </Grid>

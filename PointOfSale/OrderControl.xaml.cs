@@ -37,7 +37,7 @@ namespace PointOfSale
         public OrderControl()
         {
             InitializeComponent();
-            AddBriarheartBurger.Click += onSwitchScreen;
+            //AddBriarheartBurger.Click += onSwitchScreen;
         }
 
         /// <summary>
@@ -47,114 +47,114 @@ namespace PointOfSale
         /// <param name="e"></param>
         public void onSwitchScreen(object sender, RoutedEventArgs e)
         {
-            if (DataContext is Order newOrder)
-            {
+            //if (DataContext is Order newOrder)
+            //{
                 var buttons = (Button)sender;
                 switch (buttons.ToString())
                 {
                     case "System.Windows.Controls.Button: Briarheart Burger":
-                        DisplayCurrentOrder();
                         BriarheartBurger newbb = new BriarheartBurger();
-                        newOrder.Add(newbb);
+                        Ancestor.newOrder.Add(newbb);
                         Ancestor.SwitchScreen(Screen.custBriarheartBurger, newbb);
+                        DisplayCurrentOrder();
                         break;
 
                     case "System.Windows.Controls.Button: Double Draugr":
-                        DisplayCurrentOrder();
                         DoubleDraugr newdd = new DoubleDraugr();
-                        newOrder.Add(newdd);
+                        Ancestor.newOrder.Add(newdd);
                         Ancestor.SwitchScreen(Screen.custDoubleDraugr, newdd);
+                        DisplayCurrentOrder();
                         break;
 
                     case "System.Windows.Controls.Button: Garden Orc Omelette":
-                        DisplayCurrentOrder();
                         GardenOrcOmelette newgoc = new GardenOrcOmelette();
-                        newOrder.Add(newgoc);
+                        Ancestor.newOrder.Add(newgoc);
                         Ancestor.SwitchScreen(Screen.custGardenOrcOmelette, newgoc);
+                        DisplayCurrentOrder();
                         break;
 
                     case "System.Windows.Controls.Button: Philly Poacher":
-                        DisplayCurrentOrder();
                         PhillyPoacher newpp = new PhillyPoacher();
-                        newOrder.Add(newpp);
+                        Ancestor.newOrder.Add(newpp);
                         Ancestor.SwitchScreen(Screen.custPhillyPoacher, newpp);
+                        DisplayCurrentOrder();
                         break;
 
                     case "System.Windows.Controls.Button: Smokehouse Skeleton":
-                        DisplayCurrentOrder();
                         SmokehouseSkeleton newss = new SmokehouseSkeleton();
-                        newOrder.Add(newss);
+                        Ancestor.newOrder.Add(newss);
                         Ancestor.SwitchScreen(Screen.custSmokehouseSkeleton, newss);
+                        DisplayCurrentOrder();
                         break;
 
                     case "System.Windows.Controls.Button: Thalmor Triple":
-                        DisplayCurrentOrder();
                         ThalmorTriple newtt = new ThalmorTriple();
-                        newOrder.Add(newtt);
+                        Ancestor.newOrder.Add(newtt);
                         Ancestor.SwitchScreen(Screen.custThalmorTriple, newtt);
+                        DisplayCurrentOrder();
                         break;
 
                     case "System.Windows.Controls.Button: Dragonborn Waffle Fries":
-                        DisplayCurrentOrder();
                         DragonbornWaffleFries newdwf = new DragonbornWaffleFries();
-                        newOrder.Add(newdwf);
+                        Ancestor.newOrder.Add(newdwf);
                         Ancestor.SwitchScreen(Screen.custDragonbornWaffleFries, newdwf);
+                        DisplayCurrentOrder();
                         break;
 
                     case "System.Windows.Controls.Button: Fried Miraak":
-                        DisplayCurrentOrder();
                         FriedMiraak newfm = new FriedMiraak();
-                        newOrder.Add(newfm);
+                        Ancestor.newOrder.Add(newfm);
                         Ancestor.SwitchScreen(Screen.custFriedMiraak, newfm);
+                        DisplayCurrentOrder();
                         break;
 
                     case "System.Windows.Controls.Button: Mad Otar Grits":
-                        DisplayCurrentOrder();
                         MadOtarGrits newmog = new MadOtarGrits();
-                        newOrder.Add(newmog);
+                        Ancestor.newOrder.Add(newmog);
                         Ancestor.SwitchScreen(Screen.custMadOtarGrits, newmog);
+                        DisplayCurrentOrder();
                         break;
 
                     case "System.Windows.Controls.Button: Vokun Salad":
-                        DisplayCurrentOrder();
                         VokunSalad newvs = new VokunSalad();
-                        newOrder.Add(newvs);
+                        Ancestor.newOrder.Add(newvs);
                         Ancestor.SwitchScreen(Screen.custVokunSalad, newvs);
+                        DisplayCurrentOrder();
                         break;
 
                     case "System.Windows.Controls.Button: Aretino Apple Juice":
                         DisplayCurrentOrder();
                         AretinoAppleJuice newaa = new AretinoAppleJuice();
-                        newOrder.Add(newaa);
+                        Ancestor.newOrder.Add(newaa);
                         Ancestor.SwitchScreen(Screen.custAretinoAppleJuice, newaa);
                         break;
 
                     case "System.Windows.Controls.Button: Candlehearth Coffee":
-                        DisplayCurrentOrder();
                         CandlehearthCoffee newcc = new CandlehearthCoffee();
-                        newOrder.Add(newcc);
+                        Ancestor.newOrder.Add(newcc);
                         Ancestor.SwitchScreen(Screen.custCandlehearthCoffee, newcc);
+                        DisplayCurrentOrder();
                         break;
 
                     case "System.Windows.Controls.Button: Markarth Milk":
                         DisplayCurrentOrder();
                         MarkarthMilk newmm = new MarkarthMilk();
-                        newOrder.Add(newmm);
+                        Ancestor.newOrder.Add(newmm);
                         Ancestor.SwitchScreen(Screen.custMarkarthMilk, newmm);
                         break;
 
                     case "System.Windows.Controls.Button: Sailor Soda":
-                        DisplayCurrentOrder();
                         SailorSoda newsoda = new SailorSoda();
-                        newOrder.Add(newsoda);
+                        Ancestor.newOrder.Add(newsoda);
                         Ancestor.SwitchScreen(Screen.custSailorSoda, newsoda);
+                        DisplayCurrentOrder();
                         break;
 
                     case "System.Windows.Controls.Button: Warrior Water":
-                        DisplayCurrentOrder();
                         WarriorWater newww = new WarriorWater();
-                        newOrder.Add(newww);
+                        Ancestor.newOrder.Add(newww);
                         Ancestor.SwitchScreen(Screen.custWarriorWater, newww);
+                        DisplayCurrentOrder();
                         break;
 
                     case "System.Windows.Controls.Button: Complete Order":
@@ -162,7 +162,7 @@ namespace PointOfSale
                         break;
                 }
                 
-            }
+            //}
         }
 
         
@@ -191,6 +191,7 @@ namespace PointOfSale
 
                 Button removeButton = new Button();
                 removeButton.Margin = new Thickness(1);
+                removeButton.VerticalAlignment = VerticalAlignment.Center;
                 removeButton.Width = 250;
                 removeButton.Height = 20;
                 removeButton.FontSize = 15;
@@ -210,8 +211,13 @@ namespace PointOfSale
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             OrderListView.Items.Clear();
-            Order order = new Order();
-            DataContext = order;
+            Ancestor.newOrder = new Order();
+            DataContext = Ancestor.newOrder;
+        }
+
+        private void RemoveItemFromOrder_Click(object sender, RoutedEventArgs e)
+        {
+
         }
 
     }

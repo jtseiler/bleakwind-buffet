@@ -53,8 +53,8 @@ namespace PointOfSale
                 case CardTransactionResult.Approved:
                     //print receipt
                     //OrderListView.Items.Clear();
-                    Order order = new Order();
-                    DataContext = order;
+                    ancestor.newOrder = new Order();
+                    DataContext = ancestor.newOrder;
                     break;
                 case CardTransactionResult.Declined:
                     PayByCard.IsEnabled = false;
@@ -74,5 +74,7 @@ namespace PointOfSale
                     throw new NotImplementedException("Should never be reached");
             }
         }
+
+        
     }
 }

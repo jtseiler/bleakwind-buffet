@@ -11,7 +11,7 @@ using System.Collections.Specialized;
 
 namespace BleakwindBuffet.Data
 {
-    public class Order : INotifyPropertyChanged, INotifyCollectionChanged//, ICollection<IOrderItem>
+    public class Order : INotifyPropertyChanged, INotifyCollectionChanged
     {
         public event NotifyCollectionChangedEventHandler CollectionChanged;
 
@@ -41,7 +41,7 @@ namespace BleakwindBuffet.Data
         /// <summary>
         /// list of items for the order
         /// </summary>
-        public IEnumerable<IOrderItem> Items { get { return items.ToArray(); } }
+        public ICollection<IOrderItem> Items { get { return items.ToArray(); } }
 
 
         private double subtotal = 0;
@@ -57,7 +57,7 @@ namespace BleakwindBuffet.Data
                 {
                     total += item.Price;
                 }
-                return Math.Round(total);
+                return Math.Round(total, 2);
             }
         }
 
@@ -78,7 +78,7 @@ namespace BleakwindBuffet.Data
         {
             get
             {
-                return Math.Round(Subtotal * 1.12);
+                return Math.Round(Subtotal * 1.12, 2);
             }
         }
 

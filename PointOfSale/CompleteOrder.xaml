@@ -13,7 +13,6 @@
                 <Button x:Name="PayByCard" Content="Credit/Debit (Card Payment)" FontSize="20" FontWeight="Medium" Height="40" Margin="7" ClickMode="Release" Click="PayByCard_Click"/>
                 <Button Content="Cash" FontSize="20" FontWeight="Medium" Height="40" Margin="7" ClickMode="Release"/>
                 <Button Click="OnSwitchScreen" Content="Return To Order" FontSize="20" FontWeight="Medium" Height="50" Margin="0,50,0,0" ClickMode="Release"/>
-                <Button Click="OnSwitchScreen" Content="Continue Payment" FontSize="20" FontWeight="Medium" Height="50" Margin="0,5,0,0" ClickMode="Release"/>
             </StackPanel>
         </StackPanel>
     </Border>
