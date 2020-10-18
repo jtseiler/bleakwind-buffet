@@ -43,7 +43,7 @@
 
         <StackPanel Grid.Column="0" Grid.RowSpan="3" Margin="25,70,0,20">
             <TextBlock FontSize="20" FontWeight="Medium" TextAlignment="Center">Entrees</TextBlock>
-            <Button Click="onSwitchScreen">Briarheart Burger</Button>
+            <Button Name="AddBriarheartBurger" Click="onSwitchScreen">Briarheart Burger</Button>
             <Button Click="onSwitchScreen">Double Draugr</Button>
             <Button Click="onSwitchScreen">Garden Orc Omelette</Button>
             <Button Click="onSwitchScreen">Philly Poacher</Button>
