@@ -31,6 +31,7 @@ namespace PointOfSale
         custMarkarthMilk,
         custSailorSoda,
         custWarriorWater,
-        completeOrder
+        completeOrder,
+        cashRegister
     }
 }

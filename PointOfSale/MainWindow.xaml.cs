@@ -48,7 +48,8 @@ namespace PointOfSale
             DataContext = newOrder;
             descendant.Ancestor = this;
             screens.Add(Screen.Home, descendant);
-            screens.Add(Screen.completeOrder, new CompleteOrder(this));
+            screens.Add(Screen.completeOrder, new CompleteOrder(this, newOrder));
+            screens.Add(Screen.cashRegister, new CashRegister(this, newOrder));
             screens.Add(Screen.custBriarheartBurger, new CustomizeBriarheartBurger(this));
             screens.Add(Screen.custDoubleDraugr, new CustomzieDoubleDraugr(this)); ;
             screens.Add(Screen.custGardenOrcOmelette, new CustomizeGardenOrcOmelette(this));

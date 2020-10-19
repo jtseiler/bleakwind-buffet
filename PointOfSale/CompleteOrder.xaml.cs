@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Jack Seiler
+ * Class name: CompleteOrder.xaml.cs
+ * Purpose: completes the given order on the screen
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -25,10 +30,18 @@ namespace PointOfSale
         /// </summary>
         MainWindow ancestor;
 
-        public CompleteOrder(MainWindow ancestor)
+        Order useThisOrder = new Order();
+
+        /// <summary>
+        /// sets the data context and allows for screens switching
+        /// </summary>
+        /// <param name="ancestor"></param>
+        /// <param name="newOrder"></param>
+        public CompleteOrder(MainWindow ancestor, Order newOrder)
         {
             InitializeComponent();
             this.ancestor = ancestor;
+            useThisOrder = newOrder;
         }
 
         /// <summary>
@@ -75,6 +88,41 @@ namespace PointOfSale
             }
         }
 
-        
+        /// <summary>
+        /// method that prints the recipt for the current order
+        /// </summary>
+        /// <param name="typeofPayment"></param>
+        /// <param name="totalChange"></param>
+        public void PrintReciept(string typeofPayment, double totalChange)
+        {
+            RecieptPrinter.PrintLine("Order # " + useThisOrder.OrderNumber.ToString());
+            RecieptPrinter.PrintLine(DateTime.Now.ToString());
+
+            foreach (IOrderItem item in ancestor.newOrder.Items)
+            {
+                RecieptPrinter.PrintLine(item.ToString() + " $" + item.Price);
+                foreach (string specialstruc in item.SpecialInstructions)
+                {
+                    RecieptPrinter.PrintLine("-" + specialstruc);
+                }
+            }
+            RecieptPrinter.PrintLine("SubTotal: $" + ancestor.newOrder.Subtotal.ToString());
+            RecieptPrinter.PrintLine("Tax: $" + ancestor.newOrder.SalesTax.ToString());
+            RecieptPrinter.PrintLine("Total: $" + ancestor.newOrder.Total.ToString());
+            RecieptPrinter.PrintLine("Payment Type:  " + typeofPayment);
+            RecieptPrinter.PrintLine("Change:   $" + totalChange.ToString());
+            RecieptPrinter.CutTape();
+
+        }
+
+        /// <summary>
+        /// click event for moving to the cash register
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            ancestor.SwitchScreen(Screen.cashRegister);
+        }
     }
 }

@@ -168,7 +168,7 @@ namespace PointOfSale
 
         public void CreateACombo_Click(object sender, RoutedEventArgs e)
         {
-            Combo combo = new Combo(/*entree, side, drink*/);
+            //Combo combo = new Combo(/*entree, side, drink*/);
         }
 
         
