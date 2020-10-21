@@ -30,8 +30,6 @@ namespace PointOfSale
         /// </summary>
         MainWindow ancestor;
 
-        Order useThisOrder = new Order();
-
         /// <summary>
         /// sets the data context and allows for screens switching
         /// </summary>
@@ -41,7 +39,7 @@ namespace PointOfSale
         {
             InitializeComponent();
             this.ancestor = ancestor;
-            useThisOrder = newOrder;
+            ancestor.newOrder = newOrder;
         }
 
         /// <summary>
@@ -95,7 +93,7 @@ namespace PointOfSale
         /// <param name="totalChange"></param>
         public void PrintReciept(string typeofPayment, double totalChange)
         {
-            RecieptPrinter.PrintLine("Order # " + useThisOrder.OrderNumber.ToString());
+            RecieptPrinter.PrintLine("Order # " + ancestor.newOrder.OrderNumber.ToString());
             RecieptPrinter.PrintLine(DateTime.Now.ToString());
 
             foreach (IOrderItem item in ancestor.newOrder.Items)

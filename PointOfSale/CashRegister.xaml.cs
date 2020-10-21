@@ -25,8 +25,6 @@ namespace PointOfSale
     public partial class CashRegister : UserControl
     {
         MainWindow ancestor;
-
-        Order curOrder = new Order();
         
         RegistrarFunction Cash;
 
@@ -35,12 +33,12 @@ namespace PointOfSale
         /// </summary>
         /// <param name="ancestor"></param>
         /// <param name="order"></param>
-        public CashRegister(MainWindow ancestor, Order order)
+        public CashRegister(MainWindow ancestor, Order newOrder)
         {
             InitializeComponent();
             this.ancestor = ancestor;
-            curOrder = order;
-            Cash = new RegistrarFunction(order);
+            ancestor.newOrder = newOrder;
+            Cash = new RegistrarFunction(newOrder);
             DataContext = Cash;
         }
 
@@ -51,7 +49,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Cash.ChangeDue(curOrder.Total);
+            Cash.ChangeDue(ancestor.newOrder.Total);
         }
     }
 }

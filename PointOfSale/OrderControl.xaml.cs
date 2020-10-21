@@ -37,7 +37,6 @@ namespace PointOfSale
         public OrderControl()
         {
             InitializeComponent();
-            //AddBriarheartBurger.Click += onSwitchScreen;
         }
 
         /// <summary>
@@ -194,6 +193,7 @@ namespace PointOfSale
                 editButton.FontSize = 15;
                 editButton.Content = "Edit Item";
                 OrderListView.Items.Add(editButton);
+                editButton.Click += onSwitchScreen;
 
                 Button removeButton = new Button();
                 removeButton.Margin = new Thickness(1);
@@ -203,6 +203,7 @@ namespace PointOfSale
                 removeButton.FontSize = 15;
                 removeButton.Content = "Remove Item";
                 OrderListView.Items.Add(removeButton);
+                removeButton.Click += RemoveItemFromOrder_Click;
             }
             OrderListView.Items.Add("Subtotal:      $" + Ancestor.newOrder.Subtotal);
             OrderListView.Items.Add("Tax:      $" + Ancestor.newOrder.SalesTax);
@@ -223,8 +224,9 @@ namespace PointOfSale
 
         private void RemoveItemFromOrder_Click(object sender, RoutedEventArgs e)
         {
-
+            //OrderListView.Items.Remove();
         }
+
 
     }
 }
