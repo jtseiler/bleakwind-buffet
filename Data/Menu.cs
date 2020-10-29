@@ -111,5 +111,15 @@ namespace BleakwindBuffet.Data
             }
             return all;
         }
+
+        public static void sideIncrease(Side obj, Size s)
+        {
+            obj.Size = s;
+        }
+
+        public static void drinkIncrease(Drink obj, Size s)
+        {
+            obj.Size = s;
+        }
     }
 }
