@@ -8,6 +8,42 @@
     ViewData["Title"] = "Home page";
 }
 
+
+    <form id="menu-filtering">
+        <div id="search">
+            <input type="text" name="SearchTerms" value="@Model.SearchTerms" />
+            <input type="submit" value="Search" />
+        </div>
+
+        <div id="filters">
+
+            <h4>Category</h4>
+            @foreach (String category in BleakwindBuffet.Data.Menu.Category)
+            {
+                <label>
+                    <input type="checkbox" name="Category" value="@category" checked="@Model.Category.Contains(category)" />
+                    @category
+                </label>
+            }
+
+            <h4>Calories</h4>
+            <div>
+                Between
+                <input name="CaloriesMin" type="number" min="0" max="900" step="1" placeholder="min" value="@Model.CaloriesMin" />
+                and
+                <input name="CaloriesMax" type="number" min="0" max="900" step="1" placeholder="max" value="@Model.CaloriesMax" />
+            </div>
+
+            <h4>Price</h4>
+            <div>
+                Between
+                <input name="PriceMin" type="number" min="0" max="10.00" step="0.01" placeholder="min" value="@Model.PriceMin" />
+                and
+                <input name="PriceMax" type="number" min="0" max="10.00" step="0.01" placeholder="max" value="@Model.PriceMax" />
+            </div>
+        </div>
+    </form>
+
 <div class="text-center">
     <h1 class="display-4">Welcome to Bleakwind Buffet</h1>
     <p>
@@ -77,10 +113,10 @@
     }
 </div>
 
-<div class="combo">Create a Combo! Add any Entree, Side, and Drink to a combo order and get $1 off your order price!</div>
+<h3 class="combo">Create a Combo! Add any Entree, Side, and Drink to a combo order and get $1 off your order price!</h3>
 
 <div class="sodaFlavors">
-    <div>The available flavors for the Sailor Soda are:</div>
+    <h2>The available flavors for the Sailor Soda are:</h2>
     <ul>
         <li>Blackberry</li>
         <li>Cherry</li>

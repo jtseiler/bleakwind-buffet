@@ -144,5 +144,100 @@ namespace BleakwindBuffet.DataTests
             fullMenu = (List<IOrderItem>)Menu.FullMenu();
             Assert.Contains<IOrderItem>(fullMenu, (item) => item.ToString().Equals(s));
         }
+
+        [Fact]
+        public void SearchFilterTest()
+        {
+            IEnumerable<IOrderItem> test = Menu.Search(Menu.FullMenu(), "cowpoke");
+            IEnumerable<IOrderItem> all = Menu.FullMenu();
+            bool contains = false;
+            foreach (IOrderItem i in test)
+            {
+                if (i.ToString().Contains("cowpoke", StringComparison.InvariantCultureIgnoreCase))
+                {
+                    contains = true;
+                }
+            }
+            Assert.True(contains);
+        }
+
+        [Fact]
+        public void SearchFilterTestNull()
+        {
+            IEnumerable<IOrderItem> test = Menu.Search(Menu.FullMenu(), "");
+            IEnumerable<IOrderItem> all = Menu.FullMenu();
+            Assert.Equal<int>(all.Count(), test.Count());
+        }
+
+        [Fact]
+        public void CategoryFilterTestNull()
+        {
+            IEnumerable<IOrderItem> test = Menu.FilterByCategory(Menu.FullMenu(), null);
+            IEnumerable<IOrderItem> all = Menu.FullMenu();
+            Assert.Equal<int>(all.Count(), test.Count());
+        }
+
+        [Fact]
+        public void PriceFilterTestNull()
+        {
+            IEnumerable<IOrderItem> test = Menu.FilterByPrice(Menu.FullMenu(), null, null);
+            IEnumerable<IOrderItem> all = Menu.FullMenu();
+            Assert.Equal<int>(all.Count(), test.Count());
+        }
+
+        [Fact]
+        public void CalorieFilterTestNull()
+        {
+            IEnumerable<IOrderItem> test = Menu.FilterByCalories(Menu.FullMenu(), null, null);
+            IEnumerable<IOrderItem> all = Menu.FullMenu();
+            Assert.Equal<int>(all.Count(), test.Count());
+        }
+
+        [Fact]
+        public void CategoryFilterTest()
+        {
+            string[] category = new string[] { "Entrees" };
+            IEnumerable<IOrderItem> test = Menu.FilterByCategory(Menu.FullMenu(), category);
+            Assert.Equal<int>(7, test.Count());
+        }
+
+        [Fact]
+        public void PriceMinFilterTest()
+        {
+            IEnumerable<IOrderItem> test = Menu.FilterByPrice(Menu.FullMenu(), 0, null);
+            IEnumerable<IOrderItem> all = Menu.FullMenu();
+            Assert.Equal<int>(all.Count(), test.Count());
+        }
+
+        [Fact]
+        public void PriceMaxFilterTest()
+        {
+            IEnumerable<IOrderItem> test = Menu.FilterByPrice(Menu.FullMenu(), null, 0);
+            Assert.Empty(test);
+        }
+
+        [Fact]
+        public void CalorieMinFilterTest()
+        {
+            IEnumerable<IOrderItem> test = Menu.FilterByCalories(Menu.FullMenu(), 0, null);
+            IEnumerable<IOrderItem> all = Menu.FullMenu();
+            Assert.Equal<int>(all.Count(), test.Count());
+        }
+
+        [Fact]
+        public void CalorieMaxFilterTest()
+        {
+            IEnumerable<IOrderItem> test = Menu.FilterByCalories(Menu.FullMenu(), null, 0);
+            IEnumerable<IOrderItem> all = Menu.FullMenu();
+            bool contains = false;
+            foreach (IOrderItem i in test)
+            {
+                if (i.ToString().Contains("water", StringComparison.InvariantCultureIgnoreCase))
+                {
+                    contains = true;
+                }
+            }
+            Assert.True(contains);
+        }
     }
 }
