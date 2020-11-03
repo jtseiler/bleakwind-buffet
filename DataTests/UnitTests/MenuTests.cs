@@ -148,12 +148,12 @@ namespace BleakwindBuffet.DataTests
         [Fact]
         public void SearchFilterTest()
         {
-            IEnumerable<IOrderItem> test = Menu.Search(Menu.FullMenu(), "cowpoke");
+            IEnumerable<IOrderItem> test = Menu.Search(Menu.FullMenu(), "Briarheart");
             IEnumerable<IOrderItem> all = Menu.FullMenu();
             bool contains = false;
             foreach (IOrderItem i in test)
             {
-                if (i.ToString().Contains("cowpoke", StringComparison.InvariantCultureIgnoreCase))
+                if (i.ToString().Contains("Briarheart", StringComparison.InvariantCultureIgnoreCase))
                 {
                     contains = true;
                 }
@@ -213,7 +213,7 @@ namespace BleakwindBuffet.DataTests
         public void PriceMaxFilterTest()
         {
             IEnumerable<IOrderItem> test = Menu.FilterByPrice(Menu.FullMenu(), null, 0);
-            Assert.Empty(test);
+            Assert.Equal<int>(3, test.Count());
         }
 
         [Fact]

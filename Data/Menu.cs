@@ -133,7 +133,7 @@ namespace BleakwindBuffet.Data
             if (terms == null) return all;
             foreach (IOrderItem item in all)
             {
-                if (item.ToString().Contains(terms, StringComparison.InvariantCultureIgnoreCase))
+                if (item.ToString().Contains(terms))
                 {
                     results.Add(item);
                 }
