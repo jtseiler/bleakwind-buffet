@@ -31,37 +31,31 @@ namespace Website.Pages
         /// <summary>
         /// The filtered Categories
         /// </summary>
-        [BindProperty]
         public string[] Category { get; set; }
 
         /// <summary>
         /// The minimum IMDB Rating
         /// </summary>
-        [BindProperty]
         public int? CaloriesMin { get; set; }
 
         /// <summary>
         /// The maximum IMDB Rating
         /// </summary>
-        [BindProperty]
         public int? CaloriesMax { get; set; }
 
         /// <summary>
         /// The minimum IMDB Rating
         /// </summary>
-        [BindProperty]
         public double? PriceMin { get; set; }
 
         /// <summary>
         /// The maximum IMDB Rating
         /// </summary>
-        [BindProperty]
         public double? PriceMax { get; set; }
 
-        public void OnGet(int? CaloriesMin, int? CaloriesMax, double? PriceMin, double? PriceMax)
+        public void OnGet(int? CaloriesMin, int? CaloriesMax, double? PriceMin, double? PriceMax, string SearchTerms)
         {
-            SearchTerms = Request.Query["SearchTerms"];
-            Category = Request.Query["Category"];
+            this.SearchTerms = SearchTerms;
             this.CaloriesMin = CaloriesMin;
             this.CaloriesMax = CaloriesMax;
             this.PriceMin = PriceMin;
