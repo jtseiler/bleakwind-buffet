@@ -31,7 +31,7 @@ namespace Website.Pages
         /// <summary>
         /// The filtered Categories
         /// </summary>
-        public string[] Category { get; set; }
+        public string[] Category { get; set; } = new string [0];
 
         /// <summary>
         /// The minimum IMDB Rating
