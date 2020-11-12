@@ -17,6 +17,13 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
     public class SailorSodaTests
     {
         [Fact]
+        public void ShouldReturnCorrectDescription()
+        {
+            SailorSoda ss = new SailorSoda();
+            Assert.Equal("An old-fashioned jerked soda, carbonated water and flavored syrup poured over a bed of crushed ice.", ss.Description);
+        }
+
+        [Fact]
         public void ShouldBeAINotifyPropertyChanged()
         {
             var ss = new SailorSoda();

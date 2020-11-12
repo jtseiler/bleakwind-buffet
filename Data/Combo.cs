@@ -77,6 +77,15 @@ namespace BleakwindBuffet.Data
             }
         }
 
+        private string description;
+        public string Description
+        {
+            get
+            {
+                return description;
+            }
+        }
+
         /// <summary>
         /// property to get the special instructions for the given combo
         /// </summary>

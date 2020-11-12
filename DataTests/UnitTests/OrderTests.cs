@@ -12,6 +12,8 @@ namespace BleakwindBuffet.DataTests.UnitTests
         public double Price { get; set; }
 
         public uint Calories { get; set; }
+        
+        public string Description { get; set; }
 
         public List<string> SpecialInstructions { get; set; }
     }

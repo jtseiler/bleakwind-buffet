@@ -22,7 +22,7 @@ namespace BleakwindBuffet.Data.Entrees
         {
             get
             {
-                return "Single patty burger on a brioche bun.Comes with ketchup, mustard, pickle, and cheese.";
+                return "Single patty burger on a brioche bun. Comes with ketchup, mustard, pickle, and cheese.";
             }
         }
 

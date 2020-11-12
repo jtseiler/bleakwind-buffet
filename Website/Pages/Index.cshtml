@@ -9,7 +9,6 @@
 }
 
 
-<div class="float-columns"> <!--Dont know if this is the right spot for the float column div-->
 
     <form id="menu-filtering">
         <div id="search">
@@ -59,71 +58,77 @@
         </div>
 
         <!--Originally wanted to put the float columns div here-->
+        <div class="float-columns">
+            <!--Dont know if this is the right spot for the float column div-->
 
-        <div class="Entrees">
-            <h2>Entrees</h2>
-            @foreach (Entree e in BleakwindBuffet.Data.Menu.Entrees())
-            {
-                <div class="menuEntree">
-                    <h6>@e.ToString()</h6>
-                    <div class="description">
-                        Description: @e.Description
-                    </div>
-                    <div class="price">
-                        Price:  @e.Price
-                    </div>
-                    <div class="calories">
-                        Calories: @e.Calories
-                    </div>
-                </div>
-            }
-        </div>
-
-        <div class="Sides">
-            <h2>Sides</h2>
-            @foreach (Side s in BleakwindBuffet.Data.Menu.Sides())
-            {
-                @foreach (Size size in Enum.GetValues(typeof(Size)))
+            <div class="Entrees">
+                <h2>Entrees</h2>
+                @foreach (Entree e in BleakwindBuffet.Data.Menu.Entrees())
                 {
-                    BleakwindBuffet.Data.Menu.sideIncrease(s, size);
-                    <div class="menuSide">
-                        <h6>@s.ToString()</h6>
+                    <div class="menuEntree">
+                        <h6>@e.ToString()</h6>
                         <div class="description">
-                            Description: @s.Description
+                            Description: @e.Description
                         </div>
                         <div class="price">
-                            Price:  @s.Price
+                            Price:  @e.Price
                         </div>
                         <div class="calories">
-                            Calories: @s.Calories
+                            Calories: @e.Calories
                         </div>
                     </div>
                 }
-            }
+            </div>
+
+            <div class="Sides">
+                <h2>Sides</h2>
+                @foreach (Side s in BleakwindBuffet.Data.Menu.Sides())
+                {
+                    @foreach (Size size in Enum.GetValues(typeof(Size)))
+                    {
+                        BleakwindBuffet.Data.Menu.sideIncrease(s, size);
+                        <div class="menuSide">
+                            <h6>@s.ToString()</h6>
+                            <div class="description">
+                                Description: @s.Description
+                            </div>
+                            <div class="price">
+                                Price:  @s.Price
+                            </div>
+                            <div class="calories">
+                                Calories: @s.Calories
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+
+            <div class="Drinks">
+                <h2>Drinks</h2>
+                @foreach (Drink d in BleakwindBuffet.Data.Menu.Drinks())
+                {
+                    @foreach (Size size in Enum.GetValues(typeof(Size)))
+                    {
+                        BleakwindBuffet.Data.Menu.drinkIncrease(d, size);
+                        <div class="menuDrink">
+                            <h6>@d.ToString()</h6>
+                            <div class="description">
+                                Description: @d.Description
+                            </div>
+                            <div class="price">
+                                Price:  @d.Price
+                            </div>
+                            <div class="calories">
+                                Calories: @d.Calories
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
         </div>
 
-        <div class="Drinks">
-            <h2>Drinks</h2>
-            @foreach (Drink d in BleakwindBuffet.Data.Menu.Drinks())
-            {
-                @foreach (Size size in Enum.GetValues(typeof(Size)))
-                {
-                    BleakwindBuffet.Data.Menu.drinkIncrease(d, size);
-                    <div class="menuDrink">
-                        <h6>@d.ToString()</h6>
-                        <div class="description">
-                            Description: @d.Description
-                        </div>
-                        <div class="price">
-                            Price:  @d.Price
-                        </div>
-                        <div class="calories">
-                            Calories: @d.Calories
-                        </div>
-                    </div>
-                }
-            }
-        </div>
+        <div class="clearfix"></div>
+
 
 
         <h3 class="combo">Create a Combo! Add any Entree, Side, and Drink to a combo order and get $1 off your order price!</h3>
@@ -139,5 +144,4 @@
         </div>
 
     </form>
-</div>
-<div class="clearfix"></div>
+
