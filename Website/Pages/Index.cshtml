@@ -9,6 +9,8 @@
 }
 
 
+<div class="float-columns"> <!--Dont know if this is the right spot for the float column div-->
+
     <form id="menu-filtering">
         <div id="search">
             <input type="text" name="SearchTerms" value="@Model.SearchTerms" />
@@ -56,12 +58,17 @@
             <h2>Here at the Bleakwind Buffet we have Entrees, Sides, and Drinks!</h2>
         </div>
 
+        <!--Originally wanted to put the float columns div here-->
+
         <div class="Entrees">
             <h2>Entrees</h2>
             @foreach (Entree e in BleakwindBuffet.Data.Menu.Entrees())
             {
                 <div class="menuEntree">
                     <h6>@e.ToString()</h6>
+                    <div class="description">
+                        Description: @e.Description
+                    </div>
                     <div class="price">
                         Price:  @e.Price
                     </div>
@@ -81,6 +88,9 @@
                     BleakwindBuffet.Data.Menu.sideIncrease(s, size);
                     <div class="menuSide">
                         <h6>@s.ToString()</h6>
+                        <div class="description">
+                            Description: @s.Description
+                        </div>
                         <div class="price">
                             Price:  @s.Price
                         </div>
@@ -100,8 +110,10 @@
                 {
                     BleakwindBuffet.Data.Menu.drinkIncrease(d, size);
                     <div class="menuDrink">
-
                         <h6>@d.ToString()</h6>
+                        <div class="description">
+                            Description: @d.Description
+                        </div>
                         <div class="price">
                             Price:  @d.Price
                         </div>
@@ -112,6 +124,7 @@
                 }
             }
         </div>
+
 
         <h3 class="combo">Create a Combo! Add any Entree, Side, and Drink to a combo order and get $1 off your order price!</h3>
 
@@ -126,3 +139,5 @@
         </div>
 
     </form>
+</div>
+<div class="clearfix"></div>

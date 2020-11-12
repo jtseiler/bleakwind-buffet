@@ -23,6 +23,11 @@ namespace BleakwindBuffet.Data.Entrees
         public event PropertyChangedEventHandler PropertyChanged;
 
         /// <summary>
+        /// the description of each item
+        /// </summary>
+        public abstract string Description { get; }
+
+        /// <summary>
         /// The price of the entree
         /// </summary>
         /// <value> In US dollars </value>

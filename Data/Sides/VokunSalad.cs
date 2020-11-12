@@ -19,6 +19,14 @@ namespace BleakwindBuffet.Data.Sides
     /// </summary>
     public class VokunSalad : Side, IOrderItem, INotifyPropertyChanged
     {
+        public override string Description
+        {
+            get
+            {
+                return "A seasonal fruit salad of mellons, berries, mango, grape, apple, and oranges.";
+            }
+        }
+
         /// <summary>
         /// Creating an addition to the side menu under the sides namespace
         /// </summary>

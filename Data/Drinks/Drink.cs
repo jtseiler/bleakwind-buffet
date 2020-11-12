@@ -15,6 +15,11 @@ namespace BleakwindBuffet.Data.Drinks
         public virtual event PropertyChangedEventHandler PropertyChanged;
 
         /// <summary>
+        /// the description of each item
+        /// </summary>
+        public abstract string Description { get; }
+
+        /// <summary>
         /// The price of the drink
         /// </summary>
         /// <value> In US dollars </value>

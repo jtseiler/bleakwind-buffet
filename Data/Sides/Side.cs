@@ -14,6 +14,11 @@ namespace BleakwindBuffet.Data.Sides
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
+        /// <summary>
+        /// the description of each item
+        /// </summary>
+        public abstract string Description { get; }
+
         private Size size;
         /// <summary>
         /// The size of the side
