@@ -16,7 +16,7 @@
             <input type="submit" value="Search" />
         </div>
 
-        <div id="filters">
+        <div class="float-cloumns-filters" id="filters">
 
             <h4>Category</h4>
             @foreach (String category in BleakwindBuffet.Data.Menu.Category)
@@ -55,7 +55,25 @@
             </p>
 
             <h2>Here at the Bleakwind Buffet we have Entrees, Sides, and Drinks!</h2>
+
+            <p>
+                <h5 class="combo">Create a Combo! Add any Entree, Side, and Drink to a combo order and get $1 off your order price!</h5>
+            </p>
+
         </div>
+        
+        <p>
+            <h5>The available flavors for the Sailor Soda are:</h5>
+            <ul class="sodaFlavors">
+                @foreach (SodaFlavor flavor in Enum.GetValues(typeof(SodaFlavor)))
+                {
+                    <li class="flavors">
+                        @flavor
+                    </li>
+                }
+            </ul>
+        </p>
+
 
         <!--Originally wanted to put the float columns div here-->
         <div class="float-columns">
@@ -66,16 +84,18 @@
                 @foreach (Entree e in BleakwindBuffet.Data.Menu.Entrees())
                 {
                     <div class="menuEntree">
-                        <h6>@e.ToString()</h6>
-                        <div class="description">
-                            Description: @e.Description
-                        </div>
-                        <div class="price">
-                            Price:  @e.Price
-                        </div>
-                        <div class="calories">
-                            Calories: @e.Calories
-                        </div>
+                        <p>
+                            <h6>@e.ToString()</h6>
+                            <div class="description">
+                                Description: @e.Description
+                            </div>
+                            <div class="price">
+                                Price:  @e.Price
+                            </div>
+                            <div class="calories">
+                                Calories: @e.Calories
+                            </div>
+                        </p>
                     </div>
                 }
             </div>
@@ -88,16 +108,18 @@
                     {
                         BleakwindBuffet.Data.Menu.sideIncrease(s, size);
                         <div class="menuSide">
-                            <h6>@s.ToString()</h6>
-                            <div class="description">
-                                Description: @s.Description
-                            </div>
-                            <div class="price">
-                                Price:  @s.Price
-                            </div>
-                            <div class="calories">
-                                Calories: @s.Calories
-                            </div>
+                            <p>
+                                <h6>@s.ToString()</h6>
+                                <div class="description">
+                                    Description: @s.Description
+                                </div>
+                                <div class="price">
+                                    Price:  @s.Price
+                                </div>
+                                <div class="calories">
+                                    Calories: @s.Calories
+                                </div>
+                            </p>
                         </div>
                     }
                 }
@@ -111,16 +133,18 @@
                     {
                         BleakwindBuffet.Data.Menu.drinkIncrease(d, size);
                         <div class="menuDrink">
-                            <h6>@d.ToString()</h6>
-                            <div class="description">
-                                Description: @d.Description
-                            </div>
-                            <div class="price">
-                                Price:  @d.Price
-                            </div>
-                            <div class="calories">
-                                Calories: @d.Calories
-                            </div>
+                            <p>
+                                <h6>@d.ToString()</h6>
+                                <div class="description">
+                                    Description: @d.Description
+                                </div>
+                                <div class="price">
+                                    Price:  @d.Price
+                                </div>
+                                <div class="calories">
+                                    Calories: @d.Calories
+                                </div>
+                            </p>
                         </div>
                     }
                 }
@@ -131,17 +155,7 @@
 
 
 
-        <h3 class="combo">Create a Combo! Add any Entree, Side, and Drink to a combo order and get $1 off your order price!</h3>
 
-        <div class="sodaFlavors">
-            <h2>The available flavors for the Sailor Soda are:</h2>
-            @foreach (SodaFlavor flavor in Enum.GetValues(typeof(SodaFlavor)))
-            {
-                <div class="flavors">
-                    @flavor
-                </div>
-            }
-        </div>
 
     </form>
 
